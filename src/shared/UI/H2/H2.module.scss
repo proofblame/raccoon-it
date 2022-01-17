@@ -1,0 +1,9 @@
+@import '../../variables.scss';
+
+.header {
+  @extend %fonts;
+  @extend %fz-64;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: $mainColor;
+}

@@ -1,0 +1,77 @@
+@import './mixins/mixins.scss';
+
+$fontFamily: 'Montserrat', sans-serif;
+
+$mainColor: #f4f4f4;
+$secondaryColor: rgba(244, 244, 244, 0.8);
+$linkColor: #ffffff;
+$linkActiveColor: rgba(255, 255, 255, 0.8);
+$background: #090909;
+
+$_768: 767.98px;
+$_1024: 1023.98px;
+$reasonsListSize: 1479px;
+
+%fonts {
+  font-family: $fontFamily;
+  font-style: normal;
+}
+
+// H1
+%fz-72 {
+  @include adaptive(font-size, 72, 24);
+  @include adaptive(line-height, 81, 27);
+}
+
+// H2
+%fz-64 {
+  @include adaptive(font-size, 64, 24);
+  @include adaptive(line-height, 72, 27);
+}
+
+%fz-24-38 {
+  @include adaptive(font-size, 24, 14);
+  @include adaptive(line-height, 38, 21);
+}
+
+// H3, buttons
+%fz-24-30 {
+  @include adaptive(font-size, 24, 12);
+  @include adaptive(line-height, 30, 15);
+}
+
+%fz-24-24 {
+  @include adaptive(font-size, 24, 14);
+  @include adaptive(line-height, 24, 14);
+}
+
+%fz-18-14 {
+  @include adaptive(font-size, 18, 14);
+  @include adaptive(line-height, 22, 17);
+}
+
+%fz-18-12 {
+  @include adaptive(font-size, 18, 12);
+  @include adaptive(line-height, 23, 16);
+}
+
+%fz-18-8 {
+  @include adaptive(font-size, 18, 8);
+  @include adaptive(line-height, 22, 10);
+}
+
+%flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+%speakingListSize {
+  height: 216px;
+  width: 824px;
+}
+
+// Шаблоный брейкпоинтов
+
+//  768px
+// @media screen and (max-width: $_768) {}
