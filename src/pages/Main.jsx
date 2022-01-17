@@ -1,10 +1,12 @@
-import React from 'react'
-import Button from '../shared/UI/Button/Button'
+import React from 'react';
+import About from './About/About';
 
 const Main = () => {
   return (
-    <Button>Оставить заявку</Button>
-  )
-}
+    <>
+      <About />
+    </>
+  );
+};
 
-export default Main
+export default Main;
