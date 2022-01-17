@@ -9,9 +9,32 @@ const About = () => {
     <section className={about.section}>
       <Container>
         <div className={about.wrapper}>
-          <H2>О нас</H2>
+          <div className={about.leftColumn}>
+            <div className={about.headerWrapper}>
+              <H2 className={about.header}>О нас</H2>
+            </div>
+            <p className={about.subheader}>
+              Наша команда занимается разработкой сайтов и мобильных приложений
+              для решения сложных бизнес-задач. Мы используем современные
+              IT-решения, продуманный дизайн и грамотную маркетинговую
+              стратегию. Мы поможем вам привлечь новых клиентов.
+            </p>
+            <Button>Оставить заявку</Button>
+          </div>
+          <div className={about.rightColumn}>
+            <ul className={about.list}>
+              <li className={about.listItem}>
+                Сайты, веб-приложения и прогрессивные веб-приложения
+              </li>
+              <li className={about.listItem}>
+                Нативные и гибридные <br /> мобильные приложения
+              </li>
+              <li className={about.listItem}>
+                Разработка дизайна для <br /> вашего бизнеса под ключ
+              </li>
+            </ul>
+          </div>
         </div>
-        <Button>Оставить заявку</Button>
       </Container>
     </section>
   );

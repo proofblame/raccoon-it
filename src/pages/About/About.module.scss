@@ -3,5 +3,134 @@
 .section {
   background-color: $background;
   width: 100%;
-  height: 100vh;
+  font-family: $fontFamily;
+  color: $textColor;
+}
+
+.wrapper {
+  outline: 1px solid red;
+  @include adaptivePadding(padding, 393, 0, 50, 0);
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftColumn {
+  @include adaptive(width, 711, 286);
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    @include adaptive(width, 747.5, 254);
+    @include adaptive(height, 747.5, 254);
+    background: linear-gradient(90deg, #f43b47 0%, #453a94 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    outline: 1px solid red;
+    border-radius: 50%;
+    opacity: 0.2;
+    filter: blur(500px);
+    transform: rotate(147.49deg);
+    @include adaptive(top, 0, 0);
+    @include adaptive(left, 100, 15);
+    z-index: 1;
+  }
+
+  &::after {
+    content: '';
+    background-image: url(./images/EllipsePurplePink.svg);
+    @include adaptive(width, 214, 84);
+    @include adaptive(height, 214, 84);
+    border-radius: 2px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: contain;
+    position: absolute;
+    @include adaptive(top, 355, 350);
+    @include adaptive(left, 800, 218);
+    z-index: 1;
+  }
+}
+
+.header {
+  @extend %fz-64;
+}
+
+.headerWrapper {
+  @include adaptive(margin-bottom, 100, 50);
+}
+
+.subheader {
+  @extend %fz-24-38;
+  @include adaptive(margin-bottom, 100, 50);
+}
+
+.rightColumn {
+  @include adaptive(width, 673, 286);
+  @include adaptive(margin-top, 97, 50);
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    @include adaptive(width, 747.5, 254);
+    @include adaptive(height, 747.5, 254);
+    background: rgba(166, 91, 162, 0.3);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    outline: 1px solid red;
+    border-radius: 50%;
+    opacity: 0.2;
+    filter: blur(500px);
+    transform: rotate(147.49deg);
+    @include adaptive(top, -600, 0);
+    @include adaptive(left, 90, 15);
+    z-index: 1;
+  }
+
+  &::after {
+    content: '';
+    background-image: url(./images/EllipsePinkBlue.svg);
+    @include adaptive(width, 101, 53);
+    @include adaptive(height, 101, 53);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: contain;
+    position: absolute;
+    @include adaptive(top, -75, 125);
+    @include adaptive(left, 700, -15);
+    z-index: 1;
+  }
+}
+
+.list {
+  list-style-type: none;
+}
+
+.listItem {
+  position: relative;
+  @include adaptivePadding(padding, 27, 35, 14, 20);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(30px);
+  color: $mainColor;
+  border-radius: 2px;
+  border: 1px solid;
+  letter-spacing: 0.03em;
+  border-image: linear-gradient(
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0)
+  );
+  @extend %fz-24-30;
+  z-index: 5;
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
 }
