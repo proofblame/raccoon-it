@@ -13,7 +13,7 @@
   border: none;
   cursor: pointer;
   position: relative;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.1);
 
   &:active {
     background-color: $background;
