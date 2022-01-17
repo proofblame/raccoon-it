@@ -20,17 +20,16 @@ const Button = ({
   };
 
   const classes = classNames(style.button, style[className], { active });
-  const Tag = attr.href ? 'a' : 'button';
 
   return (
-    <Tag
+    <button
       className={classes}
       disabled={disabled}
       onClick={onClickAction}
       {...attr}
     >
       {children}
-    </Tag>
+    </button>
   );
 };
 

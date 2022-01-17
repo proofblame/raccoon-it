@@ -10,10 +10,10 @@
   @include adaptivePadding(padding, 36, 70, 16, 26);
   box-sizing: border-box;
   border-radius: 10px;
-  border: 1px solid transparent;
+  border: none;
   cursor: pointer;
   position: relative;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.1);
 
   &:active {
     background-color: $background;
