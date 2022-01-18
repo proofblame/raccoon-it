@@ -1,11 +1,11 @@
-@import '../../shared/variables.scss';
+@import '../../../shared/variables.scss';
 
 .section {
   background-color: $background;
   width: 100%;
   font-family: $fontFamily;
   color: $textColor;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .wrapper {
