@@ -65,6 +65,7 @@
 }
 
 .subscription {
+  @extend %fz-24-38;
   font-family: $fontFamily;
   color: $textColor;
   margin-left: 40px;
