@@ -1,10 +1,8 @@
-import React from 'react'
-import Button from '../shared/UI/Button/Button'
+import React from 'react';
+import Tenets from './Tenets/Tenets';
 
 const Main = () => {
-  return (
-    <Button>Оставить заявку</Button>
-  )
-}
+  return <Tenets />;
+};
 
-export default Main
+export default Main;
