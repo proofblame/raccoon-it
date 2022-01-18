@@ -1,0 +1,96 @@
+@import '../../../shared/variables.scss';
+
+.section {
+  background-color: $background;
+  margin-top: -1px;
+
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('./images/Vector.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 150%;
+    @include adaptive(width, 2191, 464);
+    @include adaptive(height, 787, 167);
+    @include adaptive(top, 200, -30);
+    @include adaptive(left, 50, -130);
+    z-index: 0;
+  }
+}
+
+.wrapper {
+  @include adaptivePadding(padding, 113, 0, 0, 0);
+}
+
+.header {
+  @include adaptive(margin-bottom, 100, 76);
+  position: relative;
+  z-index: 2;
+}
+
+.listWrapper {
+  @include adaptive(margin-bottom, 100, 112);
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.listItem {
+  @include adaptive(width, 430, 285);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(30px);
+  border-radius: 2px;
+  border: 1px solid;
+  border-image: linear-gradient(
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.listItemImage {
+  @include adaptive(width, 355, 236);
+  @include adaptive(height, 296, 212);
+  @include adaptive(margin-bottom, 31, 20);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscription {
+  font-family: $fontFamily;
+  color: $textColor;
+  margin-left: 40px;
+  vertical-align: middle;
+  z-index: 1;
+}
+
+@media screen and (max-width: 1280px) {
+  .list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .listItem {
+    @include adaptive(margin-bottom, 60, 20);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .subscription {
+    margin-left: 0;
+    @include adaptive(margin-bottom, 40, 20);
+  }
+}
