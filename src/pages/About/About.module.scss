@@ -5,10 +5,10 @@
   width: 100%;
   font-family: $fontFamily;
   color: $textColor;
+  overflow: hidden;
 }
 
 .wrapper {
-  outline: 1px solid red;
   @include adaptivePadding(padding, 393, 0, 50, 0);
   display: flex;
   justify-content: space-between;
@@ -27,7 +27,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    outline: 1px solid red;
     border-radius: 50%;
     opacity: 0.2;
     filter: blur(500px);
@@ -81,13 +80,12 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    outline: 1px solid red;
     border-radius: 50%;
     opacity: 0.2;
     filter: blur(500px);
     transform: rotate(147.49deg);
     @include adaptive(top, -600, 0);
-    @include adaptive(left, 90, 15);
+    @include adaptive(left, -65, 15);
     z-index: 1;
   }
 
