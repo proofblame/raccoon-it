@@ -10,18 +10,30 @@
   @include adaptivePadding(padding, 36, 70, 16, 26);
   box-sizing: border-box;
   border-radius: 10px;
-  border: none;
+  border: 1px solid transparent;
   cursor: pointer;
   position: relative;
-  background: rgba(255, 255, 255, 0.1);
+  background: none;
+  z-index: 2;
 
-  &:active {
-    background-color: $background;
+  &:active,
+  &:focus {
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(4px);
-    opacity: 0.5;
+    border: 1px solid;
+
+    border: 1px solid #fff;
+    border-image-width: 1px;
+    border-image-repeat: round;
+    border-image-source: linear-gradient(277.44deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 15.62%),
+      linear-gradient(100.44deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 16.13%);
   }
+  &:focus {
+    border: 1px solid transparent;
+  }
+
   &:disabled {
-    background-color: linear-gradient(270deg, #0250c5 0%, #d43f8d 100%);
+    background: linear-gradient(270deg, #0250c5 0%, #d43f8d 100%);
     opacity: 0.1;
     cursor: not-allowed;
   }

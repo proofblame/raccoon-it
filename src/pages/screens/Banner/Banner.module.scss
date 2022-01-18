@@ -1,0 +1,52 @@
+@import '../../../shared/variables.scss';
+* {
+  // outline: 1px solid red;
+}
+.banner {
+  @extend %fonts;
+  background-color: $background;
+  height: 100vh;
+  position: relative;
+}
+.bannerWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.header {
+  @include adaptive(padding-top, 48, 15);
+  @extend %flex;
+}
+.logo {
+  @include adaptive(width, 68, 30);
+  @include adaptive(height, 47, 21);
+  @include adaptive(column-gap, 22, 10);
+  @extend %flex;
+}
+.titleLogo {
+  color: $mainColor;
+  font-weight: 600;
+  @extend %fz-18-8;
+}
+
+.body {
+  @extend %flex;
+  justify-self: center;
+  height: 100%;
+}
+.subtitle {
+}
+.imgWrapper {
+}
+.imgBlock {
+  @include adaptive(width, 926, 304);
+  @include adaptive(height, 710, 233);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.imgHandle {
+}
+.pages {
+}

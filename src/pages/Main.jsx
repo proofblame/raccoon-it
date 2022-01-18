@@ -1,9 +1,9 @@
 import React from 'react'
-import Button from '../shared/UI/Button/Button'
+import Banner from './screens/Banner/Banner'
 
 const Main = () => {
   return (
-    <Button>Оставить заявку</Button>
+    <Banner />
   )
 }
 
