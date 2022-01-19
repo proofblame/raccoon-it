@@ -1,0 +1,246 @@
+@import '../../../shared/variables.scss';
+
+.section {
+  background-color: $background;
+  margin-top: -1px;
+  color: $textColor;
+  font-family: $fontFamily;
+}
+
+.wrapper {
+  @include adaptivePadding(padding, 240, 0, 90, 0);
+}
+
+.header {
+  @include adaptive(margin-bottom, 100, 50);
+}
+
+.subscription {
+  @extend %fz-24-38;
+  @include adaptive(width, 913, 274);
+  @include adaptive(margin-bottom, 100, 50);
+}
+
+.estimationList {
+  list-style-type: none;
+  display: flex;
+}
+
+.estimationListItem {
+  display: flex;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(30px);
+  border-radius: 2px;
+  @include adaptive(max-width, 376, 285);
+  @include adaptivePadding(padding, 33, 25, 28, 14);
+  align-items: center;
+  @include adaptive(margin-right, 36, 0);
+
+  &:nth-last-of-type(1) {
+    margin-right: 0;
+  }
+}
+
+.estimationListItemNumber {
+  @extend %fz-64-36;
+}
+
+.estimationListItemText {
+  @extend %fz-24-14;
+  width: 60%;
+  letter-spacing: 0.03em;
+  @include adaptive(margin-left, 20, 12);
+}
+
+.listWrapper {
+  @include adaptive(margin-bottom, 116, 50);
+}
+
+.workflowList {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.workflowListImage {
+  width: 121px;
+  height: 90px;
+  @include adaptive(margin-bottom, 36, 14);
+}
+
+.workflowListImageSprint {
+  @include adaptive(width, 315, 213);
+  @include adaptive(height, 326, 221);
+  position: relative;
+  @include adaptive(margin-bottom, 60, 14);
+
+  &::before {
+    @extend %fz-24-14;
+    content: 'Дейли';
+    position: absolute;
+    color: $textColor;
+    font-family: $fontFamily;
+    @include adaptive(top, 70, 45);
+    @include adaptive(left, 185, 130);
+  }
+
+  &::after {
+    @extend %fz-24-14;
+    content: '1-2 недели';
+    position: absolute;
+    color: $textColor;
+    font-family: $fontFamily;
+    @include adaptive(width, 100, 55);
+    text-align: center;
+    @include adaptive(top, 200, 135);
+    @include adaptive(left, 107, 77);
+  }
+}
+
+.workflowListImageSub {
+  text-transform: uppercase;
+  @include adaptive(max-width, 409, 273);
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 47px;
+    height: 15px;
+    background-image: url(./images/Arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include adaptive(top, 10, 135);
+    @include adaptive(left, 150, -177);
+  }
+}
+
+.workflowListImageSubSprint {
+  text-transform: uppercase;
+  @include adaptive(max-width, 409, 273);
+  position: relative;
+  height: 37px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 47px;
+    height: 15px;
+    background-image: url(./images/Arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include adaptive(top, -5, 135);
+    @include adaptive(left, 250, -177);
+  }
+}
+
+.workflowListImageSubNoArrow {
+  text-transform: uppercase;
+  @include adaptive(width, 409, 273);
+}
+
+.sprintListWrapper {
+  @include adaptive(margin-top, 192, 10);
+}
+
+.sprintListWrapper {
+  position: relative;
+}
+
+.sprintList {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 100px;
+  left: -550px;
+}
+
+.sprintListItem {
+  margin-right: 60px;
+
+  &:nth-last-of-type(1) {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .estimationList {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .estimationListItem {
+    @include adaptive(margin-bottom, 30, 20);
+    margin-right: 0;
+  }
+
+  .workflowList {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .workflowListItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include adaptive(margin-bottom, 100, 87);
+  }
+
+  .workflowListImageSub {
+    text-align: center;
+    &::after {
+      transform: rotate(90deg);
+      @include adaptive(top, 80, 80);
+      @include adaptive(left, 20, 15);
+    }
+  }
+
+  .workflowListImageSubSprint {
+    @include adaptive(margin-bottom, 0, 258);
+    &::after {
+      transform: rotate(90deg);
+      @include adaptive(top, 270, 300);
+      @include adaptive(left, 10, 15);
+    }
+  }
+
+  .sprintList {
+    flex-direction: column;
+    @include adaptive(top, -300, -350);
+    left: -50px;
+  }
+
+  .sprintListItem {
+    @include adaptive(margin-bottom, 20, 10);
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      @include adaptive(width, 12, 6);
+      @include adaptive(height, 12, 6);
+      @include adaptive(top, 5, 7);
+      @include adaptive(left, -20, -20);
+      top: px;
+      left: px;
+      background-image: linear-gradient(
+        rgba(40, 107, 248, 1),
+        rgba(95, 27, 208, 1)
+      );
+      border-radius: 50%;
+    }
+  }
+
+  .workflowListImageSubNoArrow {
+    text-align: center;
+  }
+}
+
+// @media screen and (max-width: 767px) {
+//   .workflowList {
+//     flex-direction: column;
+//   }
+// }

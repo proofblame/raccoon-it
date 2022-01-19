@@ -30,9 +30,19 @@ $reasonsListSize: 1479px;
   @include adaptive(line-height, 72, 27);
 }
 
+%fz-64-36 {
+  @include adaptive(font-size, 64, 36);
+  @include adaptive(line-height, 72, 45);
+}
+
 %fz-24-38 {
   @include adaptive(font-size, 24, 14);
   @include adaptive(line-height, 38, 21);
+}
+
+%fz-24-14 {
+  @include adaptive(font-size, 24, 14);
+  @include adaptive(line-height, 24, 14);
 }
 
 // H3, buttons
