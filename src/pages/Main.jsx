@@ -4,6 +4,7 @@ import Tenets from './screens/Tenets/Tenets';
 import main from './Main.module.scss';
 import Projects from './screens/Projects/Projects';
 import Workflow from './screens/Workflow/Workflow';
+import Techs from './screens/Techs/Techs';
 
 const Main = () => {
   return (
@@ -12,6 +13,7 @@ const Main = () => {
       <Tenets />
       <Projects />
       <Workflow />
+      <Techs />
     </div>
   );
 };
