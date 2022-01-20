@@ -4,10 +4,12 @@ import ProjectBacklog from './images/ProjectBacklog.svg';
 import SprintBacklog from './images/SprintBacklog.svg';
 import Sprint from './images/Sprint.svg';
 import Software from './images/Software.svg';
+import Arrow from './images/Arrows.svg';
 
 import Container from '../../../shared/UI/Container/Container';
 import H2 from '../../../shared/UI/H2/H2';
 import IMG from '../../../shared/UI/IMG/IMG';
+import Button from '../../../shared/UI/Button/Button';
 
 const Workflow = () => {
   return (
@@ -49,27 +51,43 @@ const Workflow = () => {
             </ul>
           </div>
 
-          <ul className={workflow.workflowList}>
-            <li className={workflow.workflowListItem}>
-              <IMG
-                className={workflow.workflowListImage}
-                src={ProjectBacklog}
-              />
-              <p className={workflow.workflowListImageSub}>
-                бэклог <br /> проекта
-              </p>
-            </li>
-            <li className={workflow.workflowListItem}>
-              <IMG className={workflow.workflowListImage} src={SprintBacklog} />
-              <p className={workflow.workflowListImageSub}>
-                Бэклог <br /> спринта
-              </p>
-            </li>
-            <li className={workflow.workflowListItem}>
-              <IMG className={workflow.workflowListImageSprint} src={Sprint} />
-              <p className={workflow.workflowListImageSubSprint}>Спринт</p>
-            </li>
-            <li className={workflow.sprintListWrapper}>
+          <div className={workflow.workflowWrapper}>
+            <ul className={workflow.workflowList}>
+              <li className={workflow.workflowListItem}>
+                <IMG
+                  className={workflow.workflowListImage}
+                  src={ProjectBacklog}
+                />
+                <p className={workflow.workflowListImageSub}>
+                  бэклог <br /> проекта
+                </p>
+              </li>
+              <li className={workflow.workflowListItem}>
+                <IMG
+                  className={workflow.workflowListImage}
+                  src={SprintBacklog}
+                />
+                <p className={workflow.workflowListImageSub}>
+                  Бэклог <br /> спринта
+                </p>
+              </li>
+              <li className={workflow.workflowListItem}>
+                <IMG
+                  className={workflow.workflowListImageSprint}
+                  src={Sprint}
+                />
+                <p className={workflow.workflowListImageSubSprint}>Спринт</p>
+              </li>
+              <li className={workflow.workflowListItem}>
+                <IMG className={workflow.workflowListImage} src={Software} />
+                <p className={workflow.workflowListImageSubNoArrow}>
+                  Работающее По с новыми возможностями
+                </p>
+              </li>
+            </ul>
+
+            <div className={workflow.sprintListWrapper}>
+              <IMG className={workflow.arrows} src={Arrow}></IMG>
               <ul className={workflow.sprintList}>
                 <li className={workflow.sprintListItem}>Дизайн</li>
                 <li className={workflow.sprintListItem}>Разработка</li>
@@ -77,14 +95,12 @@ const Workflow = () => {
                 <li className={workflow.sprintListItem}>Наладка</li>
                 <li className={workflow.sprintListItem}>Поддержка</li>
               </ul>
-            </li>
-            <li className={workflow.workflowListItem}>
-              <IMG className={workflow.workflowListImage} src={Software} />
-              <p className={workflow.workflowListImageSubNoArrow}>
-                Работающее По с новыми возможностями
-              </p>
-            </li>
-          </ul>
+            </div>
+
+            <div className={workflow.buttonWrapper}>
+              <Button className={workflow.bidButton}>Оставить заявку</Button>
+            </div>
+          </div>
         </div>
       </Container>
     </section>

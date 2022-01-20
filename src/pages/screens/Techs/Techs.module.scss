@@ -38,7 +38,7 @@
     border: none;
     background: linear-gradient(90deg, #667eea 0%, #0250c5 100%);
     border-image: linear-gradient(90deg, #667eea 0%, #0250c5 100%);
-    @include adaptive(top, 0, 680);
+    @include adaptive(top, -40, 680);
     @include adaptive(left, 1500, -30);
     z-index: 1;
   }
@@ -194,10 +194,6 @@
   &::before {
     background-image: url('./images/design/Photoshop.svg');
   }
-}
-
-.wrapper {
-  @include adaptive(padding-top, 190, 50);
 }
 
 @media screen and (max-width: 767px) {

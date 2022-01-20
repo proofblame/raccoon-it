@@ -18,9 +18,9 @@ const Button = ({
       return onClick(e);
     }
   };
-  console.log(className);
+
   const classes = classNames(style.button, className, { active });
-  console.log(classes);
+
   return (
     <button
       className={classes}

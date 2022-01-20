@@ -46,7 +46,6 @@
 }
 
 .section {
-  // @include adaptive(padding-top, 200, 120);
   background-color: $background;
   color: $textColor;
   font-family: $fontFamily;
@@ -61,15 +60,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    @include adaptive(top, 140, 620);
+    @include adaptive(top, -100, 420);
     @include adaptive(left, 0, 0);
     @include adaptive(height, 1113, 234);
   }
 }
-
-// .headerWrapper {
-//   @include adaptive(padding-bottom, 100, 65);
-// }
 
 .formWrapper {
   display: flex;
