@@ -9,7 +9,9 @@ const Techs = () => {
     <section className={techs.section}>
       <div className={techs.wrapper}>
         <Container>
-          <H2 className={techs.header}>Наши технологии</H2>
+          <div className={techs.headerContainer}>
+            <H2 className={techs.header}>Наши технологии</H2>
+          </div>
           <div className={techs.listWrapper}>
             <ul className={techs.list}>
               <li className={techs.listItem}>

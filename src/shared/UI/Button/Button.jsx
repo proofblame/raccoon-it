@@ -18,9 +18,9 @@ const Button = ({
       return onClick(e);
     }
   };
-
-  const classes = classNames(style.button, style[className], { active });
-
+  console.log(className);
+  const classes = classNames(style.button, className, { active });
+  console.log(classes);
   return (
     <button
       className={classes}
@@ -43,7 +43,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   children: '',
-  onClick: () => { },
+  onClick: () => {},
   className: '',
   disabled: false,
   active: false,

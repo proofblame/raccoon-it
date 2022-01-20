@@ -5,6 +5,7 @@ import main from './Main.module.scss';
 import Projects from './screens/Projects/Projects';
 import Workflow from './screens/Workflow/Workflow';
 import Techs from './screens/Techs/Techs';
+import Discuss from './screens/Discuss/Discuss';
 
 const Main = () => {
   return (
@@ -14,6 +15,7 @@ const Main = () => {
       <Projects />
       <Workflow />
       <Techs />
+      <Discuss />
     </div>
   );
 };

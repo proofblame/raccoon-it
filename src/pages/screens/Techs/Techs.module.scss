@@ -7,8 +7,12 @@
   font-family: $fontFamily;
 }
 
+.headerContainer {
+  @include adaptive(padding-bottom, 100, 43);
+}
+
 .listWrapper {
-  @include adaptivePadding(padding, 100, 0, 43, 0);
+  @include adaptive(padding-bottom, 420, 160);
   position: relative;
 
   &::before {
@@ -20,7 +24,7 @@
     border: none;
     background: linear-gradient(90deg, #6219cf 0%, #fa709a 100%);
     border-image: linear-gradient(90deg, #6219cf 0%, #fa709a 100%);
-    @include adaptive(top, 400, -120);
+    @include adaptive(top, 400, -110);
     @include adaptive(left, -250, 200);
     z-index: 0;
   }
@@ -34,7 +38,7 @@
     border: none;
     background: linear-gradient(90deg, #667eea 0%, #0250c5 100%);
     border-image: linear-gradient(90deg, #667eea 0%, #0250c5 100%);
-    @include adaptive(top, 50, 720);
+    @include adaptive(top, 0, 680);
     @include adaptive(left, 1500, -30);
     z-index: 1;
   }
