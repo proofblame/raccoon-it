@@ -7,7 +7,7 @@
 }
 
 .wrapper {
-  @include adaptivePadding(padding, 280, 0, 70, 0);
+  @include adaptive(padding-bottom, 493, 132);
 }
 
 .header {
@@ -62,7 +62,7 @@
     border: none;
     background: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
     border-image: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
-    @include adaptive(top, -180, 225);
+    @include adaptive(top, -180, 240);
     @include adaptive(left, 1080, -15);
     z-index: -1;
   }

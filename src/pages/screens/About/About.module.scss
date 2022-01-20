@@ -5,11 +5,10 @@
   width: 100%;
   font-family: $fontFamily;
   color: $textColor;
-  // overflow: hidden;
 }
 
 .wrapper {
-  @include adaptivePadding(padding, 393, 0, 50, 0);
+  @include adaptive(padding-bottom, 600, 121);
   display: flex;
   justify-content: space-between;
 }
