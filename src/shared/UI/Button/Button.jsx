@@ -19,7 +19,7 @@ const Button = ({
     }
   };
 
-  const classes = classNames(style.button, style[className], { active });
+  const classes = classNames(style.button, className, { active });
 
   return (
     <button
@@ -43,7 +43,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   children: '',
-  onClick: () => { },
+  onClick: () => {},
   className: '',
   disabled: false,
   active: false,

@@ -1,8 +1,8 @@
 import about from './About.module.scss';
 
-import Container from '../../shared/UI/Container/Container';
-import Button from '../../shared/UI/Button/Button';
-import H2 from '../../shared/UI/H2/H2';
+import Container from '../../../shared/UI/Container/Container';
+import Button from '../../../shared/UI/Button/Button';
+import H2 from '../../../shared/UI/H2/H2';
 
 const About = () => {
   return (

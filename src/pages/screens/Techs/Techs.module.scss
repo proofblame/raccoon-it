@@ -1,0 +1,208 @@
+@import '../../../shared/variables.scss';
+
+.section {
+  background-color: $background;
+  margin-top: -1px;
+  color: $textColor;
+  font-family: $fontFamily;
+}
+
+.headerContainer {
+  @include adaptive(padding-bottom, 100, 43);
+}
+
+.listWrapper {
+  @include adaptive(padding-bottom, 420, 160);
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    @include adaptive(width, 325, 125);
+    @include adaptive(height, 329, 127);
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(90deg, #6219cf 0%, #fa709a 100%);
+    border-image: linear-gradient(90deg, #6219cf 0%, #fa709a 100%);
+    @include adaptive(top, 400, -110);
+    @include adaptive(left, -250, 200);
+    z-index: 0;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    @include adaptive(width, 183, 64);
+    @include adaptive(height, 185, 65);
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(90deg, #667eea 0%, #0250c5 100%);
+    border-image: linear-gradient(90deg, #667eea 0%, #0250c5 100%);
+    @include adaptive(top, -40, 680);
+    @include adaptive(left, 1500, -30);
+    z-index: 1;
+  }
+}
+
+.header {
+  position: relative;
+  z-index: 5;
+}
+
+.headerWrapper {
+  @include adaptive(margin-bottom, 30, 19);
+  text-transform: uppercase;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+}
+
+%list {
+  list-style-type: none;
+  @extend %fz-24-38;
+  font-family: $fontFamily;
+}
+
+.listItem {
+  @include adaptive(width, 430, 286);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(30px);
+  border-radius: 2px;
+  @include adaptivePadding(padding, 60, 51, 34, 33);
+  @extend %list;
+  z-index: 2;
+}
+
+.backendList {
+  @extend %list;
+}
+
+%subListItem {
+  @include adaptive(margin-left, 40, 20);
+  @include adaptive(margin-bottom, 17, 11);
+  position: relative;
+  &:nth-last-of-type(1) {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0;
+    @include adaptive(left, -40, -25);
+    @include adaptive(width, 32, 21);
+    @include adaptive(height, 32, 21);
+  }
+}
+
+.backendListItemSpring {
+  @extend %subListItem;
+
+  &::before {
+    background-image: url('./images/backend/Spring.svg');
+  }
+}
+
+.backendListItemNginx {
+  @extend %subListItem;
+
+  &::before {
+    background-image: url('./images/backend/Nginx.svg');
+  }
+}
+
+.backendListItemPostgresql {
+  @extend %subListItem;
+  &::before {
+    background-image: url('./images/backend/Postgresql.svg');
+  }
+}
+
+.backendListItemRedis {
+  @extend %subListItem;
+  &::before {
+    background-image: url('./images/backend/Redis.svg');
+  }
+}
+
+.backendListItemDocker {
+  @extend %subListItem;
+  &::before {
+    background-image: url('./images/backend/Docker.svg');
+  }
+}
+
+.backendListItemJava {
+  @extend %subListItem;
+  &::before {
+    background-image: url('./images/backend/Java.svg');
+  }
+}
+
+.frontendList {
+  @extend %list;
+}
+
+.frontendListItemReact {
+  @extend %subListItem;
+  &::before {
+    background-image: url('./images/frontend/React.svg');
+  }
+}
+
+.frontendListItemJs {
+  @extend %subListItem;
+  &::before {
+    background-image: url('./images/frontend/Javascript.svg');
+  }
+}
+
+.frontendListItemTs {
+  @extend %subListItem;
+  &::before {
+    background-image: url('./images/frontend/Typescript.svg');
+  }
+}
+
+.frontendListItemRedux {
+  @extend %subListItem;
+  &::before {
+    background-image: url('./images/frontend/Redux.svg');
+  }
+}
+
+.designList {
+  @extend %list;
+}
+
+.designListItemFigma {
+  @extend %subListItem;
+
+  &::before {
+    background-image: url('./images/design/Figma.svg');
+  }
+}
+
+.designListItemPs {
+  @extend %subListItem;
+
+  &::before {
+    background-image: url('./images/design/Photoshop.svg');
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .listItem {
+    @include adaptive(margin-bottom, 40, 20);
+  }
+}
