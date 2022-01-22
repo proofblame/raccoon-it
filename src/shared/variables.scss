@@ -8,6 +8,7 @@ $linkColor: #ffffff;
 $linkActiveColor: rgba(255, 255, 255, 0.8);
 $background: #090909;
 $textColor: rgba(244, 244, 244, 1);
+$navbarBackground: #0f0f0f;
 
 $_768: 767.98px;
 $_1024: 1023.98px;
@@ -84,6 +85,13 @@ $reasonsListSize: 1479px;
 %fz-18-12 {
   @include adaptive(font-size, 18, 12);
   @include adaptive(line-height, 23, 16);
+}
+
+%fz-18-22-12-15 {
+  %fz-18-12 {
+    @include adaptive(font-size, 18, 12);
+    @include adaptive(line-height, 22, 15);
+  }
 }
 
 %fz-18-8 {
