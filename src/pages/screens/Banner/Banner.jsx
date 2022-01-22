@@ -34,7 +34,7 @@ const Banner = ({ isOpened, handleOpened, handleCloseByClickOnOverlay }) => {
                 WEB <br /> Development
               </H1>
               <p className={styles.subtitle}>
-                Автоматизируем бизнес и создим digital-решение
+                Автоматизируем бизнес и создаём digital-решение
               </p>
               <Button>Оставить заявку</Button>
             </div>
