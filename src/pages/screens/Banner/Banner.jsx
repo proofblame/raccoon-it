@@ -3,6 +3,7 @@ import H1 from '../../../shared/UI/H1/H1';
 import Button from '../../../shared/UI/Button/Button';
 import logo from './images/logo.svg';
 import imgBlock from './images/img-block.svg';
+// import Hand from './images/Hand.svg';
 import Container from '../../../shared/UI/Container/Container';
 import Navbar from './Navbar/Navbar';
 
@@ -39,7 +40,11 @@ const Banner = ({ isOpened, handleOpened, handleCloseByClickOnOverlay }) => {
               <Button>Оставить заявку</Button>
             </div>
             <div className={styles.imgWrapper}>
-              <img src={imgBlock} alt='imgBlock' className={styles.imgBlock} />
+              <img
+                src={imgBlock}
+                alt='synthetic hand'
+                className={styles.imgBlock}
+              />
             </div>
             <div className={styles.pages}></div>
           </div>

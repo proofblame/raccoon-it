@@ -20,6 +20,21 @@
     background-repeat: no-repeat;
   }
 
+  // &Margin {
+  //   width: 17px;
+  //   height: 100vh;
+  //   margin-left: 98%;
+  //   position: relative;
+  //   z-index: 0;
+  // }
+
+  @media screen and (min-width: 960px) {
+    &Margin {
+      margin-left: calc(100vw - 100%);
+      margin-right: 0;
+    }
+  }
+
   &::after {
     content: '';
     position: absolute;
@@ -156,6 +171,7 @@
 }
 
 .imgWrapper {
+  object-fit: cover;
 }
 .imgBlock {
   @include adaptive(width, 926, 304);
@@ -164,6 +180,7 @@
   top: 50%;
   right: 0;
   transform: translateY(-50%);
+  object-fit: contain;
 }
 .imgHandle {
 }

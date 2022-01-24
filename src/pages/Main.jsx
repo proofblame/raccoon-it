@@ -13,9 +13,20 @@ const Main = () => {
 
   useEffect(() => {
     const body = document.querySelector('body');
+    let scrollWidth = scrollbarWidth();
+
     body.style.overflow = isOpened ? 'hidden' : 'auto';
+    body.style.paddingRight = isOpened ? `${scrollWidth}px` : '';
   }, [isOpened]);
 
+  function scrollbarWidth() {
+    var documentWidth = parseInt(document.documentElement.clientWidth);
+    var windowsWidth = parseInt(window.innerWidth);
+    var scrollbarWidth = windowsWidth - documentWidth;
+    return scrollbarWidth;
+  }
+
+  console.log(scrollbarWidth());
   const handleOpened = () => {
     setIsOpened(!isOpened);
   };
