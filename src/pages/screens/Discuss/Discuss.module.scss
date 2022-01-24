@@ -13,6 +13,7 @@
   backdrop-filter: blur(50px);
   border-radius: 2px;
   color: $textColor;
+  outline: none;
 
   &::placeholder {
     color: $textColor;

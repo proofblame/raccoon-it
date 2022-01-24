@@ -13,10 +13,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    // background-size: 100% 150%;
-    // @include adaptive(width, 2191, 464);
     @include adaptive(height, 1032, 167);
-    @include adaptive(top, 0, -10);
+    @include adaptive(top, 100, -10);
     left: 0;
     z-index: 0;
   }
@@ -24,6 +22,8 @@
 
 .wrapper {
   @include adaptive(padding-bottom, 350, 165);
+  position: relative;
+  z-index: 1;
 }
 
 .header {
@@ -51,6 +51,9 @@
     rgba(255, 255, 255, 0.3),
     rgba(255, 255, 255, 0)
   );
+  @include adaptivePadding(padding, 0, 37, 0, 27);
+  @include adaptive(padding-top, 45, 26);
+  @include adaptive(padding-bottom, 44, 27);
 }
 
 .listItemImage {

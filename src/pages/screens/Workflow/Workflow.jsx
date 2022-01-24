@@ -57,6 +57,7 @@ const Workflow = () => {
                 <IMG
                   className={workflow.workflowListImage}
                   src={ProjectBacklog}
+                  alt='бэклог проекта'
                 />
                 <p className={workflow.workflowListImageSub}>
                   бэклог <br /> проекта
@@ -66,6 +67,7 @@ const Workflow = () => {
                 <IMG
                   className={workflow.workflowListImage}
                   src={SprintBacklog}
+                  alt='бэклог спринта'
                 />
                 <p className={workflow.workflowListImageSub}>
                   Бэклог <br /> спринта
@@ -75,11 +77,16 @@ const Workflow = () => {
                 <IMG
                   className={workflow.workflowListImageSprint}
                   src={Sprint}
+                  alt='спринт'
                 />
                 <p className={workflow.workflowListImageSubSprint}>Спринт</p>
               </li>
               <li className={workflow.workflowListItem}>
-                <IMG className={workflow.workflowListImage} src={Software} />
+                <IMG
+                  className={workflow.workflowListImage}
+                  src={Software}
+                  alt='Работающее По с новыми возможностями'
+                />
                 <p className={workflow.workflowListImageSubNoArrow}>
                   Работающее По с новыми возможностями
                 </p>

@@ -26,7 +26,7 @@ const Projects = () => {
                 />
                 <H3 className={projects.listHeader}>Юристы в Омске</H3>
               </li>
-              <li className={projects.listItem}>
+              <li className={`${projects.listItem} ${projects.backdropBlur}`}>
                 <IMG
                   src={Psy}
                   alt='Онлайн консультации'

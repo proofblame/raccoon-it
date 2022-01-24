@@ -61,13 +61,13 @@ const Discuss = () => {
               </Button>
             </form>
 
-            <div className={discuss.addressListWrapper}>
+            <footer className={discuss.addressListWrapper}>
               <ul className={discuss.addressList}>
                 <li className={discuss.address}>Москва, ул. Какая-то 25</li>
                 <li className={discuss.email}>raccoon@gmail.com</li>
                 <li className={discuss.phone}>+7 (999) (999) 99 99</li>
               </ul>
-            </div>
+            </footer>
           </div>
         </div>
       </Container>
