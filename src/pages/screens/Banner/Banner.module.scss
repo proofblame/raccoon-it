@@ -1,7 +1,5 @@
 @import '../../../shared/variables.scss';
-* {
-  // outline: 1px solid red;
-}
+
 .banner {
   @extend %fonts;
   background-color: $background;
@@ -19,14 +17,6 @@
     background-size: contain;
     background-repeat: no-repeat;
   }
-
-  // &Margin {
-  //   width: 17px;
-  //   height: 100vh;
-  //   margin-left: 98%;
-  //   position: relative;
-  //   z-index: 0;
-  // }
 
   @media screen and (min-width: 960px) {
     &Margin {
@@ -46,6 +36,8 @@
     border-image: linear-gradient(90deg, #30cfd0 0%, #330867 100%);
     @include adaptive(top, 200, 60);
     @include adaptive(left, -500, -250);
+    box-shadow: 0 0 25px 1.5px #330867, 0 0 25px 1.5px #30cfd0,
+      0 0 25px 1.5px #330867, 0 0 25px 1.5px #330867;
   }
 }
 .bannerWrapper {
@@ -75,7 +67,9 @@
     background: linear-gradient(90deg, #0250c5 0%, #d43f8d 100%);
     border-image: linear-gradient(90deg, #0250c5 0%, #d43f8d 100%);
     @include adaptive(top, 440, 510);
-    @include adaptive(left, 680, -10);
+    @include adaptive(left, 710, -10);
+    box-shadow: 0 0 25px 1.5px #d43f8d, 0 0 25px 1.5px #d43f8d,
+      0 0 25px 1.5px #0250c5, 0 0 25px 1.5px #0250c5;
   }
 
   &::after {
@@ -85,11 +79,13 @@
     @include adaptive(height, 101, 30);
     border-radius: 50%;
     border: none;
-    background: linear-gradient(90deg, #fc6076 0%, #ff9a44 100%);
     border-image: linear-gradient(90deg, #fc6076 0%, #ff9a44 100%);
     @include adaptive(top, 70, 65);
     @include adaptive(left, 820, 50);
     z-index: 5;
+    box-shadow: 0 0 15px 0.5px #fc6076, 0 0 15px 0.5px #ff9a44,
+      0 0 15px 0.5px #fc6076, 0 0 15px 0.5px #ff9a44;
+    background: linear-gradient(90deg, #fc6076 0%, #ff9a44 100%);
   }
 }
 .titleLogo {
@@ -122,9 +118,6 @@
 .title {
   position: relative;
   z-index: 1;
-}
-
-.subtitle {
 }
 
 .burger {
@@ -181,10 +174,6 @@
   right: 0;
   transform: translateY(-50%);
   object-fit: contain;
-}
-.imgHandle {
-}
-.pages {
 }
 
 @media screen and (max-width: 768px) {
