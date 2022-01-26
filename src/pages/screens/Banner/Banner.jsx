@@ -3,7 +3,6 @@ import H1 from '../../../shared/UI/H1/H1';
 import Button from '../../../shared/UI/Button/Button';
 import logo from './images/logo.svg';
 import Hand from './images/Hand.svg';
-import Fingers from './images/Fingers.svg';
 import Mobile from './images/Mobile.svg';
 import Mobile1Part from './images/Mobile1part.svg';
 import Mobile2Part from './images/Mobile2part.svg';

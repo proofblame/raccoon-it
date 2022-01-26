@@ -37,12 +37,17 @@
 }
 
 .list {
-  display: flex;
-  justify-content: space-between;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  column-gap: 20px;
+  row-gap: 20px;
 }
 
 .listItem {
-  @include adaptive(width, 430, 285);
+  // @include adaptive(width, 430, 285);
+  max-width: 430px;
+  width: 100%;
   background: rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(30px);
   border-radius: 2px;
@@ -54,11 +59,12 @@
   @include adaptivePadding(padding, 0, 37, 0, 27);
   @include adaptive(padding-top, 45, 26);
   @include adaptive(padding-bottom, 44, 27);
+  box-sizing: border-box;
 }
 
 .listItemImage {
-  @include adaptive(width, 355, 236);
-  @include adaptive(height, 296, 212);
+  // @include adaptive(width, 355, 236);
+  // @include adaptive(height, 296, 212);
   @include adaptive(margin-bottom, 31, 20);
 }
 
@@ -78,10 +84,10 @@
 }
 
 @media screen and (max-width: 1280px) {
-  .list {
-    flex-direction: column;
-    align-items: center;
-  }
+  // .list {
+  //   // flex-direction: column;
+  //   align-items: center;
+  // }
 
   .listItem {
     @include adaptive(margin-bottom, 60, 20);

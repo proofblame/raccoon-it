@@ -7,7 +7,7 @@
   border: 1px solid;
   border-image: linear-gradient(
     rgba(255, 255, 255, 0.3),
-    rgba(255, 255, 255, 0)
+    rgba(255, 255, 255, 0.02)
   );
   background: rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(50px);
@@ -61,7 +61,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    @include adaptive(top, -100, 420);
+    @include adaptive(top, -100, 445);
     @include adaptive(left, 0, 0);
     @include adaptive(height, 1113, 234);
   }
@@ -87,6 +87,7 @@
     rgba(255, 255, 255, 0.3),
     rgba(255, 255, 255, 0)
   );
+  backdrop-filter: blur(50px);
 }
 
 .formName {

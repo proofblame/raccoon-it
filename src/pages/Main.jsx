@@ -26,7 +26,6 @@ const Main = () => {
     return scrollbarWidth;
   }
 
-  console.log(scrollbarWidth());
   const handleOpened = () => {
     setIsOpened(!isOpened);
   };

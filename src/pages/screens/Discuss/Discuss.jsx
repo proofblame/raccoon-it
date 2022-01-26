@@ -57,7 +57,7 @@ const Discuss = () => {
                 </p>
               </label>
               <Button type='submit' className={discuss.formSubmit}>
-                Отправить заявку
+                Отправить&nbsp;заявку
               </Button>
             </form>
 
