@@ -1,5 +1,29 @@
 @import '../../../shared/variables.scss';
 
+@keyframes bounce-1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce-2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .banner {
   @extend %fonts;
   background-color: $background;
@@ -93,33 +117,6 @@
   font-weight: 600;
   @extend %fz-18-8;
 }
-
-.body {
-  @extend %flex;
-  justify-self: center;
-  height: 100%;
-}
-.subtitle {
-  color: $secondaryColor;
-  @extend %fz-24-30;
-  @include adaptive(margin-bottom, 67, 16);
-  @include adaptive(width, 475, 172);
-}
-.bodyWrapper {
-  @include adaptive(margin-bottom, 434, 0);
-  box-sizing: border-box;
-  @include adaptivePadding(padding, 98, 116, 34, 44);
-  background: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(30px);
-  position: relative;
-  z-index: 1;
-}
-
-.title {
-  position: relative;
-  z-index: 1;
-}
-
 .burger {
   position: relative;
   cursor: pointer;
@@ -163,31 +160,167 @@
   }
 }
 
+.body {
+  @extend %flex;
+  justify-self: center;
+  height: 100%;
+  @include adaptive(margin-bottom, 434, 400);
+}
+.subtitle {
+  color: $secondaryColor;
+  @extend %fz-24-30;
+  @include adaptive(margin-bottom, 67, 16);
+  @include adaptive(width, 475, 172);
+}
+.bodyWrapper {
+  box-sizing: border-box;
+  @include adaptivePadding(padding, 98, 116, 34, 44);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(30px);
+  position: relative;
+  z-index: 5;
+}
+
+.title {
+  position: relative;
+  z-index: 1;
+}
+
 .imgWrapper {
   object-fit: cover;
+  @include adaptive(width, 926, 304);
+  @include adaptive(height, 710, 108);
+  position: relative;
 }
+
 .imgBlock {
   @include adaptive(width, 926, 304);
-  @include adaptive(height, 710, 233);
+  @include adaptive(height, 710, 108);
   position: absolute;
-  top: 50%;
   right: 0;
+  @include adaptive(top, 600, 800);
+  @include adaptive(left, 35, -445);
   transform: translateY(-50%);
   object-fit: contain;
+  z-index: 1;
+}
+
+.mobileBlock {
+  position: absolute;
+  @include adaptive(width, 236, 77);
+  @include adaptive(height, 449, 147);
+  @include adaptive(top, 40, 590);
+  @include adaptive(left, 230, -400);
+  z-index: 0;
+}
+
+.mobile {
+  position: absolute;
+  object-fit: contain;
+  @include adaptive(width, 236, 79);
+  @include adaptive(height, 449, 147);
+  top: 0;
+  @include adaptive(top, 0, 20);
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-name: bounce-1;
+  animation-timing-function: ease;
+}
+
+.mobile1Part {
+  position: absolute;
+  @include adaptive(top, 25, 5);
+  @include adaptive(left, -50, -10);
+  @include adaptive(width, 101, 33);
+  @include adaptive(height, 94, 31);
+  object-fit: contain;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-name: bounce-2;
+  animation-timing-function: ease;
+}
+
+.mobile2Part {
+  position: absolute;
+  @include adaptive(top, 120, 40);
+  @include adaptive(left, 170, 59);
+  @include adaptive(width, 168, 55);
+  @include adaptive(height, 127, 42);
+  object-fit: contain;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-name: bounce-2;
+  animation-timing-function: ease;
+}
+
+.mobile3Part {
+  position: absolute;
+  @include adaptive(top, 250, 80);
+  @include adaptive(left, -50, -10);
+  @include adaptive(width, 168, 55);
+  @include adaptive(height, 127, 42);
+  object-fit: contain;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-name: bounce-2;
+  animation-timing-function: ease;
+}
+
+.mobile4Part {
+  position: absolute;
+  @include adaptive(top, 350, 127);
+  @include adaptive(left, 140, 59);
+  @include adaptive(width, 168, 45);
+  @include adaptive(height, 127, 25);
+  object-fit: contain;
+  z-index: 1;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-name: bounce-2;
+  animation-timing-function: ease;
 }
 
 @media screen and (max-width: 768px) {
   .header {
     @include adaptive(margin-bottom, 100, 58);
   }
-
-  .imgBlock {
-    @include adaptive(top, 1231, 489);
-  }
-
   .body {
     display: flex;
     flex-direction: column;
-    @include adaptive(margin-bottom, 531, 489);
+    @include adaptive(margin-bottom, 531, 429);
+  }
+
+  .imgBlock {
+    @include adaptive(top, 531, 389);
+    @include adaptive(left, 330, 9);
+  }
+  .mobileBlock {
+    @include adaptive(top, 500, -130);
+    @include adaptive(left, 700, -30);
+  }
+
+  .mobile {
+    @include adaptive(top, -550, 330);
+    @include adaptive(left, -200, 100);
+  }
+
+  .mobile1Part {
+    @include adaptive(top, -530, 335);
+    @include adaptive(left, -250, 85);
+  }
+
+  .mobile2Part {
+    @include adaptive(top, -450, 365);
+    @include adaptive(left, -50, 155);
+  }
+
+  .mobile3Part {
+    @include adaptive(top, -340, 410);
+    @include adaptive(left, -250, 85);
+  }
+
+  .mobile4Part {
+    @include adaptive(top, -190, 450);
+    @include adaptive(left, -50, 145);
   }
 }
