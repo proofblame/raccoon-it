@@ -6,10 +6,37 @@ import H2 from '../../../shared/UI/H2/H2';
 import Button from '../../../shared/UI/Button/Button';
 
 const Discuss = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [comment, setComment] = useState('');
   const [checked, setChecked] = useState(false);
 
   const toggleCheck = () => {
     setChecked(!checked);
+  };
+
+  const handleName = (e) => {
+    setName(e.target.value);
+  };
+
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleComment = (e) => {
+    setComment(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const data = {
+      name,
+      email,
+      comment,
+      checked,
+    };
+
+    console.log(data);
   };
 
   return (
@@ -20,24 +47,31 @@ const Discuss = () => {
             <H2>Обсудим проект?</H2>
           </div>
           <div className={discuss.formWrapper}>
-            <form className={discuss.form}>
+            <form className={discuss.form} onSubmit={handleSubmit}>
               <input
+                onChange={handleName}
                 type='text'
-                name=''
+                name='name'
                 id=''
                 className={discuss.formName}
                 placeholder='Ваше Имя'
+                defaultValue={name}
               />
               <input
+                onChange={handleEmail}
                 type='email'
-                name=''
+                name='email'
                 id=''
                 className={discuss.formEmail}
                 placeholder='Ваша Почта'
+                defaultValue={email}
               />
               <textarea
+                onChange={handleComment}
                 className={discuss.comments}
                 placeholder='Комментарий'
+                name='comment'
+                defaultValue={comment}
               />
               <label htmlFor='agreement' className={discuss.agreement}>
                 <input
@@ -56,7 +90,11 @@ const Discuss = () => {
                   </a>
                 </p>
               </label>
-              <Button type='submit' className={discuss.formSubmit}>
+              <Button
+                type='submit'
+                className={discuss.formSubmit}
+                onClick={handleSubmit}
+              >
                 Отправить&nbsp;заявку
               </Button>
             </form>
