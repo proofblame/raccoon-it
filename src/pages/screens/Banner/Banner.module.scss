@@ -96,6 +96,11 @@
       0 0 25px 1.5px #0250c5, 0 0 25px 1.5px #0250c5;
   }
 
+  .imgLogo {
+    @include adaptive(width, 68, 30);
+    @include adaptive(height, 47, 21);
+  }
+
   &::after {
     content: '';
     position: absolute;
