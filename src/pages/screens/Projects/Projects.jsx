@@ -1,3 +1,5 @@
+import { Link } from 'react-scroll';
+
 import projects from './Projects.module.scss';
 
 import H2 from '../../../shared/UI/H2/H2';
@@ -45,7 +47,9 @@ const Projects = () => {
             </ul>
           </div>
           <div className={projects.container}>
-            <Button>Оставить заявку</Button>
+            <Link to='discuss' smooth={true} duration={1000}>
+              <Button>Оставить заявку</Button>
+            </Link>
             <p className={projects.subscription}>Стань следующим!</p>
           </div>
         </div>

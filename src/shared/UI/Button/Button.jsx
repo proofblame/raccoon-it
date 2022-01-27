@@ -20,7 +20,6 @@ const Button = ({
   };
 
   const classes = classNames(style.button, className, { active });
-
   return (
     <button
       className={classes}

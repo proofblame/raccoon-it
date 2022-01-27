@@ -218,9 +218,6 @@
     @include adaptive(margin-right, 25, 17);
   }
 
-  .addressList {
-  }
-
   .email {
     &::before {
       @include adaptive(top, 0, 5);

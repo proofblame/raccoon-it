@@ -1,4 +1,7 @@
+import { Link } from 'react-scroll';
+
 import styles from './Banner.module.scss';
+
 import H1 from '../../../shared/UI/H1/H1';
 import Button from '../../../shared/UI/Button/Button';
 import logo from './images/logo.svg';
@@ -41,7 +44,9 @@ const Banner = ({ isOpened, handleOpened, handleCloseByClickOnOverlay }) => {
               <p className={styles.subtitle}>
                 Автоматизируем бизнес и создаём digital-решение
               </p>
-              <Button>Оставить заявку</Button>
+              <Link to='discuss' smooth={true} duration={1000}>
+                <Button>Оставить заявку</Button>
+              </Link>
             </div>
 
             <div className={styles.imgWrapper}>

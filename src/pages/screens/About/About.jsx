@@ -1,3 +1,5 @@
+import { Link } from 'react-scroll';
+
 import about from './About.module.scss';
 
 import Container from '../../../shared/UI/Container/Container';
@@ -19,7 +21,9 @@ const About = () => {
               IT-решения, продуманный дизайн и грамотную маркетинговую
               стратегию. Мы поможем вам привлечь новых клиентов.
             </p>
-            <Button>Оставить заявку</Button>
+            <Link to='discuss' smooth={true} duration={1000}>
+              <Button>Оставить заявку</Button>
+            </Link>
           </div>
           <div className={about.rightColumn}>
             <ul className={about.list}>

@@ -8,6 +8,8 @@ import Techs from './screens/Techs/Techs';
 import Discuss from './screens/Discuss/Discuss';
 import Banner from './screens/Banner/Banner';
 
+import { sendRequest } from '../features/utils/api';
+
 const Main = () => {
   const [isOpened, setIsOpened] = useState(false);
 
@@ -49,7 +51,7 @@ const Main = () => {
       <Projects />
       <Workflow />
       <Techs />
-      <Discuss />
+      <Discuss sendRequest={sendRequest} />
     </div>
   );
 };

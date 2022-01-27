@@ -1,3 +1,5 @@
+import { Link } from 'react-scroll';
+
 import workflow from './Workflow.module.scss';
 
 import ProjectBacklog from './images/ProjectBacklog.svg';
@@ -105,7 +107,9 @@ const Workflow = () => {
             </div>
 
             <div className={workflow.buttonWrapper}>
-              <Button className={workflow.bidButton}>Оставить заявку</Button>
+              <Link to='discuss' smooth={true} duration={1000}>
+                <Button className={workflow.bidButton}>Оставить заявку</Button>
+              </Link>
             </div>
           </div>
         </div>

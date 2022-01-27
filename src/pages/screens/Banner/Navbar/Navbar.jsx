@@ -120,7 +120,7 @@ function Navbar({ isOpened, handleOpened, handleCloseByClickOnOverlay }) {
         <div className={navbar.addressListWrapper}>
           <ul className={navbar.addressList}>
             <li className={navbar.phone}>+7 (999) (999) 99 99</li>
-            <li className={navbar.email}>raccoon@gmail.com</li>
+            <li className={navbar.email}>info@raccoon-it.dev</li>
           </ul>
         </div>
       </div>
