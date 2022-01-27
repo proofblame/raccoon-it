@@ -40,7 +40,7 @@ const Discuss = () => {
   };
 
   return (
-    <section className={discuss.section}>
+    <section className={discuss.section} id='discuss'>
       <Container>
         <div className={discuss.wrapper}>
           <div className={discuss.headerWrapper}>

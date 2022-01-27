@@ -6,7 +6,7 @@ import H2 from '../../../shared/UI/H2/H2';
 
 const About = () => {
   return (
-    <section className={about.section}>
+    <section className={about.section} id='about'>
       <Container>
         <div className={about.wrapper}>
           <div className={about.leftColumn}>

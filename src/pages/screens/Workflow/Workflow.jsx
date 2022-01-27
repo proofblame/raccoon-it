@@ -13,7 +13,7 @@ import Button from '../../../shared/UI/Button/Button';
 
 const Workflow = () => {
   return (
-    <section className={workflow.section}>
+    <section className={workflow.section} id='workflow'>
       <Container>
         <div className={workflow.wrapper}>
           <H2 className={workflow.header}>Как мы работаем?</H2>

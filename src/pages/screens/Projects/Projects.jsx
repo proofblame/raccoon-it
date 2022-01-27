@@ -12,7 +12,7 @@ import CRMCMS from './images/CRMCMS.svg';
 
 const Projects = () => {
   return (
-    <section className={projects.section}>
+    <section className={projects.section} id='projects'>
       <Container>
         <div className={projects.wrapper}>
           <H2 className={projects.header}>Наши проекты</H2>

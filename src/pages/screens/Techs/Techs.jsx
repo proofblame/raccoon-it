@@ -6,7 +6,7 @@ import H3 from '../../../shared/UI/H3/H3';
 
 const Techs = () => {
   return (
-    <section className={techs.section}>
+    <section className={techs.section} id='techs'>
       <div className={techs.wrapper}>
         <Container>
           <div className={techs.headerContainer}>

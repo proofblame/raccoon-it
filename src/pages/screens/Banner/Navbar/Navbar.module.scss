@@ -100,7 +100,6 @@
 }
 
 .navbarList {
-  // @include adaptive(padding-right, 158, 76);
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -127,6 +126,7 @@
 
 .listItemLink {
   color: $linkColor;
+  cursor: pointer;
 
   &:hover {
     color: $linkActiveColor;

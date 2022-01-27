@@ -13,7 +13,7 @@ import Navbar from './Navbar/Navbar';
 
 const Banner = ({ isOpened, handleOpened, handleCloseByClickOnOverlay }) => {
   return (
-    <section className={styles.banner}>
+    <section className={styles.banner} id='banner'>
       <Container>
         <div className={styles.bannerWrapper}>
           <header className={styles.header}>

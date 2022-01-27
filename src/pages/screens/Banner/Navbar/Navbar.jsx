@@ -1,3 +1,5 @@
+import { Link } from 'react-scroll';
+
 import navbar from './Navbar.module.scss';
 
 import logo from '../images/logo.svg';
@@ -37,39 +39,81 @@ function Navbar({ isOpened, handleOpened, handleCloseByClickOnOverlay }) {
         <nav className={navbar.navbarList}>
           <ul className={navbar.list}>
             <li className={navbar.listItem}>
-              <a href='#' to='/plan' className={navbar.listItemLink}>
+              <Link
+                to='banner'
+                smooth={true}
+                duration={1000}
+                onClick={handleOpened}
+                className={navbar.listItemLink}
+              >
                 Главная
-              </a>
+              </Link>
             </li>
             <li className={navbar.listItem}>
-              <a href='#' to='/plan' className={navbar.listItemLink}>
+              <Link
+                to='about'
+                smooth={true}
+                duration={1000}
+                onClick={handleOpened}
+                className={navbar.listItemLink}
+              >
                 О нас
-              </a>
+              </Link>
             </li>
             <li className={navbar.listItem}>
-              <a href='#' to='/plan' className={navbar.listItemLink}>
+              <Link
+                to='tenets'
+                smooth={true}
+                duration={1000}
+                onClick={handleOpened}
+                className={navbar.listItemLink}
+              >
                 Наши принципы
-              </a>
+              </Link>
             </li>
             <li className={navbar.listItem}>
-              <a href='#' to='/plan' className={navbar.listItemLink}>
+              <Link
+                to='projects'
+                smooth={true}
+                duration={1000}
+                onClick={handleOpened}
+                className={navbar.listItemLink}
+              >
                 Проекты
-              </a>
+              </Link>
             </li>
             <li className={navbar.listItem}>
-              <a href='#' to='/plan' className={navbar.listItemLink}>
+              <Link
+                to='workflow'
+                smooth={true}
+                duration={1000}
+                onClick={handleOpened}
+                className={navbar.listItemLink}
+              >
                 Как мы работаем
-              </a>
+              </Link>
             </li>
             <li className={navbar.listItem}>
-              <a href='#' to='/plan' className={navbar.listItemLink}>
+              <Link
+                to='techs'
+                smooth={true}
+                duration={1000}
+                onClick={handleOpened}
+                className={navbar.listItemLink}
+              >
                 Наши технологии
-              </a>
+              </Link>
             </li>
             <li className={navbar.listItem}>
-              <a href='#' to='/plan' className={navbar.listItemLink}>
+              <Link
+                to='discuss'
+                smooth={true}
+                duration={1000}
+                onClick={handleOpened}
+                className={navbar.listItemLink}
+              >
                 Контакты
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
