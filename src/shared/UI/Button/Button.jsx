@@ -14,7 +14,6 @@ const Button = ({
     if (disabled) {
       e.preventDefault();
     } else {
-      e.preventDefault();
       return onClick(e);
     }
   };
@@ -42,7 +41,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   children: '',
-  onClick: () => {},
+  onClick: () => { },
   className: '',
   disabled: false,
   active: false,

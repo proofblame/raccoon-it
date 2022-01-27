@@ -5,66 +5,103 @@ import Container from '../../../shared/UI/Container/Container';
 import H2 from '../../../shared/UI/H2/H2';
 import Button from '../../../shared/UI/Button/Button';
 import Snackbar from '../Snackbar/Snackbar';
+import api from '../../../features/utils/api';
 
-const Discuss = ({ sendRequest }) => {
+const Discuss = () => {
   const [isShown, setIsShown] = useState(false);
   const [message, setMessage] = useState('');
   const [data, setData] = useState({
     name: '',
     email: '',
     desc: '',
+    checkbox: false,
   });
   const [formValid, setFormValid] = useState(false);
+  const [errorMessage, setErrorMessage] = useState({
+    name: '',
+    email: '',
+    desc: '',
+    checkbox: false,
+  });
+  const [validState, setValidState] = useState({
+    name: false,
+    email: false,
+    desc: false,
+    checkbox: false,
+  });
 
   useEffect(() => {
+
     isFormValid();
-  }, [data]);
+  }, [data, validState]);
 
   function onChange(e) {
-    const { name, value, validity } = e.target;
+    const { name, validity, validationMessage } = e.target;
+    const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
+
     setData({
       ...data,
       [name]: value,
     });
+
+    if (name === 'email') {
+      const mailReg = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(value)
+      setValidState({ ...validState, email: mailReg })
+    } else if (name === 'checkbox') {
+      setValidState({ ...validState, checkbox: value })
+
+    }
+    else {
+      setValidState({ ...validState, [name]: validity.valid })
+    }
+    setFormValid(validity.valid)
+
+
     if (!validity.valid) {
-      setFormValid(false);
+
+      setErrorMessage({
+        ...errorMessage,
+        [name]: validationMessage,
+      });
     } else {
-      setFormValid(true);
+      setErrorMessage('');
     }
   }
+
   const isFormValid = () => {
-    const { name, email, desc } = data;
-    setFormValid(name && email && desc);
+    const { name, email, desc, checkbox } = validState;
+    setFormValid(
+      name && email && desc && checkbox);
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
+    // try {
+    await api.sendRequest(data);
+    setMessage('Данные отправлены, спасибо!');
+    setIsShown(true);
+    // } catch (error) {
+    //   setMessage('Не удалось отправить данные, повторите попытку!');
+    //   setIsShown(true);
+    // } finally {
+    setData({
+      name: '',
+      email: '',
+      desc: '',
+      checkbox: false,
+    })
+    setValidState({
+      name: false,
+      email: false,
+      desc: false,
+      checkbox: false,
+    });
+    setTimeout(() => {
+      setIsShown(false);
+    }, 3000);
+    // }
   };
 
-  const checkValidity = () => {
-    // if (data.name.length > 0) {
-    //   setValid({ ...valid, nameValid: true });
-    // } else {
-    //   setValid({ ...valid, nameValid: false });
-    // }
-    // if (data.email.length > 0) {
-    //   setValid({ ...valid, emailValid: true });
-    // } else {
-    //   setValid({ ...valid, emailValid: false });
-    // }
-    // if (data.desc.length > 0) {
-    //   setValid({ ...valid, descValid: true });
-    // } else {
-    //   setValid({ ...valid, descValid: false });
-    // }
-  };
-
-  // console.log(valid);
-  console.log(formValid);
-  // console.log(valid);
-  function onChangeForm(e) {
-    e.preventDefault();
-  }
   return (
     <section className={discuss.section} id='discuss'>
       <Container>
@@ -73,38 +110,44 @@ const Discuss = ({ sendRequest }) => {
             <H2>Обсудим проект?</H2>
           </div>
           <div className={discuss.formWrapper}>
-            <form className={discuss.form} onSubmit={onSubmit}>
+            <form className={discuss.form} >
               <input
                 type='text'
                 name='name'
-                id=''
                 className={discuss.formName}
                 placeholder='Ваше Имя'
-                defaultValue={data.name}
+                value={data.name}
                 onChange={onChange}
+                minLength="1"
+                required
               />
               <input
                 type='email'
                 name='email'
-                id=''
                 className={discuss.formEmail}
                 placeholder='Ваша Почта'
-                defaultValue={data.email}
+                value={data.email}
                 onChange={onChange}
+                minLength="1"
+                required
               />
               <textarea
                 className={discuss.comments}
                 placeholder='Комментарий'
                 name='desc'
-                defaultValue={data.desc}
+                value={data.desc}
                 onChange={onChange}
+                minLength="1"
+                required
               />
               <label htmlFor='agreement' className={discuss.agreement}>
                 <input
                   type='checkbox'
-                  name=''
+                  name='checkbox'
                   id='agreement'
                   className={discuss.checkbox}
+                  checked={data.checkbox}
+                  onChange={onChange}
                 />
                 <span className={discuss.pseudoItem}></span>
                 <p className={discuss.checkboxText}>
@@ -118,6 +161,7 @@ const Discuss = ({ sendRequest }) => {
                 type='submit'
                 className={discuss.formSubmit}
                 disabled={!formValid}
+                onClick={onSubmit}
               >
                 Отправить&nbsp;заявку
               </Button>

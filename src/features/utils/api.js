@@ -1,17 +1,15 @@
 const BASE_URL = 'https://raccoon-it.dev';
 
-function responce(res) {
-  if (res.ok) {
-    return res.json();
-  } else {
-    return Promise.reject(
-      new Error(`Ошибка ${res.status} - ${res.statusText}`)
-    );
-  }
-}
+// function getResponseData(res) {
+//   if (res.ok) {
+//     return res.json();
+//   } else {
+//     return res.json().then((res) => Promise.reject(new Error(res.message || res.error)));
+//   }
+// }
 
-export const sendRequest = (data) => {
-  return fetch(`${BASE_URL}/api/mail/send`, {
+const sendRequest = async (data) => {
+  const res = await fetch(`${BASE_URL}/api/mail/send`, {
     method: 'POST',
     mode: 'cors',
     headers: {
@@ -21,15 +19,10 @@ export const sendRequest = (data) => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(data),
-  });
-  // .then((res) => {
-  //   if (res.ok) {
-  //     return res.json();
-  //   } else {
-  //     return Promise.reject(
-  //       new Error(`Ошибка ${res.status} - ${res.statusText}`)
-  //     );
-  //   }
-  // })
-  // .catch((err) => console.log(`Ошибка ${err.status} : ${err.message}`));
+  })
+  // return getResponseData(res);
 };
+const api = {
+  sendRequest
+}
+export default api
