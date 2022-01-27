@@ -31,13 +31,13 @@ const Discuss = () => {
   });
 
   useEffect(() => {
-
     isFormValid();
   }, [data, validState]);
 
   function onChange(e) {
     const { name, validity, validationMessage } = e.target;
-    const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
+    const value =
+      e.target.type === 'checkbox' ? e.target.checked : e.target.value;
 
     setData({
       ...data,
@@ -45,20 +45,18 @@ const Discuss = () => {
     });
 
     if (name === 'email') {
-      const mailReg = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(value)
-      setValidState({ ...validState, email: mailReg })
+      const mailReg = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(
+        value
+      );
+      setValidState({ ...validState, email: mailReg });
     } else if (name === 'checkbox') {
-      setValidState({ ...validState, checkbox: value })
-
+      setValidState({ ...validState, checkbox: value });
+    } else {
+      setValidState({ ...validState, [name]: validity.valid });
     }
-    else {
-      setValidState({ ...validState, [name]: validity.valid })
-    }
-    setFormValid(validity.valid)
-
+    setFormValid(validity.valid);
 
     if (!validity.valid) {
-
       setErrorMessage({
         ...errorMessage,
         [name]: validationMessage,
@@ -70,26 +68,20 @@ const Discuss = () => {
 
   const isFormValid = () => {
     const { name, email, desc, checkbox } = validState;
-    setFormValid(
-      name && email && desc && checkbox);
+    setFormValid(name && email && desc && checkbox);
   };
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    // try {
     await api.sendRequest(data);
     setMessage('Данные отправлены, спасибо!');
     setIsShown(true);
-    // } catch (error) {
-    //   setMessage('Не удалось отправить данные, повторите попытку!');
-    //   setIsShown(true);
-    // } finally {
     setData({
       name: '',
       email: '',
       desc: '',
       checkbox: false,
-    })
+    });
     setValidState({
       name: false,
       email: false,
@@ -99,7 +91,6 @@ const Discuss = () => {
     setTimeout(() => {
       setIsShown(false);
     }, 3000);
-    // }
   };
 
   return (
@@ -110,7 +101,7 @@ const Discuss = () => {
             <H2>Обсудим проект?</H2>
           </div>
           <div className={discuss.formWrapper}>
-            <form className={discuss.form} >
+            <form className={discuss.form}>
               <input
                 type='text'
                 name='name'
@@ -118,7 +109,7 @@ const Discuss = () => {
                 placeholder='Ваше Имя'
                 value={data.name}
                 onChange={onChange}
-                minLength="1"
+                minLength='1'
                 required
               />
               <input
@@ -128,7 +119,7 @@ const Discuss = () => {
                 placeholder='Ваша Почта'
                 value={data.email}
                 onChange={onChange}
-                minLength="1"
+                minLength='1'
                 required
               />
               <textarea
@@ -137,7 +128,7 @@ const Discuss = () => {
                 name='desc'
                 value={data.desc}
                 onChange={onChange}
-                minLength="1"
+                minLength='1'
                 required
               />
               <label htmlFor='agreement' className={discuss.agreement}>
