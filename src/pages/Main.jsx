@@ -8,8 +8,6 @@ import Techs from './screens/Techs/Techs';
 import Discuss from './screens/Discuss/Discuss';
 import Banner from './screens/Banner/Banner';
 
-
-
 const Main = () => {
   const [isOpened, setIsOpened] = useState(false);
 

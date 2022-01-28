@@ -248,6 +248,7 @@
 }
 
 .arrows {
+  position: relative;
   @include adaptive(margin-bottom, 50, 0);
 }
 
@@ -273,7 +274,7 @@
   justify-content: center;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
   .arrows {
     display: none;
   }

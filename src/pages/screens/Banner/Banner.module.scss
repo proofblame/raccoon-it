@@ -35,7 +35,7 @@
     @include adaptive(height, 869, 300);
     @include adaptive(top, 100, 400);
     @include adaptive(left, 1250, 100);
-    // background-image: url('./images/Wave.svg');
+    background-image: url('./images/Wave.svg');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -70,7 +70,7 @@
 }
 .header {
   @include adaptive(padding-top, 48, 15);
-  @include adaptive(margin-bottom, 187, 58);
+  @include adaptive(margin-bottom, 127, 58);
   @extend %flex;
 }
 .logo {
@@ -168,7 +168,7 @@
   @extend %flex;
   justify-self: center;
   height: 100%;
-  @include adaptive(margin-bottom, 434, 400);
+  @include adaptive(margin-bottom, 334, 300);
 }
 .subtitle {
   color: $secondaryColor;
@@ -203,7 +203,7 @@
   position: absolute;
   right: 0;
   @include adaptive(top, 600, 800);
-  @include adaptive(left, 85, -445);
+  @include adaptive(left, 35, -445);
   transform: translateY(-50%);
   object-fit: contain;
   z-index: 1;
@@ -291,15 +291,15 @@
   .body {
     display: flex;
     flex-direction: column;
-    @include adaptive(margin-bottom, 531, 429);
+    @include adaptive(margin-bottom, 531, 329);
   }
 
   .imgBlock {
-    @include adaptive(top, 531, 389);
+    @include adaptive(top, 531, 289);
     @include adaptive(left, 330, 9);
   }
   .mobileBlock {
-    @include adaptive(top, 500, -130);
+    @include adaptive(top, 500, -230);
     @include adaptive(left, 700, -30);
   }
 
