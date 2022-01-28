@@ -162,7 +162,7 @@ const Discuss = () => {
               <ul className={discuss.addressList}>
                 {/* <li className={discuss.address}>Москва, ул. Какая-то 25</li> */}
                 <li className={discuss.email}>info@raccoon-it.dev</li>
-                <li className={discuss.phone}>+7 (999) (999) 99 99</li>
+                <li className={discuss.phone}>+7 (916) (552) 05 51</li>
               </ul>
             </footer>
           </div>
