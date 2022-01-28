@@ -3,7 +3,6 @@
 .section {
   background: $background;
   margin-top: -1px;
-  // overflow: hidden;
 }
 
 .wrapper {
@@ -33,8 +32,6 @@
 }
 
 .list {
-  // display: flex;
-  // justify-content: space-between;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
   column-gap: 20px;
@@ -86,7 +83,6 @@
 }
 
 %listItem {
-  // @include adaptive(width, 351, 198);
   max-width: 351px;
   width: 100%;
   position: relative;
@@ -146,10 +142,6 @@
 }
 
 @media screen and (max-width: 767px) {
-  // .list {
-  //   flex-direction: column;
-  // }
-
   %listItem {
     width: 70%;
   }

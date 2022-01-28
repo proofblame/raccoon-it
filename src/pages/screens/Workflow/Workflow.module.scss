@@ -75,7 +75,6 @@
 
 .estimationList {
   list-style-type: none;
-  // display: flex;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
   column-gap: 20px;

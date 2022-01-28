@@ -27,7 +27,6 @@
 .banner {
   @extend %fonts;
   background-color: $background;
-  // height: 100vh;
   position: relative;
   &::before {
     content: '';

@@ -45,7 +45,6 @@
 }
 
 .listItem {
-  // @include adaptive(width, 430, 285);
   max-width: 430px;
   width: 100%;
   background: rgba(255, 255, 255, 0.02);
@@ -63,8 +62,6 @@
 }
 
 .listItemImage {
-  // @include adaptive(width, 355, 236);
-  // @include adaptive(height, 296, 212);
   @include adaptive(margin-bottom, 31, 20);
 }
 
@@ -84,11 +81,6 @@
 }
 
 @media screen and (max-width: 1280px) {
-  // .list {
-  //   // flex-direction: column;
-  //   align-items: center;
-  // }
-
   .listItem {
     @include adaptive(margin-bottom, 60, 20);
   }
