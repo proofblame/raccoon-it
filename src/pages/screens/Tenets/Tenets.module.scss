@@ -90,54 +90,56 @@
   letter-spacing: 0.03em;
 }
 
-.listItemMobile {
-  @extend %listItem;
+.listItem {
+  &Mobile {
+    @extend %listItem;
 
-  &::before {
-    content: '';
-    position: absolute;
-    @include adaptive(width, 50, 36);
-    @include adaptive(height, 50, 36);
-    background-image: url('./images/MobileFirst.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    top: -10px;
-    left: 0;
+    &::before {
+      content: '';
+      position: absolute;
+      @include adaptive(width, 50, 36);
+      @include adaptive(height, 50, 36);
+      background-image: url('./images/MobileFirst.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      top: -10px;
+      left: 0;
+    }
   }
-}
 
-.listItemSecure {
-  @extend %listItem;
+  &Secure {
+    @extend %listItem;
 
-  &::before {
-    content: '';
-    position: absolute;
-    @include adaptive(width, 50, 36);
-    @include adaptive(height, 50, 36);
-    background-image: url('./images/TopSecure.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    top: -10px;
-    left: 0;
+    &::before {
+      content: '';
+      position: absolute;
+      @include adaptive(width, 50, 36);
+      @include adaptive(height, 50, 36);
+      background-image: url('./images/TopSecure.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      top: -10px;
+      left: 0;
+    }
   }
-}
 
-.listItemUserFriendly {
-  @extend %listItem;
+  &UserFriendly {
+    @extend %listItem;
 
-  &::before {
-    content: '';
-    position: absolute;
-    @include adaptive(width, 50, 36);
-    @include adaptive(height, 50, 36);
-    background-image: url('./images/UserFriendly.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    top: -10px;
-    left: 0;
+    &::before {
+      content: '';
+      position: absolute;
+      @include adaptive(width, 50, 36);
+      @include adaptive(height, 50, 36);
+      background-image: url('./images/UserFriendly.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      top: -10px;
+      left: 0;
+    }
   }
 }
 

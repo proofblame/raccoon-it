@@ -83,7 +83,9 @@ const Workflow = () => {
                 />
                 <p className={workflow.workflowListImageSubSprint}>Спринт</p>
               </li>
-              <li className={workflow.workflowListItem}>
+              <li
+                className={`${workflow.workflowListItem} ${workflow.listItemSoftware}`}
+              >
                 <IMG
                   className={workflow.workflowListImage}
                   src={Software}

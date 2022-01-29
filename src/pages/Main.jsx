@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
+
+import main from './Main.module.scss';
+
+import Banner from './screens/Banner/Banner';
 import About from './screens/About/About';
 import Tenets from './screens/Tenets/Tenets';
-import main from './Main.module.scss';
 import Projects from './screens/Projects/Projects';
 import Workflow from './screens/Workflow/Workflow';
 import Techs from './screens/Techs/Techs';
 import Discuss from './screens/Discuss/Discuss';
-import Banner from './screens/Banner/Banner';
 
 const Main = () => {
   const [isOpened, setIsOpened] = useState(false);

@@ -1,11 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.e7fba715.css",
-    "main.js": "/static/js/main.5a9527ef.js",
-    "static/media/Hand.svg": "/static/media/Hand.191d0054e3205f5b2c104ecbfab3abf9.svg",
-    "static/media/Lawyers.svg": "/static/media/Lawyers.e7a47413a338bbbe7a2225b6b372129e.svg",
-    "static/media/Psy.svg": "/static/media/Psy.55b302270eb931456380186d4d1c2ad2.svg",
-    "static/media/CRMCMS.svg": "/static/media/CRMCMS.2b12bd3767e0bf39abcdcbaedc536f76.svg",
+    "main.css": "/static/css/main.18d25cee.css",
+    "main.js": "/static/js/main.ceb81700.js",
+    "static/media/Hand.avif": "/static/media/Hand.350e6dfca380d5f53e7a.avif",
     "static/media/montserrat-v18-latin_cyrillic-700.woff": "/static/media/montserrat-v18-latin_cyrillic-700.302252f8724c318c368d.woff",
     "static/media/montserrat-v18-latin_cyrillic-600.woff": "/static/media/montserrat-v18-latin_cyrillic-600.2d77a224754279fd2eb2.woff",
     "static/media/montserrat-v18-latin_cyrillic-500.woff": "/static/media/montserrat-v18-latin_cyrillic-500.04c0609c41996743a201.woff",
@@ -14,6 +11,9 @@
     "static/media/montserrat-v18-latin_cyrillic-600.woff2": "/static/media/montserrat-v18-latin_cyrillic-600.eed234baab88dab532bf.woff2",
     "static/media/montserrat-v18-latin_cyrillic-500.woff2": "/static/media/montserrat-v18-latin_cyrillic-500.c2bbf96131933f2a6a90.woff2",
     "static/media/montserrat-v18-latin_cyrillic-regular.woff2": "/static/media/montserrat-v18-latin_cyrillic-regular.57960c9028c57ecd5006.woff2",
+    "static/media/Lawyers.avif": "/static/media/Lawyers.c5dd2f60f35406034a1b.avif",
+    "static/media/Psy.avif": "/static/media/Psy.02c3ad67008a49adc9bd.avif",
+    "static/media/CRMCMS.avif": "/static/media/CRMCMS.a6eb683efc83c22614a9.avif",
     "static/media/Postgresql.svg": "/static/media/Postgresql.d40588da98b35037e062.svg",
     "static/media/Mobile.svg": "/static/media/Mobile.d7983ecefd478dbd689ff63641552507.svg",
     "static/media/React.svg": "/static/media/React.ebaf5d089dc1d5bc67c5.svg",
@@ -35,9 +35,9 @@
     "static/media/Docker.svg": "/static/media/Docker.4eaaf8b64cf1e767b136.svg",
     "static/media/SprintBacklog.svg": "/static/media/SprintBacklog.a1fa937665b6125a633af4be6cea3302.svg",
     "static/media/logo.svg": "/static/media/logo.63bec26f247f578969d02bf8d38c949f.svg",
+    "index.html": "/index.html",
     "static/media/Phone.svg": "/static/media/Phone.5d15b6131d034925360a.svg",
     "static/media/Background.svg": "/static/media/Background.756e070f7a93195573a8.svg",
-    "index.html": "/index.html",
     "static/media/UserFriendly.svg": "/static/media/UserFriendly.9803d591d0d1182b8730.svg",
     "static/media/Javascript.svg": "/static/media/Javascript.9bd40e32df5eb1c7c1c6.svg",
     "static/media/Figma.svg": "/static/media/Figma.3d82bcc821e4a3727e23.svg",
@@ -50,11 +50,11 @@
     "static/media/Software.svg": "/static/media/Software.6fa940776ecfa37e5b1894b83eda417a.svg",
     "static/media/MobileFirst.svg": "/static/media/MobileFirst.7cf3a9fd90527eadff21.svg",
     "static/media/Tick.svg": "/static/media/Tick.30469d3227e3ccc7677b.svg",
-    "main.e7fba715.css.map": "/static/css/main.e7fba715.css.map",
-    "main.5a9527ef.js.map": "/static/js/main.5a9527ef.js.map"
+    "main.18d25cee.css.map": "/static/css/main.18d25cee.css.map",
+    "main.ceb81700.js.map": "/static/js/main.ceb81700.js.map"
   },
   "entrypoints": [
-    "static/css/main.e7fba715.css",
-    "static/js/main.5a9527ef.js"
+    "static/css/main.18d25cee.css",
+    "static/js/main.ceb81700.js"
   ]
 }

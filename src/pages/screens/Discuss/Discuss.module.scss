@@ -67,14 +67,6 @@
   }
 }
 
-.formWrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
-  z-index: 2;
-}
-
 .form {
   display: flex;
   flex-direction: column;
@@ -88,14 +80,22 @@
     rgba(255, 255, 255, 0)
   );
   backdrop-filter: blur(50px);
-}
 
-.formName {
-  @extend %formItem;
-}
+  &Wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    z-index: 2;
+  }
 
-.formEmail {
-  @extend %formItem;
+  &Name {
+    @extend %formItem;
+  }
+
+  &Email {
+    @extend %formItem;
+  }
 }
 
 .comments {
@@ -111,14 +111,6 @@
   position: relative;
   display: flex;
   @include adaptive(margin-bottom, 44, 23);
-}
-
-.checkbox {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
 }
 
 .pseudoItem {
@@ -141,20 +133,28 @@
   }
 }
 
-.checkbox:checked + .pseudoItem {
-  background-image: url('./images/Tick.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-size: 16px 18px;
-}
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
 
-.checkboxText {
-  @include adaptive(width, 401, 251);
-  @include adaptive(margin-left, 22, 14);
+  &:checked + .pseudoItem {
+    background-image: url('./images/Tick.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 16px 18px;
+  }
 
-  @extend %fz-18-23;
-  color: rgba(244, 244, 244, 0.6);
+  &Text {
+    @include adaptive(width, 401, 251);
+    @include adaptive(margin-left, 22, 14);
+
+    @extend %fz-18-23;
+    color: rgba(244, 244, 244, 0.6);
+  }
 }
 
 .link {
@@ -167,20 +167,20 @@
   @include adaptive(margin-bottom, 74, 34);
 }
 
-.addressListWrapper {
-  @include adaptive(padding-bottom, 72, 63);
-  z-index: 1;
-}
-
-.addressList {
-  text-decoration: none;
-}
-
 .address {
   @extend %addressListItem;
 
   &::before {
     background-image: url('./images/Compass.svg');
+  }
+
+  &ListWrapper {
+    @include adaptive(padding-bottom, 72, 63);
+    z-index: 1;
+  }
+
+  &List {
+    text-decoration: none;
   }
 }
 
