@@ -231,6 +231,9 @@
 
 .arrows {
   position: relative;
+  top: -60px;
+  // left: 60px;
+  @include adaptive(left, 60, -420);
   @include adaptive(margin-bottom, 50, 0);
 }
 
@@ -239,7 +242,9 @@
   display: flex;
   justify-content: space-between;
   position: absolute;
-  top: 202px;
+  top: 152px;
+  @include adaptive(left, 450, -1820);
+  // left: 450px;
 
   &Wrapper {
     position: relative;
@@ -277,6 +282,12 @@
 .buttonWrapper {
   display: flex;
   justify-content: center;
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1591px) {
+  .sprintList {
+    @include adaptive(left, 290, -650);
+  }
 }
 
 @media screen and (max-width: 1439px) {
