@@ -1,18 +1,20 @@
 import { Link } from 'react-scroll';
+import React, { Suspense } from 'react';
 
 import styles from './Banner.module.scss';
 
 import H1 from '../../../shared/UI/H1/H1';
 import Button from '../../../shared/UI/Button/Button';
 import logo from './images/logo.svg';
-import Hand from './images/Hand.avif';
+import Hand from './images/Hand.webp';
 import Mobile from './images/Mobile.svg';
 import Mobile1Part from './images/Mobile1part.svg';
 import Mobile2Part from './images/Mobile2part.svg';
 import Mobile3Part from './images/Mobile3part.svg';
 import Mobile4Part from './images/Mobile4part.svg';
 import Container from '../../../shared/UI/Container/Container';
-import Navbar from './Navbar/Navbar';
+// import Navbar from './Navbar/Navbar';
+const Navbar = React.lazy(() => import('./Navbar/Navbar'))
 
 const Banner = ({ isOpened, handleOpened, handleCloseByClickOnOverlay }) => {
   return (
@@ -82,11 +84,13 @@ const Banner = ({ isOpened, handleOpened, handleCloseByClickOnOverlay }) => {
             <div className={styles.pages}></div>
           </div>
         </div>
-        <Navbar
-          isOpened={isOpened}
-          handleOpened={handleOpened}
-          handleCloseByClickOnOverlay={handleCloseByClickOnOverlay}
-        />
+        <Suspense fallback={<div>Загрузка...</div>}>
+          <Navbar
+            isOpened={isOpened}
+            handleOpened={handleOpened}
+            handleCloseByClickOnOverlay={handleCloseByClickOnOverlay}
+          />
+        </Suspense>
       </Container>
     </section>
   );

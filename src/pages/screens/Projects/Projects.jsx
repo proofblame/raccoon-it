@@ -8,9 +8,9 @@ import IMG from '../../../shared/UI/IMG/IMG';
 import H3 from '../../../shared/UI/H3/H3';
 import Button from '../../../shared/UI/Button/Button';
 
-import Lawyers from './images/Lawyers.avif';
-import Psy from './images/Psy.avif';
-import CRMCMS from './images/CRMCMS.avif';
+import Lawyers from './images/Lawyers.webp';
+import Psy from './images/Psy.webp';
+import CRMCMS from './images/CRMCMS.webp';
 
 const Projects = () => {
   return (

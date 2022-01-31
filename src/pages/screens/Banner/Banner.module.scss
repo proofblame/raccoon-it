@@ -28,38 +28,37 @@
   @extend %fonts;
   background-color: $background;
   position: relative;
-  &::before {
-    content: '';
-    position: absolute;
-    @include adaptive(width, 763, 263);
-    @include adaptive(height, 869, 300);
-    @include adaptive(top, 100, 400);
-    @include adaptive(left, 1250, 100);
-    background-image: url('./images/Wave.svg');
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    @include adaptive(width, 837, 344);
-    @include adaptive(height, 837, 344);
-    border-radius: 50%;
-    border: none;
-    background: linear-gradient(90deg, #30cfd0 0%, #330867 100%);
-    border-image: linear-gradient(90deg, #30cfd0 0%, #330867 100%);
-    @include adaptive(top, 200, 60);
-    @include adaptive(left, -500, -250);
-    box-shadow: 0 0 25px 1.5px #330867, 0 0 25px 1.5px #30cfd0,
-      0 0 25px 1.5px #330867, 0 0 25px 1.5px #330867;
-  }
 
   &Wrapper {
     display: flex;
     flex-direction: column;
     height: 100%;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      @include adaptive(width, 763, 263);
+      @include adaptive(height, 869, 300);
+      @include adaptive(top, 100, 400);
+      @include adaptive(left, 1250, 100);
+      background-image: url('./images/Wave.webp');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      @include adaptive(width, 837, 344);
+      @include adaptive(height, 837, 344);
+      border-radius: 50%;
+      border: none;
+      @include adaptive(top, 200, 60);
+      @include adaptive(left, -600, -250);
+      background: linear-gradient(90deg, #30cfd0 0%, #330867 100%);
+      border-image: linear-gradient(90deg, #30cfd0 0%, #330867 100%);
+      box-shadow: 0px 0 15px 7px #330867, -10px 10px 15px 1px #30cfd0, 0 0 15px 7px #330867, 0 0 15px 10px #330867;
+    }
   }
 }
 .header {
@@ -85,8 +84,7 @@
     border-image: linear-gradient(90deg, #0250c5 0%, #d43f8d 100%);
     @include adaptive(top, 440, 510);
     @include adaptive(left, 710, -10);
-    box-shadow: 0 0 25px 1.5px #d43f8d, 0 0 25px 1.5px #d43f8d,
-      0 0 25px 1.5px #0250c5, 0 0 25px 1.5px #0250c5;
+    box-shadow: 0 0 25px 1.5px #d43f8d, 0 0 25px 1.5px #d43f8d, 0 0 25px 1.5px #0250c5, 0 0 25px 1.5px #0250c5;
   }
 
   .imgLogo {
@@ -105,8 +103,7 @@
     @include adaptive(top, 70, 65);
     @include adaptive(left, 820, 50);
     z-index: 5;
-    box-shadow: 0 0 15px 0.5px #fc6076, 0 0 15px 0.5px #ff9a44,
-      0 0 15px 0.5px #fc6076, 0 0 15px 0.5px #ff9a44;
+    box-shadow: 0 0 15px 0.5px #fc6076, 0 0 15px 0.5px #ff9a44, 0 0 15px 0.5px #fc6076, 0 0 15px 0.5px #ff9a44;
     background: linear-gradient(90deg, #fc6076 0%, #ff9a44 100%);
   }
 }

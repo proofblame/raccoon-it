@@ -1,14 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
+import Spinner from '../features/spinner/spinner';
 
 import main from './Main.module.scss';
 
-import Banner from './screens/Banner/Banner';
-import About from './screens/About/About';
-import Tenets from './screens/Tenets/Tenets';
-import Projects from './screens/Projects/Projects';
-import Workflow from './screens/Workflow/Workflow';
-import Techs from './screens/Techs/Techs';
-import Discuss from './screens/Discuss/Discuss';
+// import Banner from './screens/Banner/Banner';
+// import About from './screens/About/About';
+// import Tenets from './screens/Tenets/Tenets';
+// import Projects from './screens/Projects/Projects';
+// import Workflow from './screens/Workflow/Workflow';
+// import Techs from './screens/Techs/Techs';
+// import Discuss from './screens/Discuss/Discuss';
+
+const Banner = React.lazy(() => import('./screens/Banner/Banner'))
+const About = React.lazy(() => import('./screens/About/About'))
+const Tenets = React.lazy(() => import('./screens/Tenets/Tenets'))
+const Projects = React.lazy(() => import('./screens/Projects/Projects'))
+const Workflow = React.lazy(() => import('./screens/Workflow/Workflow'))
+const Techs = React.lazy(() => import('./screens/Techs/Techs'))
+const Discuss = React.lazy(() => import('./screens/Discuss/Discuss'))
 
 const Main = () => {
   const [isOpened, setIsOpened] = useState(false);
@@ -39,19 +48,23 @@ const Main = () => {
 
     setIsOpened(false);
   };
+
+
   return (
     <div className={main.wrapper}>
-      <Banner
-        isOpened={isOpened}
-        handleOpened={handleOpened}
-        handleCloseByClickOnOverlay={handleCloseByClickOnOverlay}
-      />
-      <About />
-      <Tenets />
-      <Projects />
-      <Workflow />
-      <Techs />
-      <Discuss />
+      <Suspense fallback={<Spinner />}>
+        <Banner
+          isOpened={isOpened}
+          handleOpened={handleOpened}
+          handleCloseByClickOnOverlay={handleCloseByClickOnOverlay}
+        />
+        <About />
+        <Tenets />
+        <Projects />
+        <Workflow />
+        <Techs />
+        <Discuss />
+      </Suspense>
     </div>
   );
 };

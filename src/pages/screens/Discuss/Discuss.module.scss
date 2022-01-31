@@ -5,10 +5,7 @@
   @include adaptivePadding(padding, 44, 39, 22, 25);
   @include adaptive(margin-bottom, 20, 10);
   border: 1px solid;
-  border-image: linear-gradient(
-    rgba(255, 255, 255, 0.3),
-    rgba(255, 255, 255, 0.02)
-  );
+  border-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.02));
   background: rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(50px);
   border-radius: 2px;
@@ -59,9 +56,9 @@
     background-image: url('./images/Background.svg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     width: 100%;
-    @include adaptive(top, -100, 445);
+    @include adaptive(top, 0, 410);
     @include adaptive(left, 0, 0);
     @include adaptive(height, 1113, 234);
   }
@@ -75,10 +72,7 @@
   @include adaptive(margin-bottom, 70, 51);
   padding-bottom: 0;
   border: 1px solid;
-  border-image: linear-gradient(
-    rgba(255, 255, 255, 0.3),
-    rgba(255, 255, 255, 0)
-  );
+  border-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
   backdrop-filter: blur(50px);
 
   &Wrapper {

@@ -143,7 +143,7 @@ const Discuss = () => {
                 <span className={discuss.pseudoItem}></span>
                 <p className={discuss.checkboxText}>
                   Даю согласие на обработку данных <br />
-                  <a href='#' className={discuss.link}>
+                  <a target='_blank' href='./policy.pdf' className={discuss.link}>
                     Политика конфиденциальности
                   </a>
                 </p>
