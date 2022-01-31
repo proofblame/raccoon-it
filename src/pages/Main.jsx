@@ -52,6 +52,7 @@ const Main = () => {
 
   return (
     <div className={main.wrapper}>
+      {/* <Spinner /> */}
       <Suspense fallback={<Spinner />}>
         <Banner
           isOpened={isOpened}

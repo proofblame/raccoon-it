@@ -50,11 +50,11 @@
     backdrop-filter: blur(30px);
     border-radius: 2px;
     border: 1px solid;
-    border-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
     @include adaptivePadding(padding, 0, 37, 0, 27);
     @include adaptive(padding-top, 45, 26);
     @include adaptive(padding-bottom, 44, 27);
     box-sizing: border-box;
+    // border-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
   }
 
   &ItemImage {

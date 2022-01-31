@@ -44,13 +44,14 @@
       @include adaptive(height, 329, 127);
       border-radius: 50%;
       border: none;
-      background: linear-gradient(90deg, #6219cf 0%, #fa709a 100%);
-      border-image: linear-gradient(90deg, #6219cf 0%, #fa709a 100%);
-      box-shadow: 0px 0 15px 7px #fa709a, -10px 10px 15px 1px #6219cf,
-        0 0 15px 7px #fa709a, 0 0 15px 1px #6219cf;
       @include adaptive(top, 400, -110);
       @include adaptive(left, -250, 200);
       z-index: 0;
+
+      // background: linear-gradient(90deg, #6219cf 0%, #fa709a 100%);
+      // border-image: linear-gradient(90deg, #6219cf 0%, #fa709a 100%);
+      // box-shadow: 0px 0 15px 7px #fa709a, -10px 10px 15px 1px #6219cf,
+      //   0 0 15px 7px #fa709a, 0 0 15px 1px #6219cf;
     }
 
     &::after {
@@ -60,13 +61,14 @@
       @include adaptive(height, 185, 65);
       border-radius: 50%;
       border: none;
-      background: linear-gradient(90deg, #667eea 0%, #0250c5 100%);
-      border-image: linear-gradient(90deg, #667eea 0%, #0250c5 100%);
-      box-shadow: 0px 0 15px 7px #0250c5, -10px 10px 15px 1px #667eea,
-        0 0 15px 7px #667eea, 0 0 15px 10px #667eea;
       @include adaptive(top, -40, 680);
       @include adaptive(left, 1500, -30);
       z-index: 1;
+
+      // background: linear-gradient(90deg, #667eea 0%, #0250c5 100%);
+      // border-image: linear-gradient(90deg, #667eea 0%, #0250c5 100%);
+      // box-shadow: 0px 0 15px 7px #0250c5, -10px 10px 15px 1px #667eea,
+      //   0 0 15px 7px #667eea, 0 0 15px 10px #667eea;
     }
   }
 

@@ -7,7 +7,7 @@ const Spinner = () => {
   return (
     <div className={styles.spinner}>
 
-      <ReactLoading type='spinningBubbles' color='#0250C5' />;
+      <ReactLoading type='spinningBubbles' color='#0250C5' />
 
     </div>
   )
