@@ -217,14 +217,14 @@
   }
 
   .email {
-    &::before {
-      @include adaptive(top, 0, 5);
-      @include adaptive(left, 950, 5);
-    }
+    // &::before {
+    //   @include adaptive(top, 0, 5);
+    //   @include adaptive(left, 950, 5);
+    // }
   }
 
-  .phone::before {
-    @include adaptive(top, 0, 5);
-    @include adaptive(left, 1000, 15);
-  }
+  // .phone::before {
+  //   @include adaptive(top, 0, 5);
+  //   @include adaptive(left, 1000, 15);
+  // }
 }

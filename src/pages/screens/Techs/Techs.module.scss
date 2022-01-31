@@ -37,39 +37,39 @@
     @include adaptive(padding-bottom, 420, 160);
     position: relative;
 
-    &::before {
-      content: '';
-      position: absolute;
-      @include adaptive(width, 325, 125);
-      @include adaptive(height, 329, 127);
-      border-radius: 50%;
-      border: none;
-      @include adaptive(top, 400, -110);
-      @include adaptive(left, -250, 200);
-      z-index: 0;
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   @include adaptive(width, 325, 125);
+    //   @include adaptive(height, 329, 127);
+    //   border-radius: 50%;
+    //   border: none;
+    // @include adaptive(top, 400, -110);
+    // @include adaptive(left, -250, 200);
+    // z-index: 0;
 
-      // background: linear-gradient(90deg, #6219cf 0%, #fa709a 100%);
-      // border-image: linear-gradient(90deg, #6219cf 0%, #fa709a 100%);
-      // box-shadow: 0px 0 15px 7px #fa709a, -10px 10px 15px 1px #6219cf,
-      //   0 0 15px 7px #fa709a, 0 0 15px 1px #6219cf;
-    }
+    // background: linear-gradient(90deg, #6219cf 0%, #fa709a 100%);
+    // border-image: linear-gradient(90deg, #6219cf 0%, #fa709a 100%);
+    // box-shadow: 0px 0 15px 7px #fa709a, -10px 10px 15px 1px #6219cf,
+    //   0 0 15px 7px #fa709a, 0 0 15px 1px #6219cf;
+    // }
 
-    &::after {
-      content: '';
-      position: absolute;
-      @include adaptive(width, 183, 64);
-      @include adaptive(height, 185, 65);
-      border-radius: 50%;
-      border: none;
-      @include adaptive(top, -40, 680);
-      @include adaptive(left, 1500, -30);
-      z-index: 1;
+    // &::after {
+    //   content: '';
+    //   position: absolute;
+    //   @include adaptive(width, 183, 64);
+    //   @include adaptive(height, 185, 65);
+    //   border-radius: 50%;
+    //   border: none;
+    // @include adaptive(top, -40, 680);
+    // @include adaptive(left, 1500, -30);
+    // z-index: 1;
 
-      // background: linear-gradient(90deg, #667eea 0%, #0250c5 100%);
-      // border-image: linear-gradient(90deg, #667eea 0%, #0250c5 100%);
-      // box-shadow: 0px 0 15px 7px #0250c5, -10px 10px 15px 1px #667eea,
-      //   0 0 15px 7px #667eea, 0 0 15px 10px #667eea;
-    }
+    // background: linear-gradient(90deg, #667eea 0%, #0250c5 100%);
+    // border-image: linear-gradient(90deg, #667eea 0%, #0250c5 100%);
+    // box-shadow: 0px 0 15px 7px #0250c5, -10px 10px 15px 1px #667eea,
+    //   0 0 15px 7px #667eea, 0 0 15px 10px #667eea;
+    // }
   }
 
   &Item {
@@ -84,123 +84,123 @@
   }
 }
 
-%subListItem {
-  @include adaptive(margin-left, 40, 20);
-  @include adaptive(margin-bottom, 17, 11);
-  position: relative;
-  &:nth-last-of-type(1) {
-    margin-bottom: 0;
-  }
+// %subListItem {
+//   @include adaptive(margin-left, 40, 20);
+//   @include adaptive(margin-bottom, 17, 11);
+//   position: relative;
+//   &:nth-last-of-type(1) {
+//     margin-bottom: 0;
+//   }
 
-  &::before {
-    content: '';
-    position: absolute;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    top: 0;
-    @include adaptive(left, -40, -25);
-    @include adaptive(width, 32, 21);
-    @include adaptive(height, 32, 21);
-  }
-}
-.backendList {
-  @extend %list;
+//   &::before {
+//     content: '';
+//     position: absolute;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: contain;
+//     top: 0;
+//     @include adaptive(left, -40, -25);
+//     @include adaptive(width, 32, 21);
+//     @include adaptive(height, 32, 21);
+//   }
+// }
+// .backendList {
+//   @extend %list;
 
-  &ItemSpring {
-    @extend %subListItem;
+//   &ItemSpring {
+//     @extend %subListItem;
 
-    &::before {
-      background-image: url('./images/backend/Spring.svg');
-    }
-  }
+//     &::before {
+//       background-image: url('./images/backend/Spring.svg');
+//     }
+//   }
 
-  &ItemNginx {
-    @extend %subListItem;
+//   &ItemNginx {
+//     @extend %subListItem;
 
-    &::before {
-      background-image: url('./images/backend/Nginx.svg');
-    }
-  }
+//     &::before {
+//       background-image: url('./images/backend/Nginx.svg');
+//     }
+//   }
 
-  &ItemPostgresql {
-    @extend %subListItem;
-    &::before {
-      background-image: url('./images/backend/Postgresql.svg');
-    }
-  }
+//   &ItemPostgresql {
+//     @extend %subListItem;
+//     &::before {
+//       background-image: url('./images/backend/Postgresql.svg');
+//     }
+//   }
 
-  &ItemRedis {
-    @extend %subListItem;
-    &::before {
-      background-image: url('./images/backend/Redis.svg');
-    }
-  }
+//   &ItemRedis {
+//     @extend %subListItem;
+//     &::before {
+//       background-image: url('./images/backend/Redis.svg');
+//     }
+//   }
 
-  &ItemDocker {
-    @extend %subListItem;
-    &::before {
-      background-image: url('./images/backend/Docker.svg');
-    }
-  }
+//   &ItemDocker {
+//     @extend %subListItem;
+//     &::before {
+//       background-image: url('./images/backend/Docker.svg');
+//     }
+//   }
 
-  .backendListItemJava {
-    @extend %subListItem;
-    &::before {
-      background-image: url('./images/backend/Java.svg');
-    }
-  }
-}
-.frontendList {
-  @extend %list;
+//   .backendListItemJava {
+//     @extend %subListItem;
+//     &::before {
+//       background-image: url('./images/backend/Java.svg');
+//     }
+//   }
+// }
+// .frontendList {
+//   @extend %list;
 
-  &ItemReact {
-    @extend %subListItem;
-    &::before {
-      background-image: url('./images/frontend/React.svg');
-    }
-  }
+//   &ItemReact {
+//     @extend %subListItem;
+//     &::before {
+//       background-image: url('./images/frontend/React.svg');
+//     }
+//   }
 
-  &ItemJs {
-    @extend %subListItem;
-    &::before {
-      background-image: url('./images/frontend/Javascript.svg');
-    }
-  }
+//   &ItemJs {
+//     @extend %subListItem;
+//     &::before {
+//       background-image: url('./images/frontend/Javascript.svg');
+//     }
+//   }
 
-  &ItemTs {
-    @extend %subListItem;
-    &::before {
-      background-image: url('./images/frontend/Typescript.svg');
-    }
-  }
+//   &ItemTs {
+//     @extend %subListItem;
+//     &::before {
+//       background-image: url('./images/frontend/Typescript.svg');
+//     }
+//   }
 
-  &ItemRedux {
-    @extend %subListItem;
-    &::before {
-      background-image: url('./images/frontend/Redux.svg');
-    }
-  }
-}
-.designList {
-  @extend %list;
+//   &ItemRedux {
+//     @extend %subListItem;
+//     &::before {
+//       background-image: url('./images/frontend/Redux.svg');
+//     }
+//   }
+// }
+// .designList {
+//   @extend %list;
 
-  &ItemFigma {
-    @extend %subListItem;
+//   &ItemFigma {
+//     @extend %subListItem;
 
-    &::before {
-      background-image: url('./images/design/Figma.svg');
-    }
-  }
+//     &::before {
+//       background-image: url('./images/design/Figma.svg');
+//     }
+//   }
 
-  &ItemPs {
-    @extend %subListItem;
+//   &ItemPs {
+//     @extend %subListItem;
 
-    &::before {
-      background-image: url('./images/design/Photoshop.svg');
-    }
-  }
-}
+//     &::before {
+//       background-image: url('./images/design/Photoshop.svg');
+//     }
+//   }
+// }
 @media screen and (max-width: 767px) {
   .list {
     flex-direction: column;

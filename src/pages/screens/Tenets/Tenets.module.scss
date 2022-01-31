@@ -21,8 +21,8 @@
     @include adaptive(height, 170, 145);
     border-radius: 50%;
     border: none;
-    @include adaptive(top, -350, 120);
-    @include adaptive(left, -230, 200);
+    // @include adaptive(top, -350, 120);
+    // @include adaptive(left, -230, 200);
     z-index: -1;
 
     // background: linear-gradient(90deg, #fc6076 0%, #ff9a44 100%);
@@ -43,40 +43,40 @@
   @extend %fz-24-38;
   z-index: 5;
 
-  &::before {
-    content: '';
-    position: absolute;
-    @include adaptive(width, 147, 67);
-    @include adaptive(height, 147, 67);
-    border-radius: 50%;
-    border: none;
-    @include adaptive(top, 250, 260);
-    @include adaptive(left, 480, 160);
-    z-index: -1;
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   @include adaptive(width, 147, 67);
+  //   @include adaptive(height, 147, 67);
+  //   border-radius: 50%;
+  //   border: none;
+  // @include adaptive(top, 250, 260);
+  // @include adaptive(left, 480, 160);
+  // z-index: -1;
 
-    // background: linear-gradient(90deg, #0250c5 0%, #d43f8d 100%);
-    // border-image: linear-gradient(90deg, #0250c5 0%, #d43f8d 100%);
-    // box-shadow: 0 0 30px -4px #d43f8d, -5px 0 10px 5px #0250c5,
-    //   0 0 10px 1px #d43f8d, 0 0 10px 4px #d43f8d, 0 0 10px 5px #0250c5;
-  }
+  // background: linear-gradient(90deg, #0250c5 0%, #d43f8d 100%);
+  // border-image: linear-gradient(90deg, #0250c5 0%, #d43f8d 100%);
+  // box-shadow: 0 0 30px -4px #d43f8d, -5px 0 10px 5px #0250c5,
+  //   0 0 10px 1px #d43f8d, 0 0 10px 4px #d43f8d, 0 0 10px 5px #0250c5;
+  // }
 
-  &::after {
-    content: '';
-    position: absolute;
-    @include adaptive(width, 66, 21);
-    @include adaptive(height, 66, 21);
-    border-radius: 50%;
-    border: none;
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   @include adaptive(width, 66, 21);
+  //   @include adaptive(height, 66, 21);
+  //   border-radius: 50%;
+  //   border: none;
 
-    @include adaptive(top, -180, 240);
-    @include adaptive(left, 1080, -15);
-    z-index: -1;
+  // @include adaptive(top, -180, 240);
+  // @include adaptive(left, 1080, -15);
+  // z-index: -1;
 
-    // background: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
-    // border-image: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
-    // box-shadow: 0 0 30px -4px #f6d365, 0 0 10px 1px #fda085,
-    //   0 0 10px 4px #fda085, 0 0 10px 5px #f6d365;
-  }
+  // background: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
+  // border-image: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
+  // box-shadow: 0 0 30px -4px #f6d365, 0 0 10px 1px #fda085,
+  //   0 0 10px 4px #fda085, 0 0 10px 5px #f6d365;
+  // }
 }
 
 .subheader {

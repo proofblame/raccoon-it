@@ -10,20 +10,20 @@
 .wrapper {
   @include adaptive(padding-bottom, 434, 160);
   position: relative;
-  &::before {
-    content: '';
-    position: absolute;
-    @include adaptive(width, 510, 208);
-    @include adaptive(height, 510, 208);
-    border-radius: 50%;
-    border: none;
-    @include adaptive(top, -40, -40);
-    @include adaptive(left, -215, -115);
-    // box-shadow: 0 0 35px 5px #ee609c, 0 0 35px 5px #453a94, 0 0 15px 5px #453a94, 0 0 15px 5px #ee609c;
-    // background: linear-gradient(90deg, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
-    // border-image: linear-gradient(90deg, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
-    z-index: 0;
-  }
+  // &::before {
+  // content: '';
+  // position: absolute;
+  // @include adaptive(width, 510, 208);
+  // @include adaptive(height, 510, 208);
+  // border-radius: 50%;
+  // border: none;
+  // @include adaptive(top, -40, -40);
+  // @include adaptive(left, -215, -115);
+  // box-shadow: 0 0 35px 5px #ee609c, 0 0 35px 5px #453a94, 0 0 15px 5px #453a94, 0 0 15px 5px #ee609c;
+  // background: linear-gradient(90deg, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+  // border-image: linear-gradient(90deg, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+  // z-index: 0;
+  // }
 
   &::after {
     content: '';
@@ -33,8 +33,8 @@
     border-radius: 50%;
     border: none;
 
-    @include adaptive(top, -100, 505);
-    @include adaptive(left, 1050, -10);
+    // @include adaptive(top, -100, 505);
+    // @include adaptive(left, 1050, -10);
     z-index: 0;
 
     // background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
@@ -67,23 +67,23 @@
   position: relative;
   z-index: 1;
 
-  &::before {
-    content: '';
-    position: absolute;
-    @include adaptive(width, 71, 61);
-    @include adaptive(height, 72, 61);
-    border-radius: 50%;
-    border: none;
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   @include adaptive(width, 71, 61);
+  //   @include adaptive(height, 72, 61);
+  //   border-radius: 50%;
+  //   border: none;
 
-    @include adaptive(top, 50, 815);
-    @include adaptive(left, 1620, 200);
-    z-index: 0;
+  // @include adaptive(top, 50, 815);
+  // @include adaptive(left, 1620, 200);
+  // z-index: 0;
 
-    // background: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
-    // border-image: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
-    // box-shadow: 0px 0 15px 5px #f6d365, 0 0 35px 1px #f6d365,
-    //   0 0 15px 1px #fda085, 0 0 15px 1px #fda085;
-  }
+  // background: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
+  // border-image: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
+  // box-shadow: 0px 0 15px 5px #f6d365, 0 0 35px 1px #f6d365,
+  //   0 0 15px 1px #fda085, 0 0 15px 1px #fda085;
+  // }
 
   &Item {
     max-width: 330px;
@@ -239,23 +239,23 @@
     justify-content: center;
     @include adaptive(margin-bottom, 100, 0);
 
-    &::before {
-      content: '';
-      position: absolute;
-      @include adaptive(width, 179, 61);
-      @include adaptive(height, 179, 61);
-      border-radius: 50%;
-      border: none;
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   @include adaptive(width, 179, 61);
+    //   @include adaptive(height, 179, 61);
+    //   border-radius: 50%;
+    //   border: none;
 
-      @include adaptive(top, 250, -790);
-      @include adaptive(left, 110, 200);
-      z-index: 0;
+      // @include adaptive(top, 250, -790);
+      // @include adaptive(left, 110, 200);
+      // z-index: 0;
 
       // background: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
       // border-image: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
       // box-shadow: 0px 0 15px 5px #f6d365, 0 0 15px 1px #fda085,
       //   0 0 15px 1px #fda085, 0 0 15px 1px #fda085;
-    }
+    // }
   }
 
   &Item {
@@ -336,21 +336,21 @@
       @include adaptive(margin-bottom, 20, 10);
       position: relative;
 
-      &::before {
-        content: '';
-        position: absolute;
-        @include adaptive(width, 12, 6);
-        @include adaptive(height, 12, 6);
-        @include adaptive(top, 5, 7);
-        @include adaptive(left, -20, -20);
-        top: 10px;
-        left: 10px;
-        // background-image: linear-gradient(
-        //   rgba(40, 107, 248, 1),
-        //   rgba(95, 27, 208, 1)
-        // );
-        // border-radius: 50%;
-      }
+      // &::before {
+      //   content: '';
+      //   position: absolute;
+      //   @include adaptive(width, 12, 6);
+      //   @include adaptive(height, 12, 6);
+      // @include adaptive(top, 5, 7);
+      // @include adaptive(left, -20, -20);
+      // top: 10px;
+      // left: 10px;
+      // background-image: linear-gradient(
+      //   rgba(40, 107, 248, 1),
+      //   rgba(95, 27, 208, 1)
+      // );
+      // border-radius: 50%;
+      // }
     }
   }
 }
