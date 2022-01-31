@@ -1,0 +1,89 @@
+@import '../../../shared/variables.scss';
+.banner {
+  @extend %fonts;
+  @include adaptive(padding-top, 146, 28);
+  @include adaptive(padding-bottom, 90, 40);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(286px, 1fr));
+  @include adaptive(column-gap, 157, 0);
+  @media screen and (max-width: $_768) {
+    grid-template-columns: repeat(1, minmax(286px, 1fr));
+    row-gap: 55px;
+    justify-items: center;
+  }
+}
+.content {
+  @include adaptivePadding(padding, 98, 116, 34, 44);
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(30px);
+  border-radius: 2px;
+  @include adaptive(width, 781, 286);
+}
+.title {
+  color: $mainColor;
+  @extend %fz-72;
+  margin-bottom: 30px;
+  @include adaptive(margin-bottom, 30, 10);
+}
+.subtitle {
+  color: $secondaryColor;
+  @extend %fz-24-30;
+  @include adaptive(margin-bottom, 67, 16);
+}
+.images {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+  @media screen and (max-width: $_768) {
+    align-items: flex-end;
+    padding-left: 40px;
+    box-sizing: border-box;
+  }
+}
+.phone {
+  position: relative;
+  align-self: center;
+  @media screen and (max-width: $_768) {
+    margin-bottom: 70px;
+    align-self: flex-start;
+  }
+}
+.mobile {
+  @include adaptive(width, 242, 80);
+}
+.mobilePart1 {
+  @include adaptive(width, 100, 34);
+  position: absolute;
+  top: 5%;
+  left: -20%;
+}
+.mobilePart2 {
+  @include adaptive(width, 168, 56);
+  position: absolute;
+  top: 25%;
+  right: -45%;
+}
+.mobilePart3 {
+  @include adaptive(width, 168, 56);
+  position: absolute;
+  top: 54%;
+  left: -25%;
+}
+.mobilePart4 {
+  @include adaptive(width, 140, 46);
+  position: absolute;
+  z-index: 1;
+  bottom: -5%;
+  right: -20%;
+}
+.hand {
+  @include adaptive(width, 926, 304);
+  position: absolute;
+  left: 0;
+  z-index: 0;
+  @include adaptive(bottom, -115, -50);
+}

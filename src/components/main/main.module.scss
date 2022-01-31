@@ -1,8 +1,10 @@
-@import '../shared/variables.scss';
+@import '../../shared/variables.scss';
 
 .main {
   @include adaptive(padding-top, 145, 51);
   box-sizing: border-box;
   position: relative;
   z-index: 0;
+  background-color: $background;
+  overflow: hidden;
 }

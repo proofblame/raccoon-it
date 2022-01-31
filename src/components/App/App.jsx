@@ -1,11 +1,8 @@
-import './App.module.scss'
 
 import { useState } from 'react'
-import Main from '../../pages/Main'
 import Header from '../header/header'
 import Navbar from '../navbar/navbar'
-
-
+import Main from '../main/main'
 
 
 const App = () => {
@@ -25,14 +22,12 @@ const App = () => {
       handleCloseMenu()
     }
   }
-  const handleClickOnOverlay = () => {
-
-  }
 
   return (
     <>
       <Header active={isActive} onToggle={handleToggleMenu} />
       <Navbar active={isActive} onClose={handleCloseMenu} />
+      <Main />
     </>
   )
 }

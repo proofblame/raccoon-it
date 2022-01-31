@@ -1,26 +1,16 @@
-import React, { useEffect, useState, Suspense } from 'react';
+import { lazy, Suspense } from 'react';
 import Spinner from '../features/spinner/spinner';
+import styles from './main.module.scss';
 
-import main from './Main.module.scss';
-
-// import Banner from './screens/Banner/Banner';
-// import About from './screens/About/About';
-// import Tenets from './screens/Tenets/Tenets';
-// import Projects from './screens/Projects/Projects';
-// import Workflow from './screens/Workflow/Workflow';
-// import Techs from './screens/Techs/Techs';
-// import Discuss from './screens/Discuss/Discuss';
-
-const Banner = React.lazy(() => import('./screens/Banner/Banner'))
-const About = React.lazy(() => import('./screens/About/About'))
-const Tenets = React.lazy(() => import('./screens/Tenets/Tenets'))
-const Projects = React.lazy(() => import('./screens/Projects/Projects'))
-const Workflow = React.lazy(() => import('./screens/Workflow/Workflow'))
-const Techs = React.lazy(() => import('./screens/Techs/Techs'))
-const Discuss = React.lazy(() => import('./screens/Discuss/Discuss'))
+const Banner = lazy(() => import('./screens/banner/banner'))
+const About = lazy(() => import('./screens/About/About'))
+const Tenets = lazy(() => import('./screens/Tenets/Tenets'))
+const Projects = lazy(() => import('./screens/Projects/Projects'))
+const Workflow = lazy(() => import('./screens/Workflow/Workflow'))
+const Techs = lazy(() => import('./screens/Techs/Techs'))
+const Discuss = lazy(() => import('./screens/Discuss/Discuss'))
 
 const Main = () => {
-  const [isOpened, setIsOpened] = useState(false);
 
   // useEffect(() => {
   //   const body = document.querySelector('body');
@@ -37,27 +27,10 @@ const Main = () => {
   //   return scrollbarWidth;
   // }
 
-  const handleToggleMenu = () => {
-    setIsOpened(!isOpened);
-  };
-
-  const handleCloseByClickOnOverlay = (e) => {
-    if (e.target !== e.currentTarget) {
-      return;
-    }
-    handleToggleMenu(false);
-  };
-
-
   return (
-    <div className={main.wrapper}>
-      {/* <Spinner /> */}
+    <section className={styles.main}>
       <Suspense fallback={<Spinner />}>
-        <Banner
-          isOpened={isOpened}
-          onOpen={handleToggleMenu}
-          handleCloseByClickOnOverlay={handleCloseByClickOnOverlay}
-        />
+        <Banner />
         {/* <About />
         <Tenets />
         <Projects />
@@ -65,7 +38,7 @@ const Main = () => {
         <Techs />
         <Discuss /> */}
       </Suspense>
-    </div>
+    </section>
   );
 };
 
