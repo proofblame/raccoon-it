@@ -1,0 +1,67 @@
+@import '../../shared/variables.scss';
+%ul {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @include adaptive(row-gap, 40, 30);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: none;
+}
+.nav {
+  @extend %fonts;
+  @include adaptive(width, 566, 320);
+  @include adaptivePadding(padding, 48, 0, 20, 0);
+  background-color: $background;
+  color: $linkActiveColor;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  bottom: 0;
+  @extend %fz-18-12;
+  letter-spacing: 0.05em;
+  transition: all linear 0.3s;
+  @media screen and (max-width: $_768) {
+    width: 100%;
+  }
+
+  &.active {
+    right: 0;
+  }
+}
+.menu {
+  @extend %ul;
+  justify-content: center;
+  flex-basis: 100%;
+  font-weight: 600;
+}
+.item {
+  text-transform: uppercase;
+}
+.link {
+  cursor: pointer;
+  transition: all linear 0.1s;
+  opacity: 0.5;
+  &:hover {
+    opacity: initial;
+  }
+}
+.contacts {
+  @extend %ul;
+  font-weight: 600;
+  row-gap: 12px;
+  opacity: 0.5;
+}
+.phone {
+}
+.email {
+}

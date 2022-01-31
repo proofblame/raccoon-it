@@ -22,22 +22,22 @@ const Discuss = React.lazy(() => import('./screens/Discuss/Discuss'))
 const Main = () => {
   const [isOpened, setIsOpened] = useState(false);
 
-  useEffect(() => {
-    const body = document.querySelector('body');
-    let scrollWidth = scrollbarWidth();
+  // useEffect(() => {
+  //   const body = document.querySelector('body');
+  //   let scrollWidth = scrollbarWidth();
 
-    body.style.overflow = isOpened ? 'hidden' : 'auto';
-    body.style.paddingRight = isOpened ? `${scrollWidth}px` : '';
-  }, [isOpened]);
+  //   body.style.overflow = isOpened ? 'hidden' : 'auto';
+  //   body.style.paddingRight = isOpened ? `${scrollWidth}px` : '';
+  // }, [isOpened]);
 
-  function scrollbarWidth() {
-    var documentWidth = parseInt(document.documentElement.clientWidth);
-    var windowsWidth = parseInt(window.innerWidth);
-    var scrollbarWidth = windowsWidth - documentWidth;
-    return scrollbarWidth;
-  }
+  // function scrollbarWidth() {
+  //   var documentWidth = parseInt(document.documentElement.clientWidth);
+  //   var windowsWidth = parseInt(window.innerWidth);
+  //   var scrollbarWidth = windowsWidth - documentWidth;
+  //   return scrollbarWidth;
+  // }
 
-  const handleOpened = () => {
+  const handleToggleMenu = () => {
     setIsOpened(!isOpened);
   };
 
@@ -45,8 +45,7 @@ const Main = () => {
     if (e.target !== e.currentTarget) {
       return;
     }
-
-    setIsOpened(false);
+    handleToggleMenu(false);
   };
 
 
@@ -56,15 +55,15 @@ const Main = () => {
       <Suspense fallback={<Spinner />}>
         <Banner
           isOpened={isOpened}
-          handleOpened={handleOpened}
+          onOpen={handleToggleMenu}
           handleCloseByClickOnOverlay={handleCloseByClickOnOverlay}
         />
-        <About />
+        {/* <About />
         <Tenets />
         <Projects />
         <Workflow />
         <Techs />
-        <Discuss />
+        <Discuss /> */}
       </Suspense>
     </div>
   );

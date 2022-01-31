@@ -6,8 +6,8 @@
 }
 
 /* Убираем внутренние отступы */
-ul[class],
-ol[class] {
+:-moz-user-disabled,
+ol {
   padding: 0;
 }
 
@@ -27,6 +27,7 @@ blockquote,
 dl,
 dd {
   margin: 0;
+  padding: 0;
 }
 
 /* Выставляем основные настройки по-умолчанию для body */
