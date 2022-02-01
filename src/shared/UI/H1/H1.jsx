@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import style from './H1.module.scss';
 
 const H1 = ({ children, className }) => {
-  const classes = classNames(style.mainHeader, className);
+  const classes = classNames(style.title, className);
 
   return <h1 className={classes}>{children}</h1>;
 };

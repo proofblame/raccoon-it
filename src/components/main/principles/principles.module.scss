@@ -1,0 +1,31 @@
+@import '../../../shared/variables.scss';
+
+.principles {
+  @extend %fonts;
+  @include adaptive(padding-top, 146, 28);
+  @include adaptive(padding-bottom, 90, 40);
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(286px, 350px));
+  justify-content: space-between;
+  @include adaptive(column-gap, 50, 0);
+  row-gap: 50px;
+}
+.item {
+  letter-spacing: 0.03em;
+}
+.itemTitle {
+  @extend %fz-24-30;
+  text-transform: uppercase;
+  color: $mainColor;
+  @include adaptive(margin-bottom, 30, 20);
+  font-weight: 600;
+}
+.itemSubtitle {
+  @extend %fz-24-38;
+
+  color: $secondaryColor;
+  font-weight: 400;
+}

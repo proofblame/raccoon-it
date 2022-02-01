@@ -10,6 +10,7 @@ $background: #090909;
 $textColor: rgba(244, 244, 244, 1);
 $navbarBackground: #0f0f0f;
 
+$_425: 424.98px;
 $_768: 767.98px;
 $_1024: 1023.98px;
 $reasonsListSize: 1479px;
@@ -110,7 +111,16 @@ $reasonsListSize: 1479px;
   width: 824px;
 }
 
+%subtitle {
+  @extend %fonts;
+  @extend %fz-24-38;
+  letter-spacing: 0.03em;
+  color: $mainColor;
+  font-weight: 400;
+}
+
 // Шаблоный брейкпоинтов
 
 //  768px
 // @media screen and (max-width: $_768) {}
+// @media screen and (max-width: $_425) {}

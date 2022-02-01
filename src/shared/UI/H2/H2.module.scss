@@ -1,9 +1,10 @@
 @import '../../variables.scss';
 
-.header {
+.title {
   @extend %fonts;
   @extend %fz-64;
   font-weight: 600;
   letter-spacing: 0.05em;
   color: $mainColor;
+  @include adaptive(margin-bottom, 100, 50);
 }
