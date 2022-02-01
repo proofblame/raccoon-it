@@ -79,18 +79,18 @@
   }
 
   // &::after {
-    // content: '';
-    // position: absolute;
-    // @include adaptive(width, 101, 30);
-    // @include adaptive(height, 101, 30);
-    // border-radius: 50%;
-    // border: none;
-    // @include adaptive(top, 70, 65);
-    // @include adaptive(left, 820, 50);
-    // z-index: 5;
-    // box-shadow: 0 0 15px 0.5px #fc6076, 0 0 15px 0.5px #ff9a44, 0 0 15px 0.5px #fc6076, 0 0 15px 0.5px #ff9a44;
-    // background: linear-gradient(90deg, #fc6076 0%, #ff9a44 100%);
-    // border-image: linear-gradient(90deg, #fc6076 0%, #ff9a44 100%);
+  // content: '';
+  // position: absolute;
+  // @include adaptive(width, 101, 30);
+  // @include adaptive(height, 101, 30);
+  // border-radius: 50%;
+  // border: none;
+  // @include adaptive(top, 70, 65);
+  // @include adaptive(left, 820, 50);
+  // z-index: 5;
+  box-shadow: 0 0 15px 0.5px #fc6076, 0 0 15px 0.5px #ff9a44, 0 0 15px 0.5px #fc6076, 0 0 15px 0.5px #ff9a44;
+  background: linear-gradient(90deg, #fc6076 0%, #ff9a44 100%);
+  border-image: linear-gradient(90deg, #fc6076 0%, #ff9a44 100%);
   // }
 }
 .titleLogo {

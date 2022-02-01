@@ -6,7 +6,7 @@ import Principles from './principles/principles';
 import Projects from './projects/projects';
 import WorkScheme from './work-scheme/work-scheme';
 import Tech from './tech/tech';
-import Footer from './form/footer';
+import Footer from './footer/footer';
 
 const Main = () => {
   return (
