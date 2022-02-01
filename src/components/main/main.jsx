@@ -6,6 +6,7 @@ import Principles from './principles/principles';
 import Projects from './projects/projects';
 import WorkScheme from './work-scheme/work-scheme';
 import Tech from './tech/tech';
+import Footer from './form/footer';
 
 const Main = () => {
   return (
@@ -17,6 +18,7 @@ const Main = () => {
         <Projects />
         <WorkScheme />
         <Tech />
+        <Footer />
       </Container>
     </section>
   );
