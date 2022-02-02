@@ -147,3 +147,61 @@
   color: $mainColor;
   font-weight: 400;
 }
+.schemeMobile {
+  text-transform: uppercase;
+  color: $mainColor;
+  letter-spacing: 0.03em;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  row-gap: 20px;
+
+  @media screen and (max-width: $_768) {
+    display: flex;
+  }
+}
+
+.schemeTitle {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+.schemeList {
+  list-style-type: none;
+}
+.schemeItem {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  opacity: 0.7;
+  position: relative;
+  padding-left: 17px;
+  margin-bottom: 10px;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background-image: url('../../../shared/images/mobile-scheme/point.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+.schemeArrow {
+  height: 47px;
+  width: 50%;
+}
+.schemeRectangle {
+  width: 135px;
+  margin-bottom: 10px;
+}
+.schemeIMG {
+  width: 212px;
+  margin-bottom: 14px;
+}
