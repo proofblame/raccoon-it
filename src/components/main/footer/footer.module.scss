@@ -15,18 +15,22 @@
 
   box-sizing: border-box;
   position: relative;
-  &::before {
-    content: '';
-    position: absolute;
-    background: url('../../../shared/images/blot-3.webp');
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: contain;
-    width: 200%;
-    height: 200%;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
+  @media screen and (min-width: $_768) {
+
+    &::before {
+      content: '';
+      position: absolute;
+      background: url('../../../shared/images/blot-3.webp');
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: contain;
+      width: 200%;
+      height: 200%;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
+
   }
 }
 

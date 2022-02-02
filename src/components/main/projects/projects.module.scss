@@ -21,17 +21,20 @@
   //   background-repeat: no-repeat;
   //   background-position: bottom right;
   // }
-  &::after {
-    content: '';
-    position: absolute;
-    background: url('../../../shared/images/blot-2.webp');
-    background-repeat: no-repeat;
 
-    background-size: contain;
-    width: 200%;
-    height: 200%;
-    top: 0;
-    z-index: -1;
+  @media screen and (min-width: $_768) {
+    &::after {
+      content: '';
+      position: absolute;
+      background: url('../../../shared/images/blot-2.webp');
+      background-repeat: no-repeat;
+
+      background-size: contain;
+      width: 200%;
+      height: 200%;
+      top: 0;
+      z-index: -1;
+    }
   }
 }
 .list {
