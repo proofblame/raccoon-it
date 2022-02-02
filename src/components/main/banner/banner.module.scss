@@ -55,7 +55,7 @@
   &::before {
     content: '';
     position: absolute;
-    background: linear-gradient(90deg, #30cfd0 0%, #330867 100%);
+
     background-repeat: no-repeat;
     background-size: contain;
     filter: blur(10px);
@@ -67,6 +67,8 @@
     @include adaptive(height, 1000, 300);
     @include adaptive(left, -700, -200);
     top: 10px;
+    background: linear-gradient(90deg, #30cfd0 0%, #330867 100%);
+    // background-image: url('../../../shared/images/balls/ball-1.png');
   }
   &::after {
     content: '';
