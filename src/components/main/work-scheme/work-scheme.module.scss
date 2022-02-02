@@ -55,6 +55,13 @@
   @extend %flex;
   @include adaptive(column-gap, 20, 12);
   justify-content: flex-start;
+  transition: 0.7s;
+  &:hover {
+    // box-shadow: ;
+    box-shadow: 0 0 20px #fff;
+    transform: translateY(-15px);
+    transition: 0.7s;
+  }
 }
 .itemNumber {
   font-weight: 500;

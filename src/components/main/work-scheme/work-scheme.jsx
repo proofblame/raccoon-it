@@ -1,8 +1,8 @@
 import { Link } from 'react-scroll';
 
 import styles from './work-scheme.module.scss'
-import H2 from '../../../shared/UI/H2/H2'
-import Button from '../../../shared/UI/Button/Button'
+import H2 from '../../../shared/UI/h2/h2'
+import Button from '../../../shared/UI/button/button'
 
 import schemeDesktop from '../../../shared/images/scheme-desktop.svg'
 import schemeMobile from '../../../shared/images/scheme-mobile.svg'

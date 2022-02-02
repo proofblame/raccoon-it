@@ -1,5 +1,5 @@
 import styles from './principles.module.scss'
-import H2 from '../../../shared/UI/H2/H2'
+import H2 from '../../../shared/UI/h2/h2'
 
 const Principles = () => {
   return (

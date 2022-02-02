@@ -1,8 +1,8 @@
 import { Link } from 'react-scroll';
 
 import styles from './projects.module.scss'
-import H2 from '../../../shared/UI/H2/H2'
-import Button from '../../../shared/UI/Button/Button'
+import H2 from '../../../shared/UI/h2/h2'
+import Button from '../../../shared/UI/button/button'
 
 import lawyers from '../../../shared/images/lawyers.webp'
 import psy from '../../../shared/images/psy.webp'

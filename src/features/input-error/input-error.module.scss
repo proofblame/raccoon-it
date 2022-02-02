@@ -1,0 +1,10 @@
+@import '../../shared/variables.scss';
+
+.inputError {
+  min-height: 30px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ff0000;
+  @include adaptivePadding(padding, 10, 15, 5, 10);
+}

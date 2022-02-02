@@ -1,5 +1,5 @@
 import styles from './header.module.scss'
-import Container from '../../shared/UI/Container/Container'
+import Container from '../../shared/UI/container/container'
 import logo from '../../shared/images/logo.svg'
 
 const Header = ({ active, onToggle }) => {

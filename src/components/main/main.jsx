@@ -1,5 +1,5 @@
 import styles from './main.module.scss'
-import Container from '../../shared/UI/Container/Container';
+import Container from '../../shared/UI/container/container';
 import Banner from './banner/banner';
 import About from './about/about';
 import Principles from './principles/principles';

@@ -1,4 +1,4 @@
-import styles from './Snackbar.module.scss';
+import styles from './snackbar.module.scss';
 
 const Snackbar = ({ isShown, message }) => {
   return (

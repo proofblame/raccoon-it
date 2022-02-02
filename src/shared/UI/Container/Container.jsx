@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import style from './Container.module.scss';
+import style from './container.module.scss';
 
 const Container = ({ children }) => {
   return (

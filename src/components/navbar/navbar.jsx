@@ -20,8 +20,8 @@ const Navbar = ({ active, onClose }) => {
   };
 
   return (
-    <section className={styles.overlay} onClick={onClose}>
-      <nav className={active ? `${styles.nav} ${styles.active}` : `${styles.nav}`} onClick={e => e.stopPropagation()}>
+    <section className={active ? `${styles.overlay} ${styles.active}` : `${styles.overlay}`} onClick={onClose}>
+      <nav className={`${styles.nav} ${active ? `${styles.active}` : ''}`} onClick={e => e.stopPropagation()}>
         <ul className={styles.menu}>
           <li className={styles.item}>
             <Link

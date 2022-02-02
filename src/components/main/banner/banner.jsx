@@ -1,7 +1,7 @@
 import { Link } from 'react-scroll';
 
 import styles from './banner.module.scss'
-import Button from '../../../shared/UI/Button/Button'
+import Button from '../../../shared/UI/button/button'
 
 import hand from '../../../shared/images/hand.webp'
 import mobile from '../../../shared/images/mobile.svg'
