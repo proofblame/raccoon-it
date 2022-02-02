@@ -9,9 +9,6 @@
   @include adaptive(row-gap, 45, 23);
   max-width: 781px;
   width: 100%;
-  @media screen and (min-width: $_768) {
-    // backdrop-filter: blur(50px);
-  }
 }
 .inputs {
   display: flex;

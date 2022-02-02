@@ -8,37 +8,31 @@
   &::before {
     content: '';
     position: absolute;
-    // filter: blur(10px);
     transform: rotate(37.27deg);
     @include adaptive(width, 400, 90);
     @include adaptive(height, 400, 90);
     border-radius: 50%;
     @include adaptive(left, -200, -50);
     bottom: 0;
-    // background: linear-gradient(90deg, #6219cf 0%, #fa709a 100%);
     z-index: -1;
     background-image: url('../../../shared/images/balls/ball-3.png');
     background-repeat: no-repeat;
     background-size: contain;
-    // z-index: -1;
   }
   @media screen and (min-width: $_768) {
     &::after {
       content: '';
       position: absolute;
-      // filter: blur(10px);
       transform: rotate(37.27deg);
       @include adaptive(width, 200, 90);
       @include adaptive(height, 200, 90);
       border-radius: 50%;
       @include adaptive(right, -200, -50);
       top: 0;
-      // background: linear-gradient(90deg, #667eea 0%, #0250c5 100%);
       z-index: -1;
       background-image: url('../../../shared/images/balls/ball-7.png');
       background-repeat: no-repeat;
       background-size: contain;
-      // z-index: -1;
     }
   }
 }
@@ -56,13 +50,9 @@
   background: rgba(255, 255, 255, 0.02);
 
   border-radius: 2px;
-  // @include adaptivePadding(padding, 45, 38, 27, 27);
   padding: 45px 38px;
   @media screen and (max-width: $_768) {
     padding: 27px;
-  }
-  @media screen and (min-width: $_768) {
-    // backdrop-filter: blur(30px);
   }
 }
 .itemTitle {

@@ -11,24 +11,6 @@
   @include adaptive(column-gap, 106, 0);
   position: relative;
 
-  // &::before {
-  //   content: '';
-  //   position: absolute;
-  //   // opacity: 0.2;
-  //   // filter: blur(500px);
-  //   width: 100%;
-  //   height: 100%;
-  //   // transform: rotate(147.49deg);
-  //   // background: linear-gradient(90deg, #f43b47 0%, #453a94 100%);
-  //   filter: blur(100px);
-  //   background-image: url('../../../shared/images/balls/bg.png');
-  //   background-size: contain;
-  //   background-repeat: no-repeat;
-  //   background-position: left center;
-  //   z-index: -1;
-  // }
-  @media screen and (min-width: $_768) {
-  }
   &::after {
     content: '';
     position: absolute;
@@ -40,7 +22,6 @@
     top: 50%;
     border-radius: 50%;
     transform: rotate(-103.81deg);
-    // background: linear-gradient(90deg, #0250c5 0%, #d43f8d 100%);
     background-image: url('../../../shared/images/balls/ball-4.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -48,10 +29,7 @@
     z-index: -1;
   }
 }
-.leftColumn {
-}
-.title {
-}
+
 .subtitle {
   @extend %subtitle;
   @include adaptive(padding-bottom, 100, 50);
@@ -61,8 +39,6 @@
     &::before {
       content: '';
       position: absolute;
-      // filter: blur(20px);
-      // transform: rotate(4.99deg);
       border-radius: 50%;
       @include adaptive(width, 200, 100);
       @include adaptive(height, 200, 100);
@@ -70,7 +46,6 @@
       transform: translateX(-50%);
       right: 60%;
       bottom: 0;
-      // background: linear-gradient(90deg, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
       background-image: url('../../../shared/images/balls/ball-3.png');
       background-repeat: no-repeat;
       background-size: contain;
@@ -89,7 +64,4 @@
   background: rgba(255, 255, 255, 0.02);
   border-radius: 2px;
   @include adaptivePadding(padding, 27, 36, 15, 20);
-  @media screen and (min-width: $_768) {
-    // backdrop-filter: blur(30px);
-  }
 }

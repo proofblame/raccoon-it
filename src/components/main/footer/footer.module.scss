@@ -44,8 +44,6 @@
   letter-spacing: 0.05em;
   align-self: flex-end;
 }
-.address {
-}
 .phone {
   position: relative;
   @include adaptive(padding-left, 72, 20);
