@@ -6,8 +6,10 @@ import api from '../../features/utils/api';
 import Snackbar from '../../features/snackbar/snackbar';
 import InputError from '../../features/input-error/input-error';
 
+
 const Form = () => {
   const [isShown, setIsShown] = useState(false);
+  const [loading, setLoading] = useState('отправить заявку')
   const [message, setMessage] = useState('');
   const [data, setData] = useState({
     name: '',
@@ -72,6 +74,7 @@ const Form = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    setLoading('Отправка данных')
     await api.sendRequest(data);
     setMessage('Данные отправлены, спасибо!');
     setIsShown(true);
@@ -89,6 +92,7 @@ const Form = () => {
     });
     setTimeout(() => {
       setIsShown(false);
+      setLoading('отправить заявку');
     }, 3000);
   };
 
@@ -147,7 +151,7 @@ const Form = () => {
             </p>
           </label>
           <Button type='submit' disabled={!formValid} onClick={onSubmit}>
-            Отправить заявку
+            {loading}
           </Button>
         </fieldset>
       </form>

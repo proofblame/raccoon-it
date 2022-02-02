@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.c43140bd.css",
-    "main.js": "/static/js/main.f2689ea3.js",
+    "main.css": "/static/css/main.88979022.css",
+    "main.js": "/static/js/main.b3ebe618.js",
     "static/media/blot-3.webp": "/static/media/blot-3.804455ad1487dec39cd3.webp",
     "static/media/hand.webp": "/static/media/hand.5b2065b8515dfad468eb.webp",
-    "static/media/scheme-mobile.svg": "/static/media/scheme-mobile.dcfb97a063156a014b50fb8e057edcda.svg",
-    "static/media/scheme-desktop.svg": "/static/media/scheme-desktop.1fc568e898266d9f204f30895a41ab64.svg",
+    "static/media/scheme-mobile.svg": "/static/media/scheme-mobile.91e642630dcc4be4b0ab9bec720f7d8d.svg",
+    "static/media/scheme-desktop.svg": "/static/media/scheme-desktop.01c2dc0b38c3904aaf9683e79e4d53a9.svg",
     "static/media/montserrat-v18-latin_cyrillic-700.woff": "/static/media/montserrat-v18-latin_cyrillic-700.302252f8724c318c368d.woff",
     "static/media/montserrat-v18-latin_cyrillic-600.woff": "/static/media/montserrat-v18-latin_cyrillic-600.2d77a224754279fd2eb2.woff",
     "static/media/montserrat-v18-latin_cyrillic-500.woff": "/static/media/montserrat-v18-latin_cyrillic-500.04c0609c41996743a201.woff",
@@ -24,11 +24,15 @@
     "static/media/mobile-part-3.svg": "/static/media/mobile-part-3.137236d0e428142ace25cc401aa948d8.svg",
     "static/media/mobile-part-1.svg": "/static/media/mobile-part-1.10b381487d9467c9f2f3483b09de2617.svg",
     "static/media/postgresql.webp": "/static/media/postgresql.8b25c828815c93c23c3e.webp",
+    "static/media/icon-lock.svg": "/static/media/icon-lock.9023e262c382498e7b20.svg",
+    "static/media/icon-filter.svg": "/static/media/icon-filter.4a0e1e114d36e855f3ef.svg",
     "static/media/redis.webp": "/static/media/redis.38d9861ce154ae751fcc.webp",
     "static/media/java.webp": "/static/media/java.34394f3aa439c5772414.webp",
     "static/media/logo.svg": "/static/media/logo.63bec26f247f578969d02bf8d38c949f.svg",
     "static/media/spring.webp": "/static/media/spring.d10c246a2b106fb5f294.webp",
+    "static/media/icon-phone-dark.svg": "/static/media/icon-phone-dark.ca7a266cae3363c79e2f.svg",
     "static/media/react.webp": "/static/media/react.73bdeb424de573ceb747.webp",
+    "static/media/icon-phone-light.svg": "/static/media/icon-phone-light.d571df6247e1ff56e94e.svg",
     "static/media/redux.webp": "/static/media/redux.fd6b4a650005a23a2f64.webp",
     "static/media/photoshop.webp": "/static/media/photoshop.e93c3bb40ace2cb35794.webp",
     "static/media/nginx.webp": "/static/media/nginx.7b62af0cdf0467a6da5e.webp",
@@ -36,12 +40,15 @@
     "static/media/figma.webp": "/static/media/figma.d1c70a104db63f58f17f.webp",
     "static/media/typescript.webp": "/static/media/typescript.780076000baaa07371fa.webp",
     "static/media/javascript.webp": "/static/media/javascript.3845f62cbd5d7ff3b560.webp",
+    "static/media/icon-email-dark.svg": "/static/media/icon-email-dark.60fadba3eccc20eca6fc.svg",
+    "static/media/icon-email-light.svg": "/static/media/icon-email-light.051839ebb39b1ce36ad0.svg",
+    "static/media/icon-tablet.svg": "/static/media/icon-tablet.844a369bd7b2c417e633.svg",
     "static/media/tick.svg": "/static/media/tick.30469d3227e3ccc7677b.svg",
-    "main.c43140bd.css.map": "/static/css/main.c43140bd.css.map",
-    "main.f2689ea3.js.map": "/static/js/main.f2689ea3.js.map"
+    "main.88979022.css.map": "/static/css/main.88979022.css.map",
+    "main.b3ebe618.js.map": "/static/js/main.b3ebe618.js.map"
   },
   "entrypoints": [
-    "static/css/main.c43140bd.css",
-    "static/js/main.f2689ea3.js"
+    "static/css/main.88979022.css",
+    "static/js/main.b3ebe618.js"
   ]
 }
