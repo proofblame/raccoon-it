@@ -8,7 +8,6 @@
   &::before {
     content: '';
     position: absolute;
-    background: linear-gradient(90deg, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
     filter: blur(20px);
     transform: rotate(4.99deg);
     border-radius: 50%;
@@ -16,7 +15,12 @@
     @include adaptive(height, 500, 200);
     @include adaptive(left, -250, -150);
     top: 0;
+    // background: linear-gradient(90deg, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
     z-index: -1;
+    background-image: url('../../../shared/images/balls/ball-2.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    // z-index: -1;
   }
   &::after {
     content: '';
@@ -76,15 +80,19 @@
   &::before {
     content: '';
     position: absolute;
-    background: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
     filter: blur(30px);
     border-radius: 50%;
     @include adaptive(width, 180, 90);
     @include adaptive(height, 180, 90);
     @include adaptive(bottom, -450, -150);
-    left: 50%;
+    left: 40%;
     transform: translateX(-50%);
     z-index: -1;
+    // background: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
+    background-image: url('../../../shared/images/balls/ball-6.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    // z-index: -1;
   }
   &::after {
     content: '';
