@@ -5,7 +5,7 @@ import Button from '../../../shared/UI/button/button'
 
 import hand from '../../../shared/images/hand.webp'
 import mobile from '../../../shared/images/mobile.svg'
-import mobilePart1 from '../../../shared/images/mobile-part-1.svg'
+import mobilePart1 from '../../../shared/images/mobile-part-1.png'
 import mobilePart2 from '../../../shared/images/mobile-part-2.svg'
 import mobilePart3 from '../../../shared/images/mobile-part-3.svg'
 import mobilePart4 from '../../../shared/images/mobile-part-4.svg'

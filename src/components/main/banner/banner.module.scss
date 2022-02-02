@@ -161,6 +161,7 @@
   top: 5%;
   left: -20%;
   @extend %animation-2;
+  opacity: 0.5;
 }
 .mobilePart2 {
   @include adaptive(width, 168, 56);

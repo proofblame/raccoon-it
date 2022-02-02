@@ -4,8 +4,8 @@ import styles from './projects.module.scss'
 import H2 from '../../../shared/UI/h2/h2'
 import Button from '../../../shared/UI/button/button'
 
-import lawyers from '../../../shared/images/lawyers.webp'
-import psy from '../../../shared/images/psy.webp'
+import lawyers from '../../../shared/images/lawyers.png'
+import psy from '../../../shared/images/psy.png'
 import moder from '../../../shared/images/moder.webp'
 
 const Projects = () => {

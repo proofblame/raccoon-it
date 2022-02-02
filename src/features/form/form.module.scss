@@ -45,7 +45,7 @@
   display: none;
 
   &:checked + .pseudoItem {
-    background-image: url('../../shared/images/tick.svg');
+    background-image: url('../../shared/images/confirm.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;

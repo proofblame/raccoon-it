@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.88979022.css",
-    "main.js": "/static/js/main.53d89e4c.js",
+    "main.css": "/static/css/main.7d2fc798.css",
+    "main.js": "/static/js/main.0e74edc4.js",
     "static/media/blot-3.webp": "/static/media/blot-3.804455ad1487dec39cd3.webp",
     "static/media/hand.webp": "/static/media/hand.5b2065b8515dfad468eb.webp",
     "static/media/scheme-mobile.svg": "/static/media/scheme-mobile.91e642630dcc4be4b0ab9bec720f7d8d.svg",
@@ -14,15 +14,13 @@
     "static/media/montserrat-v18-latin_cyrillic-600.woff2": "/static/media/montserrat-v18-latin_cyrillic-600.eed234baab88dab532bf.woff2",
     "static/media/montserrat-v18-latin_cyrillic-500.woff2": "/static/media/montserrat-v18-latin_cyrillic-500.c2bbf96131933f2a6a90.woff2",
     "static/media/montserrat-v18-latin_cyrillic-regular.woff2": "/static/media/montserrat-v18-latin_cyrillic-regular.57960c9028c57ecd5006.woff2",
+    "static/media/lawyers.png": "/static/media/lawyers.c397567e34872bb781e1.png",
     "static/media/mobile.svg": "/static/media/mobile.4d18d1974cde2975f2cd7ec6d6916946.svg",
-    "static/media/psy.webp": "/static/media/psy.c2ff54b9244d057e5afa.webp",
-    "static/media/lawyers.webp": "/static/media/lawyers.e66b04ff430be7869af7.webp",
     "static/media/moder.webp": "/static/media/moder.44385a092ec625806a06.webp",
     "index.html": "/index.html",
     "static/media/mobile-part-2.svg": "/static/media/mobile-part-2.8568cb070627f9201c1905fbb12ad37d.svg",
     "static/media/mobile-part-4.svg": "/static/media/mobile-part-4.9a936223005caa780f88d118063128ea.svg",
     "static/media/mobile-part-3.svg": "/static/media/mobile-part-3.137236d0e428142ace25cc401aa948d8.svg",
-    "static/media/mobile-part-1.svg": "/static/media/mobile-part-1.10b381487d9467c9f2f3483b09de2617.svg",
     "static/media/postgresql.webp": "/static/media/postgresql.8b25c828815c93c23c3e.webp",
     "static/media/icon-lock.svg": "/static/media/icon-lock.9023e262c382498e7b20.svg",
     "static/media/icon-filter.svg": "/static/media/icon-filter.4a0e1e114d36e855f3ef.svg",
@@ -43,12 +41,12 @@
     "static/media/icon-email-dark.svg": "/static/media/icon-email-dark.60fadba3eccc20eca6fc.svg",
     "static/media/icon-email-light.svg": "/static/media/icon-email-light.051839ebb39b1ce36ad0.svg",
     "static/media/icon-tablet.svg": "/static/media/icon-tablet.844a369bd7b2c417e633.svg",
-    "static/media/tick.svg": "/static/media/tick.30469d3227e3ccc7677b.svg",
-    "main.88979022.css.map": "/static/css/main.88979022.css.map",
-    "main.53d89e4c.js.map": "/static/js/main.53d89e4c.js.map"
+    "static/media/confirm.svg": "/static/media/confirm.9642e17dc91fc2370fb9.svg",
+    "main.7d2fc798.css.map": "/static/css/main.7d2fc798.css.map",
+    "main.0e74edc4.js.map": "/static/js/main.0e74edc4.js.map"
   },
   "entrypoints": [
-    "static/css/main.88979022.css",
-    "static/js/main.53d89e4c.js"
+    "static/css/main.7d2fc798.css",
+    "static/js/main.0e74edc4.js"
   ]
 }
