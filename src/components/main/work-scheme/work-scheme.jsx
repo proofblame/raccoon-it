@@ -5,7 +5,6 @@ import H2 from '../../../shared/UI/h2/h2';
 import Button from '../../../shared/UI/button/button';
 
 import schemeDesktop from '../../../shared/images/scheme-desktop.svg';
-import schemeMobile from '../../../shared/images/scheme-mobile.svg';
 import backlogProject from '../../../shared/images/mobile-scheme/backlog-project.svg';
 import backlogSprint from '../../../shared/images/mobile-scheme/backlog-sprint.svg';
 import arrow from '../../../shared/images/mobile-scheme/arrow.svg';
@@ -45,7 +44,6 @@ const WorkScheme = () => {
           src={schemeDesktop}
           alt='Как мы работаем'
         />
-        {/* <img className={styles.schemeMobile} src={schemeMobile} alt="Как мы работаем" /> */}
         <div className={styles.schemeMobile}>
           <div className={styles.schemeBlock}>
             <img
