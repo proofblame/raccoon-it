@@ -6,8 +6,6 @@ import Button from '../../../shared/UI/button/button'
 
 import schemeDesktop from '../../../shared/images/scheme-desktop.svg'
 import schemeMobile from '../../../shared/images/scheme-mobile.svg'
-import psy from '../../../shared/images/psy.webp'
-import moder from '../../../shared/images/moder.webp'
 
 const WorkScheme = () => {
   return (
