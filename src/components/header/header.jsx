@@ -5,7 +5,7 @@ import logo from '../../shared/images/logo.svg'
 const Header = ({ active, onToggle }) => {
 
   return (
-    <header className={styles.header}>
+    <header className={styles.header} id='header'>
       <Container>
         <section className={styles.wrapper}>
           <div className={styles.logo}>

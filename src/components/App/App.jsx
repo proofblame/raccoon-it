@@ -10,27 +10,24 @@ const App = () => {
   const [isActive, setIsActive] = useState(false);
 
 
-
-
   useEffect(() => {
-    let scrollWidth = scrollbarWidth();
-    document.body.style.paddingRight = isActive ? `${scrollWidth}px` : '';
-  }, [isActive])
+    const body = document.querySelector('body');
+    const header = document.querySelector('#header')
 
-  function scrollbarWidth() {
     var documentWidth = parseInt(document.documentElement.clientWidth);
     var windowsWidth = parseInt(window.innerWidth);
     var scrollbarWidth = windowsWidth - documentWidth;
-    return scrollbarWidth;
-  }
+    body.style.overflow = isActive ? 'hidden' : 'auto'
+    body.style.paddingRight = isActive ? `${scrollbarWidth}px` : '';
+    header.style.paddingRight = isActive ? `${scrollbarWidth}px` : '';
+  }, [isActive])
+
 
   const handleOpenMenu = () => {
     setIsActive(true)
-    document.body.style.overflow = 'hidden'
   }
   const handleCloseMenu = (e) => {
     setIsActive(false)
-    document.body.style.overflow = 'auto'
   }
 
   const handleToggleMenu = () => {

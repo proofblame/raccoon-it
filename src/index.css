@@ -1,3 +1,7 @@
 @import url('./shared/vendor/normalize.css');
 @import url('./shared/vendor/reset.css');
 @import url('./shared/vendor/fonts.css');
+
+html {
+  background-color: #090909;
+}
