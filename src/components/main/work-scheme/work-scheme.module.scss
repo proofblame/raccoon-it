@@ -22,21 +22,21 @@
     background-size: contain;
     // z-index: -1;
   }
-  &::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    // background: linear-gradient(90deg, #57004e 0%, #ff05c8 100%);
-    opacity: 0.1;
-    // filter: blur(500px);
-    filter: blur(100px);
-    background-image: url('../../../shared/images/balls/bg-blue.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   width: 100%;
+  //   height: 100%;
+  //   z-index: -1;
+  //   // background: linear-gradient(90deg, #57004e 0%, #ff05c8 100%);
+  //   opacity: 0.1;
+  //   // filter: blur(500px);
+  //   filter: blur(100px);
+  //   background-image: url('../../../shared/images/balls/bg-blue.png');
+  //   background-size: contain;
+  //   background-repeat: no-repeat;
+  //   background-position: center center;
+  // }
 }
 .subtitle {
   @extend %subtitle;

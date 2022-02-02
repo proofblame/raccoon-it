@@ -6,21 +6,21 @@
   box-sizing: border-box;
   position: relative;
 
-  &::before {
-    content: '';
-    position: absolute;
-    // opacity: 0.1;
-    // filter: blur(500px);
-    // transform: rotate(147.49deg);
-    width: 100%;
-    height: 100%;
-    // background: linear-gradient(90deg, #215fff 0%, #212afd 100%);
-    filter: blur(100px);
-    background-image: url('../../../shared/images/balls/bg-blue.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom right;
-  }
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   // opacity: 0.1;
+  //   // filter: blur(500px);
+  //   // transform: rotate(147.49deg);
+  //   width: 100%;
+  //   height: 100%;
+  //   // background: linear-gradient(90deg, #215fff 0%, #212afd 100%);
+  //   filter: blur(100px);
+  //   background-image: url('../../../shared/images/balls/bg-blue.png');
+  //   background-size: contain;
+  //   background-repeat: no-repeat;
+  //   background-position: bottom right;
+  // }
   &::after {
     content: '';
     position: absolute;

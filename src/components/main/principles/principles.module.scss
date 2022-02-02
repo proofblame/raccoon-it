@@ -6,22 +6,22 @@
   @include adaptive(padding-bottom, 90, 40);
 
   position: relative;
-  &::before {
-    content: '';
-    position: absolute;
-    // opacity: 0.1;
-    // filter: blur(500px);
-    width: 100%;
-    height: 100%;
-    // transform: rotate(147.49deg);
-    // background: linear-gradient(90deg, #ff2121 0%, #fd218b 100%);
-    // background-image: url('../../../shared/images/balls/bg.png');
-    filter: blur(100px);
-    background-image: url('../../../shared/images/balls/bg.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   // opacity: 0.1;
+  //   // filter: blur(500px);
+  //   width: 100%;
+  //   height: 100%;
+  //   // transform: rotate(147.49deg);
+  //   // background: linear-gradient(90deg, #ff2121 0%, #fd218b 100%);
+  //   // background-image: url('../../../shared/images/balls/bg.png');
+  //   filter: blur(100px);
+  //   background-image: url('../../../shared/images/balls/bg.png');
+  //   background-size: contain;
+  //   background-repeat: no-repeat;
+  //   background-position: center center;
+  // }
   &::after {
     content: '';
     position: absolute;

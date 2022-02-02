@@ -11,22 +11,22 @@
   @include adaptive(column-gap, 106, 0);
   position: relative;
 
-  &::before {
-    content: '';
-    position: absolute;
-    // opacity: 0.2;
-    // filter: blur(500px);
-    width: 100%;
-    height: 100%;
-    // transform: rotate(147.49deg);
-    // background: linear-gradient(90deg, #f43b47 0%, #453a94 100%);
-    filter: blur(100px);
-    background-image: url('../../../shared/images/balls/bg.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: left center;
-    z-index: -1;
-  }
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   // opacity: 0.2;
+  //   // filter: blur(500px);
+  //   width: 100%;
+  //   height: 100%;
+  //   // transform: rotate(147.49deg);
+  //   // background: linear-gradient(90deg, #f43b47 0%, #453a94 100%);
+  //   filter: blur(100px);
+  //   background-image: url('../../../shared/images/balls/bg.png');
+  //   background-size: contain;
+  //   background-repeat: no-repeat;
+  //   background-position: left center;
+  //   z-index: -1;
+  // }
   &::after {
     content: '';
     position: absolute;
