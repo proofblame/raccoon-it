@@ -47,8 +47,38 @@
 .address {
 }
 .phone {
+  position: relative;
+  @include adaptive(padding-left, 72, 20);
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('../../../shared/images/icon-phone-light.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    @include adaptive(width, 34, 11);
+    @include adaptive(height, 34, 11);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
 }
 .email {
+  position: relative;
+  @include adaptive(padding-left, 52, 22);
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('../../../shared/images/icon-email-light.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    @include adaptive(width, 34, 15);
+    @include adaptive(height, 34, 15);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
 }
 
 .form {

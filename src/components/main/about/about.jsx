@@ -1,17 +1,21 @@
+import { Link } from 'react-scroll';
+
 import styles from './about.module.scss'
 import H2 from '../../../shared/UI/H2/H2'
 import Button from '../../../shared/UI/Button/Button'
 
 const About = () => {
   return (
-    <section className={styles.about}>
+    <section className={styles.about} id='about'>
       <div className={styles.leftColumn}>
         <H2 className={styles.title}>О нас</H2>
         <p className={styles.subtitle}>Наша команда занимается разработкой сайтов
           и мобильных приложений для решения сложных бизнес-задач. Мы используем современные
           IT-решения, продуманный дизайн и грамотную маркетинговую стратегию. Мы поможем
           вам привлечь новых клиентов.</p>
-        <Button>Оставить заявку</Button>
+        <Link to='form' smooth={true} duration={1000}>
+          <Button>Оставить заявку</Button>
+        </Link>
       </div>
       <div className={styles.rightColumn}>
         <ul className={styles.list}>

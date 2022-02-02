@@ -1,3 +1,5 @@
+import { Link } from 'react-scroll';
+
 import styles from './banner.module.scss'
 import Button from '../../../shared/UI/Button/Button'
 
@@ -11,11 +13,13 @@ import mobilePart4 from '../../../shared/images/mobile-part-4.svg'
 
 const Banner = () => {
   return (
-    <section className={styles.banner}>
+    <section className={styles.banner} id='banner'>
       <div className={styles.content}>
         <h1 className={styles.title}>WEB <br /> Development</h1>
         <p className={styles.subtitle}>Автоматизируем бизнес и создадим digital-решение</p>
-        <Button>Оставить заявку</Button>
+        <Link to='form' smooth={true} duration={1000}>
+          <Button>Оставить заявку</Button>
+        </Link>
       </div>
 
       <div className={styles.images}>

@@ -1,3 +1,5 @@
+import { Link } from 'react-scroll';
+
 import styles from './work-scheme.module.scss'
 import H2 from '../../../shared/UI/H2/H2'
 import Button from '../../../shared/UI/Button/Button'
@@ -9,7 +11,7 @@ import moder from '../../../shared/images/moder.webp'
 
 const WorkScheme = () => {
   return (
-    <section className={styles.workScheme}>
+    <section className={styles.workScheme} id='workflow'>
       <H2 className={styles.title}>Как мы работаем?</H2>
       <p className={styles.subtitle}>Мы изучаем особенности ваших клиентов и подбираем лучшее решение для вашего бизнеса. Работаем по гибкой методологии Agile, что позволяет быстро менять продукт под требования рынка.</p>
       <ul className={styles.list}>
@@ -36,7 +38,9 @@ const WorkScheme = () => {
       </div>
 
       <div className={styles.footer}>
-        <Button>Оставить заявку</Button>
+        <Link to='form' smooth={true} duration={1000}>
+          <Button>Оставить заявку</Button>
+        </Link>
       </div>
 
     </section>

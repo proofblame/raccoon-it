@@ -12,7 +12,7 @@ const Header = ({ active, onToggle }) => {
             <img src={logo} alt="RaccoonIT IT Development" className={styles.logoImg} />
             <span className={styles.logoTitle}>RaccoonIT <br /> IT&nbsp;Development</span>
           </div>
-          <button className={active ? `${styles.burger} ${styles.active}` : `${styles.burger}`} onClick={onToggle}>
+          <button className={active ? `${styles.burger} ${styles.active}` : `${styles.burger}`} onClick={onToggle} id='burger'>
             <span></span>
           </button>
         </section>

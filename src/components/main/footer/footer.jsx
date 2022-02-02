@@ -4,7 +4,7 @@ import Button from '../../../shared/UI/Button/Button'
 
 const Footer = () => {
   return (
-    <section className={styles.footer}>
+    <section className={styles.footer} id='form'>
       <H2 className={styles.title}>Обсудим проект?</H2>
       <div className={styles.content}>
         <form className={styles.form}>

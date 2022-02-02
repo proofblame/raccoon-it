@@ -17,7 +17,7 @@ import photoshop from '../../../shared/images/photoshop.webp'
 
 const Tech = () => {
   return (
-    <section className={styles.tech}>
+    <section className={styles.tech} id='techs'>
       <H2 className={styles.title}>Наши технологии</H2>
       <ul className={styles.list}>
         <li className={styles.item}>

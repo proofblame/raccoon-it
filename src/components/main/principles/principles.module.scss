@@ -54,3 +54,56 @@
   color: $secondaryColor;
   font-weight: 400;
 }
+
+.mobile {
+  position: relative;
+  @include adaptive(padding-left, 70, 50);
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('../../../shared/images/icon-tablet.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    @include adaptive(width, 50, 36);
+    @include adaptive(height, 50, 36);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+}
+
+.top {
+  position: relative;
+  @include adaptive(padding-left, 70, 50);
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('../../../shared/images/icon-lock.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    @include adaptive(width, 50, 36);
+    @include adaptive(height, 50, 36);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+}
+.user {
+  position: relative;
+  @include adaptive(padding-left, 70, 50);
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('../../../shared/images//icon-filter.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    @include adaptive(width, 50, 36);
+    @include adaptive(height, 50, 36);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+}

@@ -18,6 +18,7 @@ const Navbar = ({ active, onClose }) => {
       onClose()
     }
   };
+
   return (
     <section className={styles.overlay} onClick={onClose}>
       <nav className={active ? `${styles.nav} ${styles.active}` : `${styles.nav}`} onClick={e => e.stopPropagation()}>
@@ -28,6 +29,7 @@ const Navbar = ({ active, onClose }) => {
               smooth={true}
               duration={1000}
               className={styles.link}
+              onClick={onClose}
             >
               Главная
             </Link>
@@ -38,16 +40,18 @@ const Navbar = ({ active, onClose }) => {
               smooth={true}
               duration={1000}
               className={styles.link}
+              onClick={onClose}
             >
               О нас
             </Link>
           </li>
           <li className={styles.item}>
             <Link
-              to='tenets'
+              to='principles'
               smooth={true}
               duration={1000}
               className={styles.link}
+              onClick={onClose}
             >
               Наши принципы
             </Link>
@@ -58,6 +62,7 @@ const Navbar = ({ active, onClose }) => {
               smooth={true}
               duration={1000}
               className={styles.link}
+              onClick={onClose}
             >
               Проекты
             </Link>
@@ -68,6 +73,7 @@ const Navbar = ({ active, onClose }) => {
               smooth={true}
               duration={1000}
               className={styles.link}
+              onClick={onClose}
             >
               Как мы работаем
             </Link>
@@ -78,16 +84,18 @@ const Navbar = ({ active, onClose }) => {
               smooth={true}
               duration={1000}
               className={styles.link}
+              onClick={onClose}
             >
               Наши технологии
             </Link>
           </li>
           <li className={styles.item}>
             <Link
-              to='discuss'
+              to='form'
               smooth={true}
               duration={1000}
               className={styles.link}
+              onClick={onClose}
             >
               Контакты
             </Link>

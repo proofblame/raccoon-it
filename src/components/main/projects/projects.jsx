@@ -1,3 +1,5 @@
+import { Link } from 'react-scroll';
+
 import styles from './projects.module.scss'
 import H2 from '../../../shared/UI/H2/H2'
 import Button from '../../../shared/UI/Button/Button'
@@ -8,7 +10,7 @@ import moder from '../../../shared/images/moder.webp'
 
 const Projects = () => {
   return (
-    <section className={styles.projects}>
+    <section className={styles.projects} id='projects'>
       <H2 className={styles.title}>Наши проекты</H2>
       <ul className={styles.list}>
         <li className={styles.item}>
@@ -25,7 +27,9 @@ const Projects = () => {
         </li>
       </ul>
       <div className={styles.footer}>
-        <Button>Оставить заявку</Button>
+        <Link to='form' smooth={true} duration={1000}>
+          <Button>Оставить заявку</Button>
+        </Link>
         <span className={styles.comment}>Стань следующим!</span>
       </div>
 
