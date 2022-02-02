@@ -26,7 +26,7 @@
     &::after {
       content: '';
       position: absolute;
-      filter: blur(10px);
+      // filter: blur(10px);
       @include adaptive(width, 250, 125);
       @include adaptive(height, 250, 125);
       right: 0;

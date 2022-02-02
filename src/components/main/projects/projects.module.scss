@@ -51,7 +51,7 @@
   border-radius: 2px;
   @include adaptivePadding(padding, 45, 38, 27, 27);
   @media screen and (min-width: $_768) {
-    backdrop-filter: blur(30px);
+    // backdrop-filter: blur(30px);
   }
 }
 .itemImage {

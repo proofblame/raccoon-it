@@ -31,7 +31,7 @@
     &::after {
       content: '';
       position: absolute;
-      filter: blur(15px);
+      // filter: blur(15px);
       @include adaptive(width, 200, 100);
       @include adaptive(height, 200, 100);
       @include adaptive(right, -100, -50);
@@ -41,6 +41,9 @@
       transform: rotate(-103.81deg);
       // background: linear-gradient(90deg, #0250c5 0%, #d43f8d 100%);
       background-image: url('../../../shared/images/balls/ball-4.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
       z-index: -1;
     }
   }
@@ -58,14 +61,14 @@
     &::before {
       content: '';
       position: absolute;
-      filter: blur(20px);
-      transform: rotate(4.99deg);
+      // filter: blur(20px);
+      // transform: rotate(4.99deg);
       border-radius: 50%;
       @include adaptive(width, 200, 100);
       @include adaptive(height, 200, 100);
       // @include adaptive(right, -100, -50);
       transform: translateX(-50%);
-      right: 50%;
+      right: 60%;
       bottom: 0;
       // background: linear-gradient(90deg, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
       background-image: url('../../../shared/images/balls/ball-3.png');
@@ -87,6 +90,6 @@
   border-radius: 2px;
   @include adaptivePadding(padding, 27, 36, 15, 20);
   @media screen and (min-width: $_768) {
-    backdrop-filter: blur(30px);
+    // backdrop-filter: blur(30px);
   }
 }

@@ -10,7 +10,7 @@
     &::before {
       content: '';
       position: absolute;
-      filter: blur(10px);
+      // filter: blur(10px);
       transform: rotate(37.27deg);
       @include adaptive(width, 400, 90);
       @include adaptive(height, 400, 90);
@@ -28,7 +28,7 @@
     &::after {
       content: '';
       position: absolute;
-      filter: blur(10px);
+      // filter: blur(10px);
       transform: rotate(37.27deg);
       @include adaptive(width, 200, 90);
       @include adaptive(height, 200, 90);
@@ -64,7 +64,7 @@
     padding: 27px;
   }
   @media screen and (min-width: $_768) {
-    backdrop-filter: blur(30px);
+    // backdrop-filter: blur(30px);
   }
 }
 .itemTitle {
