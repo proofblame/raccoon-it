@@ -8,9 +8,9 @@ import lawyers from '../../../shared/images/lawyers.png'
 import psy from '../../../shared/images/psy.png'
 import moder from '../../../shared/images/moder.webp'
 
-const Projects = () => {
+const Projects = ({ style }) => {
   return (
-    <section className={styles.projects} id='projects'>
+    <section className={styles.projects} id='projects' style={style}>
       <H2 className={styles.title}>Наши проекты</H2>
       <ul className={styles.list}>
         <li className={styles.item}>

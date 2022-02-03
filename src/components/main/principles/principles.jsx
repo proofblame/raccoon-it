@@ -1,9 +1,9 @@
 import styles from './principles.module.scss'
 import H2 from '../../../shared/UI/h2/h2'
 
-const Principles = () => {
+const Principles = ({ style }) => {
   return (
-    <section className={styles.principles} id='principles'>
+    <section className={styles.principles} id='principles' style={style}>
       <H2 className={styles.title}>Наши принципы</H2>
       <ul className={styles.list}>
         <li className={styles.item}>

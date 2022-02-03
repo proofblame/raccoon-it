@@ -11,9 +11,9 @@ import mobilePart3 from '../../../shared/images/mobile-part-3.svg'
 import mobilePart4 from '../../../shared/images/mobile-part-4.svg'
 
 
-const Banner = () => {
+const Banner = ({ style }) => {
   return (
-    <section className={styles.banner} id='banner'>
+    <section className={styles.banner} id='banner' style={style}>
       <div className={styles.content}>
         <h1 className={styles.title}>WEB <br /> Development</h1>
         <p className={styles.subtitle}>Автоматизируем бизнес и создадим digital-решение</p>

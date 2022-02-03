@@ -15,9 +15,9 @@ import redux from '../../../shared/images/redux.webp'
 import figma from '../../../shared/images/figma.webp'
 import photoshop from '../../../shared/images/photoshop.webp'
 
-const Tech = () => {
+const Tech = ({ style }) => {
   return (
-    <section className={styles.tech} id='techs'>
+    <section className={styles.tech} id='techs' style={style}>
       <H2 className={styles.title}>Наши технологии</H2>
       <ul className={styles.list}>
         <li className={styles.item}>

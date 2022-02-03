@@ -2,9 +2,9 @@ import styles from './footer.module.scss'
 import H2 from '../../../shared/UI/h2/h2'
 import Form from '../../../features/form/form';
 
-const Footer = () => {
+const Footer = ({ style }) => {
   return (
-    <section className={styles.footer} id='form'>
+    <section className={styles.footer} id='form' style={style}>
       <H2 className={styles.title}>Обсудим проект?</H2>
       <div className={styles.content}>
         <Form id='form' />

@@ -4,9 +4,9 @@ import styles from './about.module.scss'
 import H2 from '../../../shared/UI/h2/h2'
 import Button from '../../../shared/UI/button/button'
 
-const About = () => {
+const About = ({ style }) => {
   return (
-    <section className={styles.about} id='about'>
+    <section className={styles.about} id='about' style={style}>
       <div className={styles.leftColumn}>
         <H2 className={styles.title}>О нас</H2>
         <p className={styles.subtitle}>Наша команда занимается разработкой сайтов

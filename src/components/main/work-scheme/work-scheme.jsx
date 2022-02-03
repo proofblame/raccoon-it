@@ -11,9 +11,9 @@ import arrow from '../../../shared/images/mobile-scheme/arrow.svg';
 import daily from '../../../shared/images/mobile-scheme/daily.svg';
 import rectangle from '../../../shared/images/mobile-scheme/rectangle.svg';
 
-const WorkScheme = () => {
+const WorkScheme = ({ style }) => {
   return (
-    <section className={styles.workScheme} id='workflow'>
+    <section className={styles.workScheme} id='workflow' style={style}>
       <H2 className={styles.title}>Как мы работаем?</H2>
       <p className={styles.subtitle}>
         Мы изучаем особенности ваших клиентов и подбираем лучшее решение для
