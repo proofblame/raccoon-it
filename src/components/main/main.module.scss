@@ -7,4 +7,9 @@
   z-index: 0;
   background-color: $background;
   overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
 }
