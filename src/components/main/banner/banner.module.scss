@@ -1,5 +1,27 @@
 @import '../../../shared/variables.scss';
 
+@keyframes bounce-1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes bounce-2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 %animation-1 {
   animation-duration: 10s;
   animation-iteration-count: infinite;
@@ -14,29 +36,29 @@
   animation-timing-function: ease;
 }
 
-@keyframes bounce-1 {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
+// @keyframes bounce-1 {
+//   0% {
+//     transform: translateY(0);
+//   }
+//   50% {
+//     transform: translateY(-10%);
+//   }
+//   100% {
+//     transform: translateY(0);
+//   }
+// }
 
-@keyframes bounce-2 {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(15%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
+// @keyframes bounce-2 {
+//   0% {
+//     transform: translateY(0);
+//   }
+//   50% {
+//     transform: translateY(15%);
+//   }
+//   100% {
+//     transform: translateY(0);
+//   }
+// }
 
 .banner {
   @extend %fonts;

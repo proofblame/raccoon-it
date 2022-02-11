@@ -125,3 +125,11 @@ $reasonsListSize: 1479px;
 //  768px
 // @media screen and (max-width: $_768) {}
 // @media screen and (max-width: $_425) {}
+
+%bounce-1 {
+  animation-name: bounce-1;
+}
+
+%bounce-2 {
+  animation-name: bounce-2;
+}

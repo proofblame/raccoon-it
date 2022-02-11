@@ -1,8 +1,14 @@
 import styles from './header.module.scss'
 import Container from '../../shared/UI/container/container'
 import logo from '../../shared/images/logo.svg'
+import { useLocation } from "react-router-dom";
+import MenuButton from '../../features/menu-button/menu-button';
 
 const Header = ({ active, onToggle }) => {
+
+  const { pathname } = useLocation()
+
+  const menuButton = pathname === '/' ? (<MenuButton active={active} onToggle={onToggle} />) : ('')
 
   return (
     <header className={styles.header} id='header'>
@@ -12,9 +18,7 @@ const Header = ({ active, onToggle }) => {
             <img src={logo} alt="RaccoonIT IT Development" className={styles.logoImg} />
             <span className={styles.logoTitle}>RaccoonIT <br /> IT&nbsp;Development</span>
           </div>
-          <button className={active ? `${styles.burger} ${styles.active}` : `${styles.burger}`} onClick={onToggle} id='burger' aria-label="Open menu">
-            <span></span>
-          </button>
+          {menuButton}
         </section>
       </Container>
     </header>
