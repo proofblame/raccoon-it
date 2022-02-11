@@ -1,0 +1,103 @@
+@import '../../shared/variables.scss';
+
+%_burgerElement {
+  @include adaptive(height, 4, 2);
+  background-color: $mainColor;
+  border-radius: 3px;
+  transition: all linear 0.3s;
+}
+
+.header {
+  @include adaptivePadding(padding, 48, 0, 15, 0);
+  @include adaptive(height, 145, 51);
+  background-color: $background;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.wrapper {
+  @extend %flex;
+}
+.logo {
+  @extend %flex;
+  @include adaptive(width, 68, 30);
+  @include adaptive(height, 47, 21);
+  @include adaptive(column-gap, 22, 10);
+  position: relative;
+  z-index: 1;
+}
+.logoImg {
+  @include adaptive(width, 68, 30);
+  @include adaptive(height, 47, 21);
+}
+.logoTitle {
+  @extend %fonts;
+  @extend %fz-18-8;
+  color: $mainColor;
+  font-weight: 600;
+}
+
+.burger {
+  @include adaptive(width, 60, 30);
+  @include adaptive(height, 37, 18);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  background: none;
+  border: none;
+  overflow: hidden;
+
+  &:hover {
+    opacity: 0.7;
+    transition: 0.5s;
+  }
+  &:focus {
+    outline: none;
+  }
+
+  span {
+    @include adaptive(width, 50, 24);
+    @extend %_burgerElement;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    @extend %_burgerElement;
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    @extend %_burgerElement;
+    bottom: 0;
+    left: 0;
+  }
+
+  &.active {
+    span {
+      opacity: 0;
+      transform: scale(0) translateX(100%);
+    }
+
+    &::before {
+      top: 50%;
+      transform: rotate(45deg) translateY(-50%);
+    }
+
+    &::after {
+      top: 50%;
+      transform: rotate(-45deg) translateY(-50%);
+    }
+  }
+}

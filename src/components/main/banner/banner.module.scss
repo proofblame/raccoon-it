@@ -1,0 +1,208 @@
+@import '../../../shared/variables.scss';
+
+%animation-1 {
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-name: bounce-1;
+  animation-timing-function: ease;
+}
+
+%animation-2 {
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-name: bounce-2;
+  animation-timing-function: ease;
+}
+
+@keyframes bounce-1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce-2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.banner {
+  height: 100%;
+  @extend %fonts;
+  // @include adaptive(padding-top, 146, 28);
+  @include adaptive(padding-bottom, 90, 40);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(286px, 1fr));
+  align-items: center;
+
+  @include adaptive(column-gap, 157, 0);
+  position: relative;
+  @media screen and (max-width: $_768) {
+    grid-template-columns: repeat(1, minmax(286px, 1fr));
+    row-gap: 55px;
+    justify-items: center;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: blur(10px);
+    transform: rotate(-39.57deg);
+    border-radius: 50%;
+    width: 1000px;
+    height: 1000px;
+    @include adaptive(width, 1000, 300);
+    @include adaptive(height, 1000, 300);
+    @include adaptive(left, -700, -200);
+    top: 10px;
+    background-image: url('../../../shared/images/balls/ball-1.png');
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    background-image: url('../../../shared/images/blot-1.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include adaptive(width, 1000, 300);
+    @include adaptive(height, 1000, 300);
+    @include adaptive(right, -700, -85);
+    @include adaptive(top, 10, 340);
+    z-index: -1;
+  }
+}
+.content {
+  @include adaptivePadding(padding, 98, 116, 34, 44);
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 2px;
+  @include adaptive(width, 781, 286);
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    transform: rotate(-39.57deg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: blur(10px);
+    border-radius: 50%;
+    @include adaptive(width, 200, 100);
+    @include adaptive(height, 200, 100);
+    @include adaptive(right, -100, -50);
+    transform: translateY(-50%);
+    top: 50%;
+    background-image: url('../../../shared/images/balls/ball-4.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    filter: blur(5px);
+    transform: rotate(37.27deg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+    @include adaptive(width, 100, 50);
+    @include adaptive(height, 100, 50);
+    @include adaptive(right, -100, 200);
+    transform: translateY(-50%);
+    top: 0;
+    background-image: url('../../../shared/images/balls/ball-5.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+.title {
+  color: $mainColor;
+  @extend %fz-72;
+  margin-bottom: 30px;
+  @include adaptive(margin-bottom, 30, 10);
+}
+.subtitle {
+  color: $secondaryColor;
+  @extend %fz-24-30;
+  @include adaptive(margin-bottom, 67, 16);
+}
+.images {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  padding-left: 100px;
+  @media screen and (max-width: $_768) {
+    align-items: flex-end;
+    padding-left: 40px;
+    box-sizing: border-box;
+  }
+}
+.phone {
+  position: relative;
+  align-self: center;
+  justify-self: start;
+  @media screen and (max-width: $_768) {
+    margin-bottom: 70px;
+    align-self: center;
+  }
+}
+.mobile {
+  @include adaptive(width, 242, 80);
+  @extend %animation-1;
+}
+.mobilePart1 {
+  @include adaptive(width, 100, 34);
+  position: absolute;
+  top: 5%;
+  left: -20%;
+  @extend %animation-2;
+  opacity: 0.5;
+}
+.mobilePart2 {
+  @include adaptive(width, 168, 56);
+  position: absolute;
+  top: 25%;
+  right: -45%;
+  @extend %animation-2;
+}
+.mobilePart3 {
+  @include adaptive(width, 168, 56);
+  position: absolute;
+  top: 54%;
+  left: -25%;
+  @extend %animation-2;
+}
+.mobilePart4 {
+  @include adaptive(width, 140, 46);
+  position: absolute;
+  z-index: 1;
+  bottom: -5%;
+  right: -20%;
+  @extend %animation-2;
+}
+.hand {
+  @include adaptive(width, 926, 304);
+  position: absolute;
+  left: 0;
+  z-index: 0;
+  @include adaptive(bottom, -230, 0);
+  @media screen and (max-width: $_768) {
+    left: initial;
+    @include adaptive(right, -230, -50);
+  }
+}

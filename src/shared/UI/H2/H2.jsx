@@ -1,20 +1,20 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import style from './H2.module.scss';
+import style from './h2.module.scss';
 
-const Header = ({ children, className }) => {
-  const classes = classNames(style.header, className);
+const H2 = ({ children, className }) => {
+  const classes = classNames(style.title, className);
   return <h2 className={classes}>{children}</h2>;
 };
 
-Header.propTypes = {
+H2.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
 };
 
-Header.defaultProps = {
+H2.defaultProps = {
   children: 'Заголовок',
   className: '',
 };
 
-export default Header;
+export default H2;

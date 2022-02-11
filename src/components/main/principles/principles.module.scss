@@ -1,0 +1,101 @@
+@import '../../../shared/variables.scss';
+
+.principles {
+  @extend %fonts;
+  @include adaptive(padding-top, 146, 28);
+  @include adaptive(padding-bottom, 90, 40);
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    @include adaptive(width, 250, 125);
+    @include adaptive(height, 250, 125);
+    right: 0;
+    transform: translateY(-50%);
+    top: 0;
+    border-radius: 50%;
+    transform: rotate(4.99deg);
+    z-index: -1;
+    background-image: url('../../../shared/images/balls/ball-5.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(286px, 350px));
+  justify-content: space-between;
+  @include adaptive(column-gap, 50, 0);
+  row-gap: 50px;
+}
+.item {
+  letter-spacing: 0.03em;
+}
+.itemTitle {
+  @extend %fz-24-30;
+  text-transform: uppercase;
+  color: $mainColor;
+  @include adaptive(margin-bottom, 30, 20);
+  font-weight: 600;
+}
+.itemSubtitle {
+  @extend %fz-24-38;
+
+  color: $secondaryColor;
+  font-weight: 400;
+}
+
+.mobile {
+  position: relative;
+  @include adaptive(padding-left, 70, 50);
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('../../../shared/images/icon-tablet.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    @include adaptive(width, 50, 36);
+    @include adaptive(height, 50, 36);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+}
+
+.top {
+  position: relative;
+  @include adaptive(padding-left, 70, 50);
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('../../../shared/images/icon-lock.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    @include adaptive(width, 50, 36);
+    @include adaptive(height, 50, 36);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+}
+.user {
+  position: relative;
+  @include adaptive(padding-left, 70, 50);
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('../../../shared/images//icon-filter.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    @include adaptive(width, 50, 36);
+    @include adaptive(height, 50, 36);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+}

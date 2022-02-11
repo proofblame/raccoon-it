@@ -1,9 +1,0 @@
-@import '../../variables.scss';
-
-.mainHeader {
-  @extend %fonts;
-  @extend %fz-72;
-  letter-spacing: 0.05em;
-  font-weight: bold;
-  color: $mainColor;
-}

@@ -1,0 +1,102 @@
+@import '../../shared/variables.scss';
+%ul {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @include adaptive(row-gap, 40, 30);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: none;
+  z-index: 1;
+  &.active {
+    left: 0;
+  }
+}
+.nav {
+  @extend %fonts;
+  @include adaptive(width, 566, 320);
+  @include adaptivePadding(padding, 48, 0, 20, 0);
+  background-color: $background;
+  color: $linkActiveColor;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  @extend %fz-18-12;
+  letter-spacing: 0.05em;
+  transition: all 0.5s ease-in-out;
+  transform: translateX(100%);
+  @media screen and (max-width: $_768) {
+    width: 100%;
+  }
+
+  &.active {
+    transform: translateX(0);
+  }
+}
+.menu {
+  @extend %ul;
+  justify-content: center;
+  flex-basis: 100%;
+  font-weight: 600;
+}
+.item {
+  text-transform: uppercase;
+}
+.link {
+  cursor: pointer;
+  transition: all linear 0.1s;
+  opacity: 0.5;
+  &:hover {
+    opacity: initial;
+  }
+}
+.contacts {
+  @extend %ul;
+  font-weight: 600;
+  row-gap: 12px;
+  opacity: 0.5;
+}
+.phone {
+  position: relative;
+  @include adaptive(padding-left, 72, 20);
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('../../shared/images/icon-phone-dark.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    @include adaptive(width, 34, 15);
+    @include adaptive(height, 34, 15);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+}
+.email {
+  position: relative;
+  @include adaptive(padding-left, 52, 22);
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('../../shared/images/icon-email-dark.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    @include adaptive(width, 34, 15);
+    @include adaptive(height, 34, 15);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+}

@@ -1,0 +1,67 @@
+@import '../../../shared/variables.scss';
+.about {
+  @extend %fonts;
+  @include adaptive(padding-top, 146, 28);
+  @include adaptive(padding-bottom, 90, 40);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(286px, 1fr));
+  align-items: center;
+  row-gap: 50px;
+  @include adaptive(column-gap, 106, 0);
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    // filter: blur(15px);
+    @include adaptive(width, 200, 100);
+    @include adaptive(height, 200, 100);
+    @include adaptive(right, -100, -50);
+    transform: translateY(-50%);
+    top: 50%;
+    border-radius: 50%;
+    transform: rotate(-103.81deg);
+    background-image: url('../../../shared/images/balls/ball-4.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+  }
+}
+
+.subtitle {
+  @extend %subtitle;
+  @include adaptive(padding-bottom, 100, 50);
+}
+.rightColumn {
+  @media screen and (min-width: $_768) {
+    &::before {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      @include adaptive(width, 200, 100);
+      @include adaptive(height, 200, 100);
+      // @include adaptive(right, -100, -50);
+      transform: translateX(-50%);
+      right: 60%;
+      bottom: 0;
+      background-image: url('../../../shared/images/balls/ball-3.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      z-index: -1;
+    }
+  }
+}
+.list {
+  @extend %fz-24-30;
+  color: $mainColor;
+  display: flex;
+  flex-direction: column;
+  @include adaptive(row-gap, 30, 17);
+}
+.item {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 2px;
+  @include adaptivePadding(padding, 27, 36, 15, 20);
+}

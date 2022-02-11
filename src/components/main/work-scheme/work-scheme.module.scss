@@ -1,0 +1,182 @@
+@import '../../../shared/variables.scss';
+.workScheme {
+  @extend %fonts;
+  @include adaptive(padding-top, 146, 28);
+  @include adaptive(padding-bottom, 90, 40);
+  box-sizing: border-box;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    filter: blur(20px);
+    transform: rotate(4.99deg);
+    border-radius: 50%;
+    @include adaptive(width, 500, 200);
+    @include adaptive(height, 500, 200);
+    @include adaptive(left, -250, -150);
+    top: 0;
+    z-index: -1;
+    background-image: url('../../../shared/images/balls/ball-2.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  @media screen and (min-width: 768px) {
+  }
+}
+.subtitle {
+  @extend %subtitle;
+  @include adaptive(padding-bottom, 100, 50);
+  max-width: 914px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(286px, 330px));
+  justify-content: space-between;
+  @include adaptive(column-gap, 50, 0);
+  row-gap: 20px;
+  @include adaptive(margin-bottom, 100, 50);
+}
+.item {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 2px;
+  @include adaptivePadding(padding, 17, 24, 12, 14);
+  opacity: 0.5;
+  letter-spacing: 0.03em;
+  color: $mainColor;
+  @extend %flex;
+  @include adaptive(column-gap, 20, 12);
+  justify-content: flex-start;
+  transition: 0.7s;
+
+  @media screen and (min-width: $_768) {
+    &:hover {
+      box-shadow: 0 0 20px #fff;
+      transform: translateY(-15px);
+      transition: 0.7s;
+    }
+  }
+}
+.itemNumber {
+  font-weight: 500;
+  @extend %fz-64;
+}
+.itemSubtitle {
+  @extend %fz-24-24;
+}
+.scheme {
+  @include adaptive(margin-bottom, 100, 50);
+  position: relative;
+  @media screen and (min-width: 768px) {
+    &::before {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      @include adaptive(width, 180, 90);
+      @include adaptive(height, 180, 90);
+      @include adaptive(bottom, -450, -150);
+      left: 40%;
+      transform: translateX(-50%);
+      z-index: -1;
+      background-image: url('../../../shared/images/balls/ball-6.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+.schemeDesktop {
+  @media screen and (max-width: $_768) {
+    display: none;
+  }
+}
+
+.schemeMobile {
+  display: none;
+  @media screen and (max-width: $_768) {
+    display: block;
+    max-width: 284px;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  @include adaptive(column-gap, 40, 0);
+  row-gap: 20px;
+  @media screen and (max-width: $_425) {
+    flex-direction: column-reverse;
+  }
+}
+.comment {
+  @extend %fz-24-38;
+  color: $mainColor;
+  font-weight: 400;
+}
+.schemeMobile {
+  text-transform: uppercase;
+  color: $mainColor;
+  letter-spacing: 0.03em;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  row-gap: 20px;
+
+  @media screen and (max-width: $_768) {
+    display: flex;
+  }
+}
+
+.schemeTitle {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.schemeList {
+  list-style-type: none;
+}
+.schemeItem {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  opacity: 0.7;
+  position: relative;
+  padding-left: 17px;
+  margin-bottom: 10px;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background-image: url('../../../shared/images/mobile-scheme/point.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+.schemeArrow {
+  height: 47px;
+  width: 50%;
+}
+.schemeRectangle {
+  width: 135px;
+  margin-bottom: 10px;
+  margin: 0 auto;
+}
+.schemeIMG {
+  width: 212px;
+  margin-bottom: 14px;
+}
+.schemeBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}

@@ -1,0 +1,80 @@
+@import '../../../shared/variables.scss';
+
+%ul {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  @include adaptive(row-gap, 40, 10);
+  @extend %fz-24-30;
+}
+
+.footer {
+  @extend %fonts;
+  @include adaptive(padding-top, 146, 28);
+  @include adaptive(padding-bottom, 90, 40);
+
+  box-sizing: border-box;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    background: url('../../../shared/images/blot-3.webp');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+    width: 200%;
+    height: 200%;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+.content {
+  @extend %flex;
+  flex-wrap: wrap;
+  column-gap: 25px;
+  row-gap: 50px;
+}
+
+.contacts {
+  @extend %ul;
+  font-weight: 600;
+  color: $linkActiveColor;
+  letter-spacing: 0.05em;
+  align-self: flex-end;
+}
+.phone {
+  position: relative;
+  @include adaptive(padding-left, 72, 20);
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('../../../shared/images/icon-phone-light.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    @include adaptive(width, 34, 11);
+    @include adaptive(height, 34, 11);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+}
+.email {
+  position: relative;
+  @include adaptive(padding-left, 52, 22);
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('../../../shared/images/icon-email-light.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    @include adaptive(width, 34, 15);
+    @include adaptive(height, 34, 15);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+}

@@ -1,0 +1,60 @@
+@import '../../../shared/variables.scss';
+.projects {
+  @extend %fonts;
+  @include adaptive(padding-top, 146, 28);
+  @include adaptive(padding-bottom, 90, 40);
+  box-sizing: border-box;
+  position: relative;
+
+  @media screen and (min-width: $_768) {
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    background: url('../../../shared/images/blot-2.webp');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 200%;
+    height: 200%;
+    top: 0;
+    z-index: -1;
+  }
+}
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(286px, 1fr));
+  justify-content: space-between;
+  row-gap: 20px;
+  column-gap: 20px;
+  @include adaptive(margin-bottom, 100, 50);
+}
+.item {
+  letter-spacing: 0.03em;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 2px;
+  @include adaptivePadding(padding, 45, 38, 27, 27);
+}
+.itemImage {
+  @include adaptive(margin-bottom, 30, 20);
+}
+.itemSubtitle {
+  @extend %fz-24-30;
+  color: $mainColor;
+  font-weight: 600;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  @include adaptive(column-gap, 40, 0);
+  row-gap: 20px;
+  @media screen and (max-width: $_425) {
+    flex-direction: column-reverse;
+  }
+}
+.comment {
+  @extend %fz-24-38;
+  color: $mainColor;
+  font-weight: 400;
+}
