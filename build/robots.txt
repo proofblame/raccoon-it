@@ -1,3 +1,4 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Disallow: 
+Disallow: /policy.pdf
+Sitemap: https://raccoon-it.dev/sitemap.xml
