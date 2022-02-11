@@ -1,0 +1,18 @@
+.notFound {
+  composes: main from '../main/main.module.scss';
+}
+.wrapper {
+  composes: banner from '../main/banner/banner.module.scss';
+}
+.content {
+  composes: content from '../main/banner/banner.module.scss';
+}
+.images {
+  composes: images from '../main/banner/banner.module.scss';
+}
+.hand {
+  composes: hand from '../main/banner/banner.module.scss';
+}
+.subtitle {
+  composes: subtitle from '../main/banner/banner.module.scss';
+}

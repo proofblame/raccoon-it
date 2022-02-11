@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react'
 import Header from '../header/header'
 import Navbar from '../navbar/navbar'
 import Main from '../main/main'
-
+import { Switch, Route } from "react-router-dom";
+import NotFound from '../not-found/not-found';
 
 const App = () => {
 
@@ -42,8 +43,15 @@ const App = () => {
   return (
     <>
       <Header active={isActive} onToggle={handleToggleMenu} />
-      <Navbar active={isActive} onClose={handleCloseMenu} />
-      <Main />
+      <Switch>
+        <Route exact path='/'>
+          <Navbar active={isActive} onClose={handleCloseMenu} />
+          <Main />
+        </Route>
+        <Route path='*'>
+          <NotFound />
+        </Route>
+      </Switch>
     </>
   )
 }
