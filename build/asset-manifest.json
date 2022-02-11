@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.73a07e3f.css",
-    "main.js": "/static/js/main.e49489b0.js",
+    "main.css": "/static/css/main.cbc8d0fd.css",
+    "main.js": "/static/js/main.4a7b6381.js",
     "static/media/blot-3.webp": "/static/media/blot-3.804455ad1487dec39cd3.webp",
     "static/media/blot-2.webp": "/static/media/blot-2.366058ec0a51b6490e87.webp",
     "static/media/ball-1.png": "/static/media/ball-1.4da380880f38be3b8976.png",
@@ -19,7 +19,7 @@
     "static/media/ball-2.png": "/static/media/ball-2.1fa04ce2ece10761c5cc.png",
     "static/media/ball-3.png": "/static/media/ball-3.5f094f3d1d1a2b837162.png",
     "static/media/lawyers.png": "/static/media/lawyers.c397567e34872bb781e1.png",
-    "static/media/mobile.svg": "/static/media/mobile.4d18d1974cde2975f2cd7ec6d6916946.svg",
+    "static/media/mobile.svg": "/static/media/mobile.ac3f329085f827140c0ed278dcd0a480.svg",
     "static/media/daily.svg": "/static/media/daily.019200ef42dd8341bc6ab5d36ec64e09.svg",
     "static/media/moder.webp": "/static/media/moder.44385a092ec625806a06.webp",
     "index.html": "/index.html",
@@ -51,12 +51,12 @@
     "static/media/icon-email-dark.svg": "/static/media/icon-email-dark.60fadba3eccc20eca6fc.svg",
     "static/media/icon-email-light.svg": "/static/media/icon-email-light.051839ebb39b1ce36ad0.svg",
     "static/media/icon-tablet.svg": "/static/media/icon-tablet.844a369bd7b2c417e633.svg",
-    "static/media/confirm.svg": "/static/media/confirm.9642e17dc91fc2370fb9.svg",
-    "main.73a07e3f.css.map": "/static/css/main.73a07e3f.css.map",
-    "main.e49489b0.js.map": "/static/js/main.e49489b0.js.map"
+    "static/media/confirm.svg": "/static/media/confirm.0b0af534c10c3403717b.svg",
+    "main.cbc8d0fd.css.map": "/static/css/main.cbc8d0fd.css.map",
+    "main.4a7b6381.js.map": "/static/js/main.4a7b6381.js.map"
   },
   "entrypoints": [
-    "static/css/main.73a07e3f.css",
-    "static/js/main.e49489b0.js"
+    "static/css/main.cbc8d0fd.css",
+    "static/js/main.4a7b6381.js"
   ]
 }
