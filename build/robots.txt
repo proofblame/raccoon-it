@@ -1,4 +1,6 @@
 User-agent: *
 Disallow: 
 Disallow: /policy.pdf
+Disallow: /static/
 Sitemap: https://raccoon-it.dev/sitemap.xml
+
