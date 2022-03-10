@@ -1,4 +1,18 @@
 @import '../../../shared/variables.scss';
+
+%sizesIcons {
+  content: '';
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  @include adaptive(width, 150, 60);
+  @include adaptive(height, 150, 60);
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+
 .projects {
   @extend %fonts;
   @include adaptive(padding-top, 146, 28);
@@ -22,17 +36,21 @@
 }
 .list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(286px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(286px, 720px));
   justify-content: space-between;
-  row-gap: 20px;
   column-gap: 20px;
   @include adaptive(margin-bottom, 100, 50);
+  @include adaptive(row-gap, 30, 20);
 }
 .item {
   letter-spacing: 0.03em;
   background: rgba(255, 255, 255, 0.02);
   border-radius: 2px;
   @include adaptivePadding(padding, 45, 38, 27, 27);
+}
+.item:last-of-type {
+  padding: 0;
+  background: none;
 }
 .itemImage {
   @include adaptive(margin-bottom, 30, 20);
@@ -41,13 +59,48 @@
   @extend %fz-24-30;
   color: $mainColor;
   font-weight: 600;
+  position: relative;
+  @include adaptive(padding-left, 185, 70);
 }
+.sdn {
+  &::before {
+    @extend %sizesIcons;
+    background-image: url('../../../shared/images/sdn.svg');
+  }
+}
+.docker {
+  &::before {
+    @extend %sizesIcons;
+    background-image: url('../../../shared/images/docker.svg');
+  }
+}
+
+.laptop {
+  &::before {
+    @extend %sizesIcons;
+    background-image: url('../../../shared/images/laptop.svg');
+  }
+}
+.garant {
+  &::before {
+    @extend %sizesIcons;
+    background-image: url('../../../shared/images/garant.svg');
+  }
+}
+.erp {
+  &::before {
+    @extend %sizesIcons;
+    background-image: url('../../../shared/images/erp.svg');
+  }
+}
+
 .footer {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  @include adaptive(column-gap, 40, 0);
+  @include adaptive(column-gap, 25, 0);
   row-gap: 20px;
   @media screen and (max-width: $_425) {
     flex-direction: column-reverse;

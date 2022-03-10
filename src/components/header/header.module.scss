@@ -31,3 +31,8 @@
   color: $mainColor;
   font-weight: 600;
 }
+.buttons {
+  display: flex;
+  align-items: center;
+  column-gap: 70px;
+}

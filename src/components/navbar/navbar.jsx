@@ -1,6 +1,7 @@
 import { Link } from 'react-scroll';
 import { useEffect } from 'react';
 import styles from './navbar.module.scss'
+import Button from '../../shared/UI/button/button';
 
 const Navbar = ({ active, onClose }) => {
   useEffect(() => {
@@ -99,6 +100,12 @@ const Navbar = ({ active, onClose }) => {
             >
               Контакты
             </Link>
+          </li>
+          <li className={styles.item}>
+            <form className={styles.form}>
+              <Button size={'small'}>RU</Button>
+              <Button size={'small'} type={'inactive'}>EN</Button>
+            </form>
           </li>
         </ul>
         <ul className={styles.contacts}>
