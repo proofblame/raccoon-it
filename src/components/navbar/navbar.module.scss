@@ -20,7 +20,7 @@
 .nav {
   @extend %fonts;
   @include adaptive(width, 566, 320);
-  @include adaptivePadding(padding, 48, 0, 20, 0);
+  @include adaptivePadding(padding, 145, 0, 51, 0);
   background-color: $background;
   color: $linkActiveColor;
   display: flex;
@@ -41,6 +41,7 @@
 
   &.active {
     transform: translateX(0);
+    overflow-y: auto;
   }
 }
 .menu {
@@ -48,6 +49,7 @@
   justify-content: center;
   flex-basis: 100%;
   font-weight: 600;
+  @include adaptive(margin-bottom, 40, 30);
 }
 .item {
   text-transform: uppercase;
@@ -99,4 +101,8 @@
     transform: translateY(-50%);
     left: 0;
   }
+}
+.form {
+  display: flex;
+  @include adaptive(column-gap, 14, 9);
 }

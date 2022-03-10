@@ -5,9 +5,11 @@ import Navbar from '../navbar/navbar'
 import Main from '../main/main'
 import { Switch, Route } from "react-router-dom";
 import NotFound from '../not-found/not-found';
+import { useDispatch } from 'react-redux';
+import { changeLanguage } from '../../services/actions/languages';
 
 const App = () => {
-
+  const dispatch = useDispatch()
   const [isActive, setIsActive] = useState(false);
 
 
@@ -21,7 +23,9 @@ const App = () => {
     body.style.overflow = isActive ? 'hidden' : 'auto'
     body.style.paddingRight = isActive ? `${scrollbarWidth}px` : '';
     header.style.paddingRight = isActive ? `${scrollbarWidth}px` : '';
-  }, [isActive])
+    const lang = document.documentElement.lang
+    dispatch(changeLanguage(lang))
+  }, [isActive, dispatch])
 
 
   const handleOpenMenu = () => {

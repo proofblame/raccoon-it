@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import style from './button.module.scss';
 
 const Button = ({
@@ -8,6 +7,8 @@ const Button = ({
   className,
   disabled,
   active,
+  type,
+  size,
   ...attr
 }) => {
   const onClickAction = (e) => {
@@ -18,7 +19,12 @@ const Button = ({
     }
   };
 
-  const classes = classNames(style.button, className, { active });
+  const classes = `
+  ${style.button}
+  ${type === 'inactive' ? style.inactive : ''}
+  ${size === 'small' ? style.small : ''}
+  `
+
   return (
     <button
       className={classes}
