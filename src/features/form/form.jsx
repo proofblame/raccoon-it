@@ -5,11 +5,14 @@ import Button from '../../shared/UI/button/button';
 import api from '../../features/utils/api';
 import Snackbar from '../../features/snackbar/snackbar';
 import InputError from '../../features/input-error/input-error';
-
+import { langLib } from '../../utils/langLib';
+import { useSelector } from 'react-redux';
 
 const Form = () => {
+  const { lang } = useSelector(store => store.lang)
+  const { form } = langLib[lang]
   const [isShown, setIsShown] = useState(false);
-  const [loading, setLoading] = useState('отправить заявку')
+  const [loading, setLoading] = useState(false)
   const [message, setMessage] = useState('');
   const [data, setData] = useState({
     name: '',
@@ -33,6 +36,7 @@ const Form = () => {
 
   useEffect(() => {
     isFormValid();
+
   }, [data, validState]);
 
   function onChange(e) {
@@ -74,9 +78,9 @@ const Form = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    setLoading('Отправка данных')
+    setLoading(true)
     await api.sendRequest(data);
-    setMessage('Данные отправлены, спасибо!');
+    setMessage(form.setMessage);
     setIsShown(true);
     setData({
       name: '',
@@ -92,7 +96,7 @@ const Form = () => {
     });
     setTimeout(() => {
       setIsShown(false);
-      setLoading('отправить заявку');
+      setLoading(false);
     }, 3000);
   };
 
@@ -103,7 +107,7 @@ const Form = () => {
           <input
             className={`${styles.input} ${errorMessage.name ? `${styles.error}` : ''}`}
             type='text'
-            placeholder='ваше имя'
+            placeholder={form.placeholder1}
             name='name'
             required
             minLength='1'
@@ -114,7 +118,7 @@ const Form = () => {
           <input
             className={`${styles.input} ${errorMessage.email ? `${styles.error}` : ''}`}
             type='email'
-            placeholder='ваша почта'
+            placeholder={form.placeholder2}
             name='email'
             required
             minLength='1'
@@ -125,7 +129,7 @@ const Form = () => {
           <textarea
             className={`${styles.input} ${errorMessage.desc ? `${styles.error}` : ''}`}
             type='text'
-            placeholder='Комментарий'
+            placeholder={form.placeholder3}
             name='desc'
             required
             minLength='1'
@@ -144,14 +148,14 @@ const Form = () => {
             />
             <span className={styles.pseudoItem}></span>
             <p className={styles.caption}>
-              Даю согласие на обработку данных <br />
+              {form.caption} <br />
               <a className={styles.link} target='_blank' href='./policy.pdf'>
-                Политика конфиденциальности
+                {form.link}
               </a>
             </p>
           </label>
           <Button type='submit' disabled={!formValid} onClick={onSubmit}>
-            {loading}
+            {!loading ? form.setLoadingDefault : form.setLoading}
           </Button>
         </fieldset>
       </form>

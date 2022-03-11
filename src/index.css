@@ -4,4 +4,17 @@
 
 html {
   background-color: #090909;
+  scrollbar-width: thin;
+  scrollbar-color: #f4f4f4 #0e131d;
+}
+html::-webkit-scrollbar {
+  width: 8px;
+}
+html::-webkit-scrollbar-track {
+  background: #0e131d;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  border: 2px solid #0e131d;
 }

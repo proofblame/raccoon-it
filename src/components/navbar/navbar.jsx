@@ -2,8 +2,28 @@ import { Link } from 'react-scroll';
 import { useEffect } from 'react';
 import styles from './navbar.module.scss'
 import Button from '../../shared/UI/button/button';
+import { useSelector, useDispatch } from 'react-redux';
+import { changeLanguage } from '../../services/actions/languages';
+import { langLib } from '../../utils/langLib';
+import { closeMenu } from '../../services/actions/navbar';
 
-const Navbar = ({ active, onClose }) => {
+const Navbar = () => {
+  const { lang } = useSelector(store => store.lang)
+  const nav = useSelector(store => store.nav.navbar)
+  const dispatch = useDispatch()
+
+  const { navbar } = langLib[lang]
+
+  const handleCloseMenu = () => {
+    dispatch(closeMenu())
+  }
+
+
+  const onChangeLanguage = (lang) => {
+    dispatch(changeLanguage(lang))
+  }
+
+
   useEffect(() => {
     document.addEventListener('keydown', handleEscapePress);
 
@@ -16,13 +36,13 @@ const Navbar = ({ active, onClose }) => {
   const handleEscapePress = (e) => {
     if (e.key === 'Escape') {
 
-      onClose()
+      handleCloseMenu()
     }
   };
 
   return (
-    <section className={active ? `${styles.overlay} ${styles.active}` : `${styles.overlay}`} onClick={onClose}>
-      <nav className={`${styles.nav} ${active ? `${styles.active}` : ''}`} onClick={e => e.stopPropagation()}>
+    <section className={nav ? `${styles.overlay} ${styles.active}` : `${styles.overlay}`} onClick={handleCloseMenu}>
+      <nav className={`${styles.nav} ${nav ? `${styles.active}` : ''}`} onClick={e => e.stopPropagation()}>
         <ul className={styles.menu}>
           <li className={styles.item}>
             <Link
@@ -30,9 +50,9 @@ const Navbar = ({ active, onClose }) => {
               smooth={true}
               duration={1000}
               className={styles.link}
-              onClick={onClose}
+              onClick={handleCloseMenu}
             >
-              Главная
+              {navbar.main}
             </Link>
           </li>
           <li className={styles.item}>
@@ -41,9 +61,9 @@ const Navbar = ({ active, onClose }) => {
               smooth={true}
               duration={1000}
               className={styles.link}
-              onClick={onClose}
+              onClick={handleCloseMenu}
             >
-              О нас
+              {navbar.about}
             </Link>
           </li>
           <li className={styles.item}>
@@ -52,9 +72,9 @@ const Navbar = ({ active, onClose }) => {
               smooth={true}
               duration={1000}
               className={styles.link}
-              onClick={onClose}
+              onClick={handleCloseMenu}
             >
-              Наши принципы
+              {navbar.principles}
             </Link>
           </li>
           <li className={styles.item}>
@@ -63,9 +83,9 @@ const Navbar = ({ active, onClose }) => {
               smooth={true}
               duration={1000}
               className={styles.link}
-              onClick={onClose}
+              onClick={handleCloseMenu}
             >
-              Проекты
+              {navbar.projects}
             </Link>
           </li>
           <li className={styles.item}>
@@ -74,9 +94,9 @@ const Navbar = ({ active, onClose }) => {
               smooth={true}
               duration={1000}
               className={styles.link}
-              onClick={onClose}
+              onClick={handleCloseMenu}
             >
-              Как мы работаем
+              {navbar.workScheme}
             </Link>
           </li>
           <li className={styles.item}>
@@ -85,9 +105,9 @@ const Navbar = ({ active, onClose }) => {
               smooth={true}
               duration={1000}
               className={styles.link}
-              onClick={onClose}
+              onClick={handleCloseMenu}
             >
-              Наши технологии
+              {navbar.techs}
             </Link>
           </li>
           <li className={styles.item}>
@@ -96,16 +116,16 @@ const Navbar = ({ active, onClose }) => {
               smooth={true}
               duration={1000}
               className={styles.link}
-              onClick={onClose}
+              onClick={handleCloseMenu}
             >
-              Контакты
+              {navbar.footer}
             </Link>
           </li>
           <li className={styles.item}>
-            <form className={styles.form}>
-              <Button size={'small'}>RU</Button>
-              <Button size={'small'} type={'inactive'}>EN</Button>
-            </form>
+            <div className={styles.buttons}>
+              <Button size={'small'} type={lang === 'en' && 'inactive'} onClick={() => onChangeLanguage('ru')}>RU</Button>
+              <Button size={'small'} type={lang === 'ru' && 'inactive'} onClick={() => onChangeLanguage('en')}>EN</Button>
+            </div>
           </li>
         </ul>
         <ul className={styles.contacts}>

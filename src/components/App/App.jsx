@@ -1,16 +1,17 @@
 
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import Header from '../header/header'
 import Navbar from '../navbar/navbar'
 import Main from '../main/main'
 import { Switch, Route } from "react-router-dom";
 import NotFound from '../not-found/not-found';
 import { useDispatch } from 'react-redux';
-import { changeLanguage } from '../../services/actions/languages';
+import { getLanguage } from '../../services/actions/languages';
+import { useSelector } from 'react-redux';
 
 const App = () => {
   const dispatch = useDispatch()
-  const [isActive, setIsActive] = useState(false);
+  const { navbar } = useSelector(store => store.nav)
 
 
   useEffect(() => {
@@ -20,36 +21,19 @@ const App = () => {
     var documentWidth = parseInt(document.documentElement.clientWidth);
     var windowsWidth = parseInt(window.innerWidth);
     var scrollbarWidth = windowsWidth - documentWidth;
-    body.style.overflow = isActive ? 'hidden' : 'auto'
-    body.style.paddingRight = isActive ? `${scrollbarWidth}px` : '';
-    header.style.paddingRight = isActive ? `${scrollbarWidth}px` : '';
-    const lang = document.documentElement.lang
-    dispatch(changeLanguage(lang))
-  }, [isActive, dispatch])
+    body.style.overflow = navbar ? 'hidden' : 'auto'
+    body.style.paddingRight = navbar ? `${scrollbarWidth}px` : '';
+    header.style.paddingRight = navbar ? `${scrollbarWidth}px` : '';
 
-
-  const handleOpenMenu = () => {
-    setIsActive(true)
-  }
-  const handleCloseMenu = (e) => {
-    setIsActive(false)
-  }
-
-  const handleToggleMenu = () => {
-    if (!isActive) {
-      handleOpenMenu()
-    } else {
-      handleCloseMenu()
-    }
-  }
-
+    dispatch(getLanguage())
+  }, [navbar, dispatch])
 
   return (
     <>
-      <Header active={isActive} onToggle={handleToggleMenu} />
+      <Header />
       <Switch>
         <Route exact path='/'>
-          <Navbar active={isActive} onClose={handleCloseMenu} />
+          <Navbar />
           <Main />
         </Route>
         <Route path='*'>

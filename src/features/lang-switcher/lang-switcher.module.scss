@@ -1,6 +1,6 @@
 @import '../../shared/variables.scss';
-.form {
-  padding: 5px 10px;
+.section {
+  padding: 0px 25px;
   box-sizing: border-box;
   cursor: pointer;
   position: relative;
@@ -14,6 +14,7 @@
 .selectTitle {
   position: relative;
   color: $mainColor;
+  text-transform: uppercase;
   &::before,
   &::after {
     content: '';
@@ -60,22 +61,17 @@
 }
 .activeContent {
   opacity: 1;
-  bottom: -30px;
+  bottom: -35px;
 }
 
 .selectInput {
   display: none;
 }
 .selectLabel {
+  text-transform: uppercase;
   cursor: pointer;
   &:hover {
     opacity: 0.8;
     transition: all 0.2s ease-out;
   }
-}
-.selectLabel:first-of-type {
-  display: none;
-}
-
-.activeSelect {
 }
