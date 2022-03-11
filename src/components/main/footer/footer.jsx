@@ -1,11 +1,15 @@
 import styles from './footer.module.scss'
 import H2 from '../../../shared/UI/h2/h2'
 import Form from '../../../features/form/form';
+import { useSelector } from 'react-redux';
+import { langLib } from '../../../utils/langLib';
 
 const Footer = ({ style }) => {
+  const { lang } = useSelector(store => store.lang)
+  const { footer } = langLib[lang]
   return (
     <section className={styles.footer} id='form' style={style}>
-      <H2 className={styles.title}>Обсудим проект?</H2>
+      <H2 className={styles.title}>{footer.title}</H2>
       <div className={styles.content}>
         <Form id='form' />
         <ul className={styles.contacts}>

@@ -9,6 +9,9 @@
   font-size: 30px;
   line-height: 37px;
   letter-spacing: 0.03em;
+  @media screen and (max-width: $_768) {
+    display: none;
+  }
 }
 
 .selectTitle {

@@ -3,30 +3,29 @@ import { Link } from 'react-scroll';
 import styles from './about.module.scss'
 import H2 from '../../../shared/UI/h2/h2'
 import Button from '../../../shared/UI/button/button'
+import { useSelector } from 'react-redux';
+import { langLib } from '../../../utils/langLib';
 
 const About = ({ style }) => {
+  const { lang } = useSelector(store => store.lang)
+  const { about } = langLib[lang]
+
   return (
     <section className={styles.about} id='about' style={style}>
       <div className={styles.leftColumn}>
-        <H2 className={styles.title}>О нас</H2>
-        <p className={styles.subtitle}>Наша команда занимается разработкой сайтов
-          и мобильных приложений для решения сложных бизнес-задач. Мы используем современные
-          IT-решения, продуманный дизайн и грамотную маркетинговую стратегию. Мы поможем
-          вам привлечь новых клиентов.</p>
+        <H2 className={styles.title}>{about.title}</H2>
+        <p className={styles.subtitle}>{about.subtitle}</p>
         <Link to='form' smooth={true} duration={1000}>
-          <Button>Оставить заявку</Button>
+          <Button>{about.button}</Button>
         </Link>
       </div>
       <div className={styles.rightColumn}>
         <ul className={styles.list}>
-          <li className={styles.item}>Сайты, веб-приложения и прогрессивные веб-приложения</li>
-          <li className={styles.item}>Нативные и гибридные мобильные приложения</li>
-          <li className={styles.item}>Разработка дизайна для вашего бизнеса под ключ</li>
+          <li className={styles.item}>{about.listItem1}</li>
+          <li className={styles.item}>{about.listItem2}</li>
+          <li className={styles.item}>{about.listItem3}</li>
         </ul>
-
-
       </div>
-
     </section>
   )
 };

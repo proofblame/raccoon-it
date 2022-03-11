@@ -126,7 +126,7 @@ export const langLib = {
       comment: 'Be the next!',
     },
     advances: {
-      title: 'Преимущества наших проектов',
+      title: 'Advantages of our projects',
       listItem1:
         "At the client's request, we deploy a CDN network to optimize and distribute content to all clients around the world.",
       listItem2:
@@ -156,7 +156,7 @@ export const langLib = {
       schemeItem3: 'Testing',
       schemeItem4: 'Adjustment',
       schemeItem5: 'Support',
-      schemeTitle4: 'Working software with new features ',
+      schemeTitle4: 'Working software with new features',
       button: 'Submit your application',
     },
     techs: {
