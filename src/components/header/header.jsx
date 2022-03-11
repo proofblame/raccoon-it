@@ -4,11 +4,36 @@ import logo from '../../shared/images/logo.svg'
 import { useLocation } from "react-router-dom";
 import MenuButton from '../../features/menu-button/menu-button';
 import LangSwitcher from '../../features/lang-switcher/lang-switcher';
+import { CSSTransition } from "react-transition-group";
+import { useRef } from 'react';
+import { useSelector } from 'react-redux';
 
-const Header = ({ active, onToggle }) => {
 
+const Header = () => {
+
+  const { navbar } = useSelector(store => store.nav)
+  const nodeRef = useRef(null)
   const { pathname } = useLocation()
-  const menuButton = pathname === '/' ? <MenuButton active={active} onToggle={onToggle} /> : ('')
+  const menuButtons = pathname === '/' ?
+    <div className={styles.buttons}>
+      <CSSTransition
+        in={navbar}
+        timeout={200}
+        classNames={{
+          enter: styles.switcherEnter,
+          enterActive: styles.switcherEnterActive,
+          enterDone: styles.switcherEnterDone,
+          exit: styles.switcherExit,
+          exitActive: styles.switcherExit,
+          exitDone: styles.switcherExitDone,
+        }}
+        nodeRef={nodeRef}
+      >
+        <LangSwitcher forRef={nodeRef} />
+      </CSSTransition>
+      <MenuButton />
+    </div>
+    : ('')
 
   return (
     <header className={styles.header} id='header'>
@@ -18,10 +43,7 @@ const Header = ({ active, onToggle }) => {
             <img src={logo} alt="RaccoonIT IT Development" className={styles.logoImg} />
             <span className={styles.logoTitle}>RaccoonIT <br /> IT&nbsp;Development</span>
           </div>
-          <div className={styles.buttons}>
-            {!active && <LangSwitcher />}
-            {menuButton}
-          </div>
+          {menuButtons}
         </section>
       </Container>
     </header>

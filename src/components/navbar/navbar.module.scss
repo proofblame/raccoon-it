@@ -42,6 +42,19 @@
   &.active {
     transform: translateX(0);
     overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #f4f4f4 #0e131d;
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #0e131d;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #f4f4f4;
+      border-radius: 20px;
+      border: 2px solid #0e131d;
+    }
   }
 }
 .menu {
@@ -102,7 +115,7 @@
     left: 0;
   }
 }
-.form {
+.buttons {
   display: flex;
   @include adaptive(column-gap, 14, 9);
 }

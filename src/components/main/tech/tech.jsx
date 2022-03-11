@@ -14,11 +14,16 @@ import typescript from '../../../shared/images/typescript.webp'
 import redux from '../../../shared/images/redux.webp'
 import figma from '../../../shared/images/figma.webp'
 import photoshop from '../../../shared/images/photoshop.webp'
+import { langLib } from '../../../utils/langLib';
+import { useSelector } from 'react-redux';
 
 const Tech = () => {
+  const { lang } = useSelector(store => store.lang)
+  const { techs } = langLib[lang]
+
   return (
     <section className={styles.tech} id='techs'>
-      <H2 className={styles.title}>Наши технологии</H2>
+      <H2 className={styles.title}>{techs.title}</H2>
       <ul className={styles.list}>
         <li className={styles.item}>
           <p className={styles.itemTitle}>Backend</p>

@@ -36,3 +36,23 @@
   align-items: center;
   column-gap: 70px;
 }
+
+.switcherEnter {
+  transition: opacity 300ms;
+}
+
+.switcherEnterActive {
+  opacity: 0;
+}
+.switcherEnterDone {
+  opacity: 0;
+}
+.switcherExit {
+  opacity: 0;
+}
+.switcherExitActive {
+  opacity: 1;
+}
+.switcherExitDone {
+  transition: opacity 300ms;
+}

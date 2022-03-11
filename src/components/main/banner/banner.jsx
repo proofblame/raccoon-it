@@ -9,16 +9,21 @@ import mobilePart1 from '../../../shared/images/mobile-part-1.png'
 import mobilePart2 from '../../../shared/images/mobile-part-2.svg'
 import mobilePart3 from '../../../shared/images/mobile-part-3.svg'
 import mobilePart4 from '../../../shared/images/mobile-part-4.svg'
+import { langLib } from '../../../utils/langLib';
+import { useSelector } from 'react-redux';
 
 
 const Banner = () => {
+  const { lang } = useSelector(store => store.lang)
+  const { banner } = langLib[lang]
+
   return (
     <section className={styles.banner} id='banner'>
       <div className={styles.content}>
-        <h1 className={styles.title}>WEB <br /> Development</h1>
-        <p className={styles.subtitle}>Автоматизируем бизнес и создадим digital-решение</p>
+        <h1 className={styles.title}>{banner.title}</h1>
+        <p className={styles.subtitle}>{banner.subtitle}</p>
         <Link to='form' smooth={true} duration={1000}>
-          <Button>Оставить заявку</Button>
+          <Button>{banner.button}</Button>
         </Link>
       </div>
 

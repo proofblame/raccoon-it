@@ -10,32 +10,33 @@ import backlogSprint from '../../../shared/images/mobile-scheme/backlog-sprint.s
 import arrow from '../../../shared/images/mobile-scheme/arrow.svg';
 import daily from '../../../shared/images/mobile-scheme/daily.svg';
 import rectangle from '../../../shared/images/mobile-scheme/rectangle.svg';
+import { langLib } from '../../../utils/langLib';
+import { useSelector } from 'react-redux';
 
 const WorkScheme = () => {
+  const { lang } = useSelector(store => store.lang)
+  const { workScheme } = langLib[lang]
+
   return (
     <section className={styles.workScheme} id='workflow'>
-      <H2 className={styles.title}>Как мы работаем?</H2>
-      <p className={styles.subtitle}>
-        Мы изучаем особенности ваших клиентов и подбираем лучшее решение для
-        вашего бизнеса. Работаем по гибкой методологии Agile, что позволяет
-        быстро менять продукт под требования рынка.
-      </p>
+      <H2 className={styles.title}>{workScheme.title}</H2>
+      <p className={styles.subtitle}>{workScheme.subtitle}</p>
       <ul className={styles.list}>
         <li className={styles.item}>
           <p className={styles.itemNumber}>01</p>
-          <p className={styles.itemSubtitle}>Определяем цели</p>
+          <p className={styles.itemSubtitle}>{workScheme.itemSubtitle1}</p>
         </li>
         <li className={styles.item}>
           <p className={styles.itemNumber}>02</p>
-          <p className={styles.itemSubtitle}>Создаём прототип</p>
+          <p className={styles.itemSubtitle}>{workScheme.itemSubtitle2}</p>
         </li>
         <li className={styles.item}>
           <p className={styles.itemNumber}>03</p>
-          <p className={styles.itemSubtitle}>Верстаем и программируем</p>
+          <p className={styles.itemSubtitle}>{workScheme.itemSubtitle3}</p>
         </li>
         <li className={styles.item}>
           <p className={styles.itemNumber}>04</p>
-          <p className={styles.itemSubtitle}>Тестируем и оптимизируем</p>
+          <p className={styles.itemSubtitle}>{workScheme.itemSubtitle4}</p>
         </li>
       </ul>
       <div className={styles.scheme}>
@@ -51,23 +52,23 @@ const WorkScheme = () => {
               src={backlogProject}
               alt='бэклог проекта'
             />
-            <p className={styles.schemeTitle}>бэклог проекта</p>
+            <p className={styles.schemeTitle}>{workScheme.schemeTitle1}</p>
           </div>
           <img className={styles.schemeArrow} src={arrow} alt='arrow' />
           <div className={styles.schemeBlock}>
-            <img className={styles.schemeRectangle} src={backlogSprint} alt='Бэклог спринта' />
-            <p className={styles.schemeTitle}>Бэклог спринта</p>
+            <img className={styles.schemeRectangle} src={backlogSprint} alt={workScheme.schemeTitle2} />
+            <p className={styles.schemeTitle}>{workScheme.schemeTitle2}</p>
           </div>
           <img className={styles.schemeArrow} src={arrow} alt='arrow' />
           <div className={styles.schemeBlock}>
             <img className={styles.schemeIMG} src={daily} alt='daily' />
-            <p className={styles.schemeTitle}>Спринт</p>
+            <p className={styles.schemeTitle}>{workScheme.schemeTitle3}</p>
             <ul className={styles.schemeList}>
-              <li className={styles.schemeItem}>дизайн</li>
-              <li className={styles.schemeItem}>Разработка</li>
-              <li className={styles.schemeItem}>Тестирование</li>
-              <li className={styles.schemeItem}>Наладка</li>
-              <li className={styles.schemeItem}>поддержка</li>
+              <li className={styles.schemeItem}>{workScheme.schemeItem1}</li>
+              <li className={styles.schemeItem}>{workScheme.schemeItem2}</li>
+              <li className={styles.schemeItem}>{workScheme.schemeItem3}</li>
+              <li className={styles.schemeItem}>{workScheme.schemeItem4}</li>
+              <li className={styles.schemeItem}>{workScheme.schemeItem5}</li>
             </ul>
           </div>
           <img className={styles.schemeArrow} src={arrow} alt='arrow' />
@@ -75,10 +76,10 @@ const WorkScheme = () => {
             <img
               className={styles.schemeRectangle}
               src={rectangle}
-              alt='Работающее ПО с новыми возможностями'
+              alt={workScheme.schemeTitle4}
             />
             <p className={styles.schemeTitle}>
-              Работающее По с новыми возможностями
+              {workScheme.schemeTitle4}
             </p>
           </div>
         </div>
@@ -86,7 +87,7 @@ const WorkScheme = () => {
 
       <div className={styles.footer}>
         <Link to='form' smooth={true} duration={1000}>
-          <Button>Оставить заявку</Button>
+          <Button>{workScheme.button}</Button>
         </Link>
       </div>
     </section>
