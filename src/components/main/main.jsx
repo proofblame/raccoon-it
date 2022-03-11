@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import styles from './main.module.scss'
 import Container from '../../shared/UI/container/container';
 import Banner from './banner/banner';
