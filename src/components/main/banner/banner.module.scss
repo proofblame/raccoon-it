@@ -195,6 +195,7 @@
 }
 .hand {
   @include adaptive(width, 926, 304);
+  height: 100%;
   position: absolute;
   left: 0;
   z-index: 0;

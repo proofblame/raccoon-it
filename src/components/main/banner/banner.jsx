@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 import styles from './banner.module.scss'
 import Button from '../../../shared/UI/button/button'
 
-import hand from '../../../shared/images/hand.webp'
+import hand from '../../../shared/images/hand.png'
 import mobile from '../../../shared/images/mobile.svg'
 import mobilePart1 from '../../../shared/images/mobile-part-1.png'
 import mobilePart2 from '../../../shared/images/mobile-part-2.svg'
