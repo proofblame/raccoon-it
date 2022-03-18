@@ -10,7 +10,7 @@ export const langLib = {
       subtitle:
         'Наша команда занимается разработкой сайтов и мобильных приложений для решения сложных бизнес-задач. Мы используем современные IT-решения, продуманный дизайн и грамотную маркетинговую стратегию. Мы поможем вам привлечь новых клиентов.',
       button: 'Оставить заявку',
-      listItem1: 'Сайты, веб-приложения и прогрессивные веб-приложения',
+      listItem1: 'Сайты, телеграм боты, веб-приложения и прогрессивные веб-приложения',
       listItem2: 'Нативные и гибридные мобильные приложения',
       listItem3: 'Разработка дизайна для вашего бизнеса под ключ',
     },
@@ -103,7 +103,7 @@ export const langLib = {
       subtitle:
         'Our team develops websites and mobile applications to solve complex business problems. We use modern IT solutions, thoughtful design and a competent marketing strategy. We will help you attract new clients.',
       button: 'Submit your application',
-      listItem1: 'Websites, web applications and progressive web applications ',
+      listItem1: 'Websites, telegram bots, web applications and progressive web applications',
       listItem2: 'Native and hybrid mobile apps',
       listItem3: 'Design development for your turnkey business',
     },

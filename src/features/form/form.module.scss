@@ -42,7 +42,8 @@
   padding: 0;
 }
 .check {
-  display: none;
+  opacity: 0;
+  position: absolute;
 
   &:checked + .pseudoItem {
     background-image: url('../../shared/images/confirm.svg');

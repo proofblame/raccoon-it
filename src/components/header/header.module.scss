@@ -1,8 +1,8 @@
 @import '../../shared/variables.scss';
 
 .header {
-  @include adaptivePadding(padding, 48, 0, 15, 0);
-  @include adaptive(height, 145, 51);
+  @include adaptivePadding(padding, 20, 0, 15, 0);
+  // @include adaptive(height, 145, 51);
   background-color: $background;
   position: fixed;
   top: 0;

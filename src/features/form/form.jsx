@@ -25,7 +25,7 @@ const Form = () => {
     name: '',
     email: '',
     desc: '',
-    checkbox: false,
+    checkbox: '',
   });
   const [validState, setValidState] = useState({
     name: false,
@@ -67,7 +67,12 @@ const Form = () => {
         [name]: validationMessage,
       });
     } else {
-      setErrorMessage('');
+      setErrorMessage(
+        {
+          ...errorMessage,
+          [name]: validationMessage,
+        }
+      );
     }
   }
 
@@ -78,37 +83,43 @@ const Form = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true)
-    await api.sendRequest(data);
-    setMessage(form.setMessage);
-    setIsShown(true);
-    setData({
-      name: '',
-      email: '',
-      desc: '',
-      checkbox: false,
-    });
-    setValidState({
-      name: false,
-      email: false,
-      desc: false,
-      checkbox: false,
-    });
-    setTimeout(() => {
-      setIsShown(false);
-      setLoading(false);
-    }, 3000);
+    if (formValid) {
+      setLoading(true)
+      await api.sendRequest(data);
+      setMessage(form.setMessage);
+      setIsShown(true);
+      setData({
+        name: '',
+        email: '',
+        desc: '',
+        checkbox: false,
+      });
+      setValidState({
+        name: false,
+        email: false,
+        desc: false,
+        checkbox: false,
+      });
+      setTimeout(() => {
+        setIsShown(false);
+        setLoading(false);
+      }, 3000);
+    } else {
+      onChange()
+    }
+
   };
 
   return (
     <>
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={onSubmit}>
         <fieldset className={styles.inputs}>
           <input
-            className={`${styles.input} ${errorMessage.name ? `${styles.error}` : ''}`}
+            className={`${styles.input} ${errorMessage.name || errorMessage.name ? `${styles.error}` : ''}`}
             type='text'
             placeholder={form.placeholder1}
             name='name'
+            autoFocus={true}
             required
             minLength='1'
             value={data.name}
@@ -139,10 +150,12 @@ const Form = () => {
           <InputError id='name-error' text={errorMessage.desc} />
         </fieldset>
         <fieldset className={styles.checkbox}>
+          <InputError id='name-checkbox' text={errorMessage.checkbox} />
           <label className={styles.label} htmlFor='agreement'>
             <input className={styles.check} type='checkbox'
               name='checkbox'
               id='agreement'
+              required
               checked={data.checkbox}
               onChange={onChange}
             />
@@ -154,10 +167,10 @@ const Form = () => {
               </a>
             </p>
           </label>
-          <Button type='submit' disabled={!formValid} onClick={onSubmit}>
-            {!loading ? form.setLoadingDefault : form.setLoading}
-          </Button>
         </fieldset>
+        <Button type='submit' >
+          {!loading ? form.setLoadingDefault : form.setLoading}
+        </Button>
       </form>
       <Snackbar isShown={isShown} message={message} />
     </>

@@ -31,7 +31,7 @@
 
 .list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(286px, 330px));
+  grid-template-columns: repeat(auto-fit, minmax(286px, 1fr));
   justify-content: space-between;
   @include adaptive(column-gap, 50, 0);
   row-gap: 20px;
