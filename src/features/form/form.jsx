@@ -119,7 +119,6 @@ const Form = () => {
             type='text'
             placeholder={form.placeholder1}
             name='name'
-            autoFocus={true}
             required
             minLength='1'
             value={data.name}

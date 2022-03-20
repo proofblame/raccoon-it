@@ -8,11 +8,12 @@ import NotFound from '../not-found/not-found';
 import { useDispatch } from 'react-redux';
 import { getLanguage } from '../../services/actions/languages';
 import { useSelector } from 'react-redux';
+import { useLocation } from 'react-router-dom';
 
 const App = () => {
   const dispatch = useDispatch()
   const { navbar } = useSelector(store => store.nav)
-
+  const { pathname } = useLocation()
 
   useEffect(() => {
     const body = document.querySelector('body');

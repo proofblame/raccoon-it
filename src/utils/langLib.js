@@ -91,6 +91,11 @@ export const langLib = {
       setMessage: 'Данные отправлены, спасибо!',
       setLoadingDefault: 'отправить заявку',
     },
+    notFound: {
+      title: 'Страница не найдена',
+      subtitle: 'Ошибка 404',
+      button: 'Вернуться на главную'
+    }
   },
   en: {
     banner: {
@@ -184,6 +189,11 @@ export const langLib = {
       setMessage: 'Data are sent, thank you! ',
       setLoadingDefault: 'Submit your application',
     },
+    notFound: {
+      title: 'Page not found',
+      subtitle: 'Error 404',
+      button: 'Back to main'
+    }
   }
 }
 
