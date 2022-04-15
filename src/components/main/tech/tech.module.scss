@@ -70,11 +70,11 @@
   @include adaptive(margin-bottom, 17, 11);
   display: flex;
   align-items: center;
-  @include adaptive(column-gap, 20, 10);
   justify-content: flex-start;
 }
 .image {
   @include adaptive(width, 32, 20);
+  @include adaptive(margin-right, 20, 10);
 }
 
 .subtitle {

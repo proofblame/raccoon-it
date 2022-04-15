@@ -17,13 +17,13 @@
   @extend %flex;
   @include adaptive(width, 68, 30);
   @include adaptive(height, 47, 21);
-  @include adaptive(column-gap, 22, 10);
   position: relative;
   z-index: 1;
 }
 .logoImg {
   @include adaptive(width, 68, 30);
   @include adaptive(height, 47, 21);
+  @include adaptive(margin-right, 22, 10);
 }
 .logoTitle {
   @extend %fonts;
